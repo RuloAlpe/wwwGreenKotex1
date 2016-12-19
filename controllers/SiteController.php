@@ -8,6 +8,11 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\EntGerentes;
+use app\models\CatSucursal;
+use app\models\CatCadena;
+use app\models\EntVendedores;
+use yii\web\Response;
 
 class SiteController extends Controller
 {
@@ -121,5 +126,54 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    
+    public function actionRegistro(){
+    	//$this->layout = false;
+    	
+    	return $this->render('registro');
+    }
+
+    public function actionRegistroGerentes(){
+    	//$this->layout = false;
+    	
+    	$gerente = new EntGerentes();
+    	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
+    	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
+    	
+    	if($gerente->load ( Yii::$app->request->post () )){
+    		$gerente->save();
+    		$entVendedores = new EntVendedores();
+    		
+    		return $this->render('registroVendedores',[
+    				'vendedor' => $entVendedores
+    		]);
+    	}
+    	
+    	return $this->render('registroGerentes', [
+    			'gerente' => $gerente,
+    			'sucursales' => $sucursales,
+    			'cadenas' => $cadenas
+    	]);
+    }
+    
+    public function actionRegistroVendedores(){
+    	//$this->layout = false;
+    	
+    	$vendedor = new EntVendedores();
+    	
+    	if($vendedor->load ( Yii::$app->request->post () )){
+    		$vendedor->id_gerente = 1;
+    		$vendedor->save();
+    		$vendedor = new EntVendedores();
+    			
+    		return $this->render('registroVendedores',[
+    				'vendedor' => $vendedor
+    		]);
+    	}
+    	
+    	return $this->render('registroVendedores',[
+    			'vendedor' => $vendedor
+    	]);
     }
 }

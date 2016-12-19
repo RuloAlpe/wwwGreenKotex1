@@ -38,14 +38,18 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+        
+        'urlManager' => [ 
+	      'class' => 'yii\web\UrlManager',
+	      // Disable index.php
+	      'showScriptName' => false,
+	      // Disable r= routes
+	      'enablePrettyUrl' => true,
+	      'enableStrictParsing' => false,
+	      'rules' => [ ]
+	      // 'site'=>'site/bienvenida',
+	       
+	    ]
     ],
     'params' => $params,
 ];
