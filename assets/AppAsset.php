@@ -18,7 +18,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/sweetalert.css',
+        'webAssets/css/kotex.css',
     ];
     public $js = [
     	'js/site.js',
