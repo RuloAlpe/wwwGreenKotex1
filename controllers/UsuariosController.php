@@ -121,4 +121,9 @@ class UsuariosController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+    public function actionRegistro(){
+    	
+    	return $this->render('registro');
+    }
 }
