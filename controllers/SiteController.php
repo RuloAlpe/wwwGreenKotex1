@@ -182,4 +182,12 @@ class SiteController extends Controller
     			'idGerente' => $idGerente
     	]);
     }
+    
+    public function actionTabla123456789QwertyVendedores(){
+    	$vendedores = EntVendedores::find()->all();
+    	
+    	return $this->render('tablaVendedores',[
+    			'vendedores' =>$vendedores
+    	]);
+    }
 }

@@ -12,7 +12,7 @@ use Yii;
  * @property string $txt_nombre
  * @property string $txt_apellido
  * @property string $txt_correo
- * @property integer $num_telefono
+ * @property string $num_telefono
  *
  * @property EntGerentes $idGerente
  */
@@ -32,9 +32,11 @@ class EntVendedores extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_gerente', 'txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required'],
-            [['id_gerente', 'num_telefono'], 'integer'],
+            [['id_gerente', 'txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
+            [['id_gerente'], 'integer'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
+        		['txt_correo', 'email', 'message'=>'Formato de email no es valido'],
+            [['num_telefono'], 'string', 'max' => 10],
             [['id_gerente'], 'exist', 'skipOnError' => true, 'targetClass' => EntGerentes::className(), 'targetAttribute' => ['id_gerente' => 'id_gerente']],
         ];
     }
@@ -45,12 +47,12 @@ class EntVendedores extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_vendedor' => 'Id Vendedor',
-            'id_gerente' => 'Id Gerente',
-            'txt_nombre' => 'Txt Nombre',
-            'txt_apellido' => 'Txt Apellido',
-            'txt_correo' => 'Txt Correo',
-            'num_telefono' => 'Num Telefono',
+            'id_vendedor' => 'Vendedor',
+            'id_gerente' => 'Gerente',
+            'txt_nombre' => 'Nombre',
+            'txt_apellido' => 'Apellido',
+            'txt_correo' => 'Correo',
+            'num_telefono' => 'Telefono',
         ];
     }
 

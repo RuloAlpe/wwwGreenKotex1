@@ -16,9 +16,9 @@ $form = ActiveForm::begin ( [
 		
 	<?= $form->field($gerente, 'txt_apellido')->textInput(['maxlength' => true])?>
 	
-	<?= $form->field($gerente, 'txt_correo')->textInput(['maxlength' => true])?>
+	<?= $form->field($gerente, 'txt_correo')->input('email')?>
 	
-	<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => true])?>
+	<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 	
 	<?= $form->field($gerente, 'id_sucursal')->dropDownList(ArrayHelper::map($sucursales, 'id_sucursal', 'txt_nombre'))?>
 	

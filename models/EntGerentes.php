@@ -11,7 +11,7 @@ use Yii;
  * @property string $txt_nombre
  * @property string $txt_apellido
  * @property string $txt_correo
- * @property integer $num_telefono
+ * @property string $num_telefono
  * @property string $id_sucursal
  * @property string $id_cadena
  *
@@ -35,9 +35,11 @@ class EntGerentes extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono', 'id_sucursal', 'id_cadena'], 'required'],
-            [['num_telefono', 'id_sucursal', 'id_cadena'], 'integer'],
+            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono', 'id_sucursal', 'id_cadena'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
+            [['id_sucursal', 'id_cadena'], 'integer'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
+        	['txt_correo', 'email', 'message'=>'Formato de email no es valido'],
+            [['num_telefono'], 'string', 'max' => 10],
             [['id_cadena'], 'exist', 'skipOnError' => true, 'targetClass' => CatCadena::className(), 'targetAttribute' => ['id_cadena' => 'id_cadena']],
             [['id_sucursal'], 'exist', 'skipOnError' => true, 'targetClass' => CatSucursal::className(), 'targetAttribute' => ['id_sucursal' => 'id_sucursal']],
         ];
@@ -50,12 +52,12 @@ class EntGerentes extends \yii\db\ActiveRecord
     {
         return [
             'id_gerente' => 'Id Gerente',
-            'txt_nombre' => 'Txt Nombre',
-            'txt_apellido' => 'Txt Apellido',
-            'txt_correo' => 'Txt Correo',
-            'num_telefono' => 'Num Telefono',
-            'id_sucursal' => 'Id Sucursal',
-            'id_cadena' => 'Id Cadena',
+            'txt_nombre' => 'Nombre',
+            'txt_apellido' => 'Apellido',
+            'txt_correo' => 'Correo',
+            'num_telefono' => 'Telefono',
+            'id_sucursal' => 'Sucursal',
+            'id_cadena' => 'Cadena',
         ];
     }
 
