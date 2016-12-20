@@ -18,6 +18,8 @@
 			# Utility
 			# Loader
 	3.0 - Mesa de trabajo 1
+	4.0 - Mesa de trabajo 2
+	5.0 - Mesa de trabajo 3
 
 	--------------------------------------------------------
 	*/
@@ -249,10 +251,13 @@ blockquote {
   -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: .5rem 1rem;
-  font-size: 1rem;
-  border-radius: .25rem;
+  padding: .6rem 3.4rem;
+  font-size: 1.25rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
 }
 
 .btn.active.focus,
@@ -285,6 +290,33 @@ blockquote {
 .btn:disabled {
   cursor: not-allowed;
   opacity: .65;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #E8D841;
+  border-color: #E8D841;
+}
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #dbc91b;
+  border-color: #dbc91b;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  color: #000;
+  background-color: #efe47e;
+  border-color: #efe47e;
+}
+
+.btn-primary.active,
+.btn-primary:active {
+  color: #000;
+  background-color: #efe47e;
+  border-color: #efe47e;
+  background-image: none;
 }
 
 /*  Modal
@@ -411,3 +443,401 @@ blockquote {
 
 	-----------------------------------------------------------------------------
 	*/
+.mt1 {
+  align-items: center;
+  background-image: url(../images/bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.mt1 .logo {
+  display: flex;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.mt1 .avion {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+}
+
+.mt1 .pavimento {
+  bottom: 0;
+  left: -390px;
+  position: absolute;
+  right: 0;
+}
+
+.mt1 .premios {
+  bottom: 20px;
+  left: 4px;
+  position: absolute;
+}
+
+.mt1 .mt1-cont {
+  background-color: rgba(255, 0, 0, 0.2);
+  padding-right: 40px;
+  position: relative;
+  z-index: 3;
+}
+
+.mt1 .mt1-cont h2 {
+  color: #FFF;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  -webkit-text-fill-color: #FFF;
+  -webkit-text-stroke: 2px #B93C89;
+}
+
+.mt1 .mt1-cont p {
+  color: #FFF;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  line-height: 1.9rem;
+  margin: 0 0 70px auto;
+  max-width: 300px;
+  text-align: justify;
+}
+
+.mt1 .mt1-cont form {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 70px;
+}
+
+.mt1 .mt1-cont form .btn {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.mt1 .kotex-cont-registro-gerentes {
+  background-color: rgba(255, 255, 0, 0.3);
+  max-width: 800px;
+}
+
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+.mt2 {
+  align-items: center;
+  background-image: url(../images/bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.mt2 .logo {
+  display: flex;
+  left: 110px;
+  position: absolute;
+  top: 20px;
+  z-index: 4;
+}
+
+.mt2 .avion {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}
+
+.mt2 .productos {
+  bottom: -64px;
+  left: -106px;
+  position: absolute;
+}
+
+.mt2 .mt2-cont {
+  padding-right: 100px;
+  position: relative;
+  max-width: 560px;
+  z-index: 3;
+}
+
+.mt2 .mt2-cont h2 {
+  color: #FFF;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.mt2 .mt2-cont form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.mt2 .mt2-cont form .form-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+.mt2 .mt2-cont form .form-group label {
+  color: #FFF;
+  font-size: 1.1rem;
+  margin-right: 20px;
+}
+
+.mt2 .mt2-cont form .form-group input[type="email"],
+.mt2 .mt2-cont form .form-group input[type="text"],
+.mt2 .mt2-cont form .form-group input[type="password"] {
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  padding: 3px 10px;
+  width: 56%;
+}
+
+.mt2 .mt2-cont form .form-group input[type="email"]:focus,
+.mt2 .mt2-cont form .form-group input[type="text"]:focus,
+.mt2 .mt2-cont form .form-group input[type="password"]:focus {
+  outline: none;
+}
+
+.mt2 .mt2-cont form .form-group .help-block {
+  width: 100%;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6), .mt2 .mt2-cont form .form-group:nth-child(7) {
+  justify-content: flex-start;
+  margin-top: 20px;
+  position: relative;
+  text-align: left;
+  width: 45%;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6) label, .mt2 .mt2-cont form .form-group:nth-child(7) label {
+  margin-bottom: 18px;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6):after, .mt2 .mt2-cont form .form-group:nth-child(7):after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  width: 0;
+  height: 0;
+  right: 8px;
+  bottom: 0;
+  margin: auto;
+  border-style: solid;
+  border-width: 10px 6px 0 6px;
+  border-color: #999 transparent transparent transparent;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6):before, .mt2 .mt2-cont form .form-group:nth-child(7):before {
+  width: 30px;
+  position: absolute;
+  top: 44px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #ccc;
+  content: '';
+  pointer-events: none;
+  z-index: 8;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6) select, .mt2 .mt2-cont form .form-group:nth-child(7) select {
+  background-color: #FFF;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  height: 100%;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  z-index: 3;
+  -moz-appearance: none;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6) select:-moz-focusring, .mt2 .mt2-cont form .form-group:nth-child(7) select:-moz-focusring {
+  color: transparent;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6) select::-ms-expand, .mt2 .mt2-cont form .form-group:nth-child(7) select::-ms-expand {
+  display: none;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6) select:focus, .mt2 .mt2-cont form .form-group:nth-child(7) select:focus {
+  border-color: #76aec1;
+  outline: none;
+}
+
+.mt2 .mt2-cont form .form-group:nth-child(6) select.error, .mt2 .mt2-cont form .form-group:nth-child(7) select.error {
+  border: 1px solid red;
+}
+
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  .mt2 .mt2-cont form .form-group:nth-child(6) .select select, .mt2 .mt2-cont form .form-group:nth-child(7) .select select {
+    padding-right: 0;
+  }
+  .mt2 .mt2-cont form .form-group:nth-child(6) .select:after, .mt2 .mt2-cont form .form-group:nth-child(6) .select:before, .mt2 .mt2-cont form .form-group:nth-child(7) .select:after, .mt2 .mt2-cont form .form-group:nth-child(7) .select:before {
+    display: none;
+  }
+}
+
+.mt2 .mt2-cont form .btn {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+.mt3 {
+  align-items: center;
+  background-image: url(../images/bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.mt3 .logo {
+  display: flex;
+  left: 200px;
+  position: absolute;
+  top: 20px;
+  z-index: 4;
+}
+
+.mt3 .avion {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}
+
+.mt3 .productos {
+  bottom: -54px;
+  left: -103px;
+  position: absolute;
+}
+
+.mt3 .mt3-cont {
+  padding-right: 100px;
+  position: relative;
+  max-width: 600px;
+  z-index: 3;
+}
+
+.mt3 .mt3-cont h2 {
+  color: #FFF;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.mt3 .mt3-cont form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mt3 .mt3-cont form .form-group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+.mt3 .mt3-cont form .form-group label {
+  color: #FFF;
+  font-size: 1.1rem;
+  margin-right: 20px;
+  width: 30%;
+}
+
+.mt3 .mt3-cont form .form-group input[type="email"],
+.mt3 .mt3-cont form .form-group input[type="text"],
+.mt3 .mt3-cont form .form-group input[type="password"] {
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  padding: 3px 10px;
+  width: 56%;
+}
+
+.mt3 .mt3-cont form .form-group input[type="email"]:focus,
+.mt3 .mt3-cont form .form-group input[type="text"]:focus,
+.mt3 .mt3-cont form .form-group input[type="password"]:focus {
+  outline: none;
+}
+
+.mt3 .mt3-cont form .form-group .help-block {
+  width: 100%;
+}
+
+.mt3 .mt3-cont form .form-group-btns {
+  align-items: center;
+  background-color: rgba(0, 128, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.mt3 .mt3-cont form .form-group-btns .btn {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+  width: 210px;
+}
+
+.mt3 .mt3-cont form .form-group-btns button.btn {
+  padding: .6rem 2rem;
+  white-space: normal;
+}
+
+.mt3 .mt3-cont form .form-group-btns a.btn {
+  letter-spacing: 1px;
+  margin-left: 20px;
+  padding: 1.13rem 3rem;
+}

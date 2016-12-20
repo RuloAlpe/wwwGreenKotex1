@@ -1,0 +1,114 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+
+.mt3
+	align-items: center
+	background-image: url(../images/bg.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	height: 100vh
+	justify-content: flex-end
+	overflow: hidden
+	position: relative
+
+	.logo
+		display: flex
+		left: 200px
+		position: absolute
+		top: 20px
+		z-index: 4
+
+	.avion
+		position: absolute
+		right: 30px
+		top: 50px
+
+	.productos
+		bottom: -54px
+		left: -103px
+		position: absolute
+
+	.mt3-cont
+		// background-color: rgba(red,.2)
+		padding-right: 100px
+		position: relative
+		max-width: 600px
+		z-index: 3
+
+		h2
+			color: $white
+			font-size: 3rem
+			margin-bottom: 40px
+
+		form
+			align-items: center
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			// padding-right: 100px
+
+			.form-group
+				align-items: center
+				// background-color: green
+				display: flex
+				flex-wrap: wrap
+				justify-content: flex-start
+				margin-bottom: 20px
+				text-align: right
+				width: 100%
+
+				label
+					// background-color: red
+					color: $white
+					font-size: 1.1rem
+					margin-right: 20px
+					width: 30%
+
+				input[type="email"],
+				input[type="text"],
+				input[type="password"]
+					// background-color: blue
+					border: none
+					font-family: $font-base
+					font-size: 1rem
+					padding: 3px 10px
+					width: 56%
+					&:focus
+						outline: none
+
+				.help-block
+					width: 100%
+
+			.form-group-btns
+				align-items: center
+				background-color: rgba(green,.2)
+				display: flex
+				justify-content: center
+				margin-top: 30px
+				width: 100%
+
+				.btn
+					font-size: 1.1rem
+					font-style: italic
+					font-weight: bold
+					line-height: 1
+					width: 210px
+
+				button.btn
+					padding: .6rem 2rem
+					white-space: normal
+
+				a.btn
+					letter-spacing: 1px
+					margin-left: 20px
+					padding: 1.13rem 3rem
