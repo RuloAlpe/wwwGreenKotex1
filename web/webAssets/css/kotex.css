@@ -32,134 +32,6 @@
 	----------------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900");
-@font-face {
-  font-family: 'Nexa Black Italic';
-  src: url("../fonts/nexar/Nexa-Black-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Black-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Black-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Black-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Black-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Black-Italic.svg#Nexa-Black-Italic") format("svg");
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Regular Italic';
-  src: url("../fonts/nexar/Nexa-Regular-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Regular-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Regular-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Regular-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Regular-Italic.svg#Nexa-Regular-Italic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Bold Italic';
-  src: url("../fonts/nexar/Nexa-Bold-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Bold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Bold-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Bold-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Bold-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Bold-Italic.svg#Nexa-Bold-Italic") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Book Italic';
-  src: url("../fonts/nexar/Nexa-Book-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Book-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Book-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Book-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Book-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Book-Italic.svg#Nexa-Book-Italic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Light Italic';
-  src: url("../fonts/nexar/Nexa-Light-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Light-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Light-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Light-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Light-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Light-Italic.svg#Nexa-Light-Italic") format("svg");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Regular';
-  src: url("../fonts/nexar/NexaRegular.eot");
-  src: url("../fonts/nexar/NexaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/NexaRegular.woff2") format("woff2"), url("../fonts/nexar/NexaRegular.woff") format("woff"), url("../fonts/nexar/NexaRegular.ttf") format("truetype"), url("../fonts/nexar/NexaRegular.svg#NexaRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa Light';
-  src: url("../fonts/nexar/Nexa-Light.eot");
-  src: url("../fonts/nexar/Nexa-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Light.woff2") format("woff2"), url("../fonts/nexar/Nexa-Light.woff") format("woff"), url("../fonts/nexar/Nexa-Light.ttf") format("truetype"), url("../fonts/nexar/Nexa-Light.svg#Nexa-Light") format("svg");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa Book';
-  src: url("../fonts/nexar/Nexa-Book.eot");
-  src: url("../fonts/nexar/Nexa-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Book.woff2") format("woff2"), url("../fonts/nexar/Nexa-Book.woff") format("woff"), url("../fonts/nexar/Nexa-Book.ttf") format("truetype"), url("../fonts/nexar/Nexa-Book.svg#Nexa-Book") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa Bold';
-  src: url("../fonts/nexar/Nexa-Bold.eot");
-  src: url("../fonts/nexar/Nexa-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Bold.woff2") format("woff2"), url("../fonts/nexar/Nexa-Bold.woff") format("woff"), url("../fonts/nexar/Nexa-Bold.ttf") format("truetype"), url("../fonts/nexar/Nexa-Bold.svg#Nexa-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa Thin';
-  src: url("../fonts/nexar/NexaThin.eot");
-  src: url("../fonts/nexar/NexaThin.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/NexaThin.woff2") format("woff2"), url("../fonts/nexar/NexaThin.woff") format("woff"), url("../fonts/nexar/NexaThin.ttf") format("truetype"), url("../fonts/nexar/NexaThin.svg#NexaThin") format("svg");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa XBold Italic';
-  src: url("../fonts/nexar/Nexa-XBold-Italic.eot");
-  src: url("../fonts/nexar/Nexa-XBold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-XBold-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-XBold-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-XBold-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-XBold-Italic.svg#Nexa-XBold-Italic") format("svg");
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Black';
-  src: url("../fonts/nexar/NexaBlack.eot");
-  src: url("../fonts/nexar/NexaBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/NexaBlack.woff2") format("woff2"), url("../fonts/nexar/NexaBlack.woff") format("woff"), url("../fonts/nexar/NexaBlack.ttf") format("truetype"), url("../fonts/nexar/NexaBlack.svg#NexaBlack") format("svg");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa Thin Italic';
-  src: url("../fonts/nexar/Nexa-Thin-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Thin-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Thin-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Thin-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Thin-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Thin-Italic.svg#Nexa-Thin-Italic") format("svg");
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa Heavy Italic';
-  src: url("../fonts/nexar/Nexa-Heavy-Italic.eot");
-  src: url("../fonts/nexar/Nexa-Heavy-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-Heavy-Italic.woff2") format("woff2"), url("../fonts/nexar/Nexa-Heavy-Italic.woff") format("woff"), url("../fonts/nexar/Nexa-Heavy-Italic.ttf") format("truetype"), url("../fonts/nexar/Nexa-Heavy-Italic.svg#Nexa-Heavy-Italic") format("svg");
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Nexa XBold';
-  src: url("../fonts/nexar/Nexa-XBold.eot");
-  src: url("../fonts/nexar/Nexa-XBold.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/Nexa-XBold.woff2") format("woff2"), url("../fonts/nexar/Nexa-XBold.woff") format("woff"), url("../fonts/nexar/Nexa-XBold.ttf") format("truetype"), url("../fonts/nexar/Nexa-XBold.svg#Nexa-XBold") format("svg");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa Heavy';
-  src: url("../fonts/nexar/NexaHeavy.eot");
-  src: url("../fonts/nexar/NexaHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/nexar/NexaHeavy.woff2") format("woff2"), url("../fonts/nexar/NexaHeavy.woff") format("woff"), url("../fonts/nexar/NexaHeavy.ttf") format("truetype"), url("../fonts/nexar/NexaHeavy.svg#NexaHeavy") format("svg");
-  font-weight: 900;
-  font-style: normal;
-}
-
 /*!
 	-----------------------------------------------------------------------------
 
@@ -181,12 +53,12 @@
 
 ::-moz-selection {
   color: #FFF;
-  background: rgba(255, 0, 0, 0.4);
+  background: rgba(0, 0, 255, 0.4);
 }
 
 ::selection {
   color: #FFF;
-  background: rgba(255, 0, 0, 0.4);
+  background: rgba(0, 0, 255, 0.4);
 }
 
 * {
@@ -196,16 +68,16 @@
 
 body {
   background-color: #FFF;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #343333;
+  color: #000;
 }
 
 /* a */
 a {
-  color: #343333;
-  font-family: "Nexa Thin";
+  color: #000;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
@@ -220,7 +92,7 @@ a {
 }
 
 a:hover {
-  color: #4e4c4c;
+  color: #000;
   text-decoration: none;
   -ms-transition: color 0.3s ease-out;
   -moz-transition: color 0.3s ease-out;
@@ -255,7 +127,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Nexa Book";
+  font-family: "Oswald", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -305,7 +177,7 @@ blockquote {
 
 blockquote {
   font-style: italic;
-  color: #4e4c4c;
+  color: #1a1a1a;
   padding: 40px 20px;
   text-align: center;
 }
@@ -337,7 +209,7 @@ blockquote {
 /*  Titles
 	@mixin =============================================== */
 .title-gral {
-  color: #343333;
+  color: #000;
   margin-bottom: 40px;
   text-align: left;
 }
@@ -350,7 +222,7 @@ blockquote {
 }
 
 .title-gral hr {
-  background-color: #343333;
+  background-color: #000;
   height: 1px;
   margin: 0 auto 19px;
   width: 136px;
@@ -415,60 +287,6 @@ blockquote {
   opacity: .65;
 }
 
-.btn-primary {
-  color: #FFF;
-  background-color: #4E83DA;
-  border-color: #4E83DA;
-}
-
-.btn-primary:hover {
-  color: #FFF;
-  background-color: #326fd4;
-  border-color: #326fd4;
-}
-
-.btn-primary.focus,
-.btn-primary:focus {
-  color: #FFF;
-  background-color: #78a1e3;
-  border-color: #78a1e3;
-}
-
-.btn-primary.active,
-.btn-primary:active {
-  color: #FFF;
-  background-color: #78a1e3;
-  border-color: #78a1e3;
-  background-image: none;
-}
-
-.btn-secundary {
-  color: #FFF;
-  background-color: #6779EF;
-  border-color: #6779EF;
-}
-
-.btn-secundary:hover {
-  color: #FFF;
-  background-color: #485eec;
-  border-color: #485eec;
-}
-
-.btn-secundary.focus,
-.btn-secundary:focus {
-  color: #FFF;
-  background-color: #95a2f4;
-  border-color: #95a2f4;
-}
-
-.btn-secundary.active,
-.btn-secundary:active {
-  color: #FFF;
-  background-color: #95a2f4;
-  border-color: #95a2f4;
-  background-image: none;
-}
-
 /*  Modal
 	@mixin =============================================== */
 .modal {
@@ -515,7 +333,7 @@ blockquote {
 }
 
 .modal .modal-content .modal-close {
-  color: #343333;
+  color: #000;
   font-size: 1.2rem;
   font-weight: bold;
   position: absolute;
@@ -524,7 +342,7 @@ blockquote {
 }
 
 .modal .modal-content .modal-close:hover, .modal .modal-content .modal-close:focus {
-  color: #4e4c4c;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
@@ -537,7 +355,7 @@ blockquote {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    color: #343333;
+    color: #000;
     display: flex;
     height: 23px;
     justify-content: center;
@@ -553,7 +371,7 @@ blockquote {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    color: #343333;
+    color: #000;
     display: flex;
     height: 23px;
     justify-content: center;
