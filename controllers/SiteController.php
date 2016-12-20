@@ -143,10 +143,12 @@ class SiteController extends Controller
     	
     	if($gerente->load ( Yii::$app->request->post () )){
     		$gerente->save();
+    		$idGerente = $gerente->id_gerente;
     		$entVendedores = new EntVendedores();
     		
     		return $this->render('registroVendedores',[
-    				'vendedor' => $entVendedores
+    				'vendedor' => $entVendedores,
+    				'idGerente' => $idGerente
     		]);
     	}
     	
@@ -161,19 +163,23 @@ class SiteController extends Controller
     	//$this->layout = false;
     	
     	$vendedor = new EntVendedores();
+    	$idGerente = 0;
     	
     	if($vendedor->load ( Yii::$app->request->post () )){
-    		$vendedor->id_gerente = 1;
+    		//$vendedor->id_gerente = 1;
     		$vendedor->save();
+    		$idGerente = $vendedor->id_gerente;
     		$vendedor = new EntVendedores();
     			
     		return $this->render('registroVendedores',[
-    				'vendedor' => $vendedor
+    				'vendedor' => $vendedor,
+    				'idGerente' => $idGerente
     		]);
     	}
     	
     	return $this->render('registroVendedores',[
-    			'vendedor' => $vendedor
+    			'vendedor' => $vendedor,
+    			'idGerente' => $idGerente
     	]);
     }
 }

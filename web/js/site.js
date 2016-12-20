@@ -3,13 +3,22 @@
  */
 var basePath = "http://localhost/wwwGreenKotex1/web/site/";
 
-$('.js-submit-vendedores').on("click", function(e){
-	e.preventDefault();
-	$.ajax({
-		url: basePath + "registro-vendedores",
-		type: 'post',
-		success: function(){
-			console.log("success");	
-		}
-	});
-});
+$(document).ready(
+	    $('#from-verdedores').on('beforeSubmit', function(){
+	        var form = $(this);
+	        if(form.find('.has-error').length) {
+	            return false;
+	        }
+
+	        $.ajax({
+	            url: form.attr('action'),
+	            type: 'post',
+	            data: form.serialize(),
+	            success: function() {
+	            	document.getElementById("from-verdedores").reset();
+	            }
+	        });
+	        return false;
+	    })
+);
+
