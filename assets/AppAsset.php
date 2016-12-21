@@ -14,15 +14,24 @@ use yii\web\AssetBundle;
  * @since 2.0
  */
 class AppAsset extends AssetBundle
-{
+    {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+        'webAssets/plugins/animsition/css/animsition.min.css',
+        'webAssets/plugins/ladda/css/ladda.min.css',
         'webAssets/css/kotex.css',
     ];
     public $js = [
-    	'js/site.js',
-    	'js/sweetalert.min.js'
+// <<<<<<< HEAD
+//     	'js/site.js',
+//     	'js/sweetalert.min.js'
+// =======
+        'webAssets/plugins/animsition/js/animsition.min.js',
+        'webAssets/plugins/ladda/js/spin.min.js',
+        'webAssets/plugins/ladda/js/ladda.min.js',
+    	'js/site.js'
+// >>>>>>> origin/master
     ];
     public $depends = [
         'yii\web\YiiAsset',
