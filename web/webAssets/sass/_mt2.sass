@@ -21,6 +21,10 @@
 	overflow: hidden
 	position: relative
 
+	+respond-to(xs)
+		height: auto
+		min-height: 100vh
+
 	.logo
 		display: flex
 		left: 110px
@@ -28,15 +32,129 @@
 		top: 20px
 		z-index: 4
 
+		+respond-to(sm)
+			height: 232px
+			left: 70px
+			width: 280px
+			img
+				width: 100%
+
+		+respond-to(xs)
+			height: 100px
+			left: 30px
+			top: 10px
+			width: 122px
+			img
+				width: 100%
+
+		+respond-to(xx)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+
+
 	.avion
 		position: absolute
 		right: 30px
 		top: 50px
 
+		+respond-to(sm)
+			right: 20px
+
+		+respond-to(xs)
+			height: 41px
+			right: 10px
+			top: 30px
+			width: 103px
+
 	.productos
 		bottom: -64px
 		left: -106px
 		position: absolute
+
+		// +respond-to(md)
+		// 	height: 404px
+		// 	width: 500px
+
+		// +respond-to(sm)
+		// 	height: 330px
+		// 	width: 408px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 300px
+			width: 213px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			height: 300px
+			width: 213px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: -34px
+			height: 300px
+			left: -76px
+			width: 213px
+		
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 300px
+			width: 213px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			height: 300px
+			opacity: .6
+			width: 213px
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			height: 250px
+			left: -60px
+			opacity: .6
+			width: 177px
 
 	.mt2-cont
 		// background-color: rgba(red,.2)
@@ -45,10 +163,24 @@
 		max-width: 560px
 		z-index: 3
 
+		+respond-to(xs)
+			padding: 20px
+
+		+respond-to(xx)
+			padding: 10px
+
 		h2
 			color: $white
 			font-size: 3rem
 			margin-bottom: 40px
+			
+			+respond-to(sm)
+				margin-bottom: 20px
+
+			+respond-to(xs)
+				font-size: 1.35rem
+				margin-bottom: 10px
+				text-align: right
 
 		form
 			align-items: center
@@ -66,6 +198,9 @@
 				margin-bottom: 20px
 				text-align: right
 				width: 100%
+
+				+respond-to(xs)
+					margin-bottom: 7px
 
 				label
 					color: $white
@@ -85,6 +220,8 @@
 						outline: none
 
 				.help-block
+					color: red
+					font-size: .8rem
 					width: 100%
 
 
@@ -97,6 +234,9 @@
 					position: relative
 					text-align: left
 					width: 45%
+
+					+respond-to(xs)
+						margin-top: 10px
 
 					label
 						margin-bottom: 18px
@@ -179,3 +319,9 @@
 				font-style: italic
 				font-weight: bold
 				margin-top: 30px
+				
+				+respond-to(sm)
+					margin-left: auto
+
+				+respond-to(xs)
+					margin-left: auto

@@ -576,8 +576,8 @@ blockquote {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .mt1 .premios {
-    height: 359px;
-    width: 444px;
+    height: 330px;
+    width: 408px;
   }
 }
 
@@ -590,6 +590,7 @@ blockquote {
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
   .mt1 .premios {
+    background-color: purple;
     height: 121px;
     width: 150px;
   }
@@ -597,6 +598,7 @@ blockquote {
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
   .mt1 .premios {
+    background-color: yellow;
     height: 221px;
     width: 273px;
   }
@@ -617,7 +619,7 @@ blockquote {
   }
 }
 
-@media only screen and (max-device-width: 350px) and (orientation: landscape) {
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
   .mt1 .premios {
     background-color: blue;
     height: 121px;
@@ -726,6 +728,13 @@ blockquote {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .mt2 {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
 .mt2 .logo {
   display: flex;
   left: 110px;
@@ -734,16 +743,185 @@ blockquote {
   z-index: 4;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt2 .logo {
+    height: 232px;
+    left: 70px;
+    width: 280px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .logo {
+    height: 100px;
+    left: 30px;
+    top: 10px;
+    width: 122px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt2 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt2 .logo img {
+    width: 100%;
+  }
+}
+
 .mt2 .avion {
   position: absolute;
   right: 30px;
   top: 50px;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt2 .avion {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .avion {
+    height: 41px;
+    right: 10px;
+    top: 30px;
+    width: 103px;
+  }
+}
+
 .mt2 .productos {
   bottom: -64px;
   left: -106px;
   position: absolute;
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt2 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt2 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt2 .productos {
+    bottom: -34px;
+    height: 300px;
+    left: -76px;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt2 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt2 .productos {
+    height: 300px;
+    opacity: .6;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt2 .productos {
+    height: 250px;
+    left: -60px;
+    opacity: .6;
+    width: 177px;
+  }
 }
 
 .mt2 .mt2-cont {
@@ -753,10 +931,36 @@ blockquote {
   z-index: 3;
 }
 
+@media screen and (max-width: 767px) {
+  .mt2 .mt2-cont {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mt2 .mt2-cont {
+    padding: 10px;
+  }
+}
+
 .mt2 .mt2-cont h2 {
   color: #FFF;
   font-size: 3rem;
   margin-bottom: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt2 .mt2-cont h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .mt2-cont h2 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    text-align: right;
+  }
 }
 
 .mt2 .mt2-cont form {
@@ -774,6 +978,12 @@ blockquote {
   margin-bottom: 20px;
   text-align: right;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .mt2-cont form .form-group {
+    margin-bottom: 7px;
+  }
 }
 
 .mt2 .mt2-cont form .form-group label {
@@ -799,6 +1009,8 @@ blockquote {
 }
 
 .mt2 .mt2-cont form .form-group .help-block {
+  color: red;
+  font-size: .8rem;
   width: 100%;
 }
 
@@ -808,6 +1020,12 @@ blockquote {
   position: relative;
   text-align: left;
   width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .mt2-cont form .form-group:nth-child(6), .mt2 .mt2-cont form .form-group:nth-child(7) {
+    margin-top: 10px;
+  }
 }
 
 .mt2 .mt2-cont form .form-group:nth-child(6) label, .mt2 .mt2-cont form .form-group:nth-child(7) label {
@@ -890,6 +1108,18 @@ blockquote {
   font-style: italic;
   font-weight: bold;
   margin-top: 30px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt2 .mt2-cont form .btn {
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .mt2-cont form .btn {
+    margin-left: auto;
+  }
 }
 
 /*!

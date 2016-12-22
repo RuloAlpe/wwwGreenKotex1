@@ -117,21 +117,19 @@
 			width: 500px
 
 		+respond-to(sm)
-			height: 359px
-			width: 444px
-
-		// +respond-to(xs)
-		// 	height: 121px
-		// 	width: 150px
+			height: 330px
+			width: 408px
 
 		// Movil Lg
 		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
 			height: 121px
 			width: 150px
 		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			background-color: purple
 			height: 121px
 			width: 150px
 		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			background-color: yellow
 			height: 221px
 			width: 273px
 		
@@ -143,7 +141,7 @@
 			background-color: red
 			height: 121px
 			width: 150px
-		@media only screen and (max-device-width : 350px) and (orientation : landscape)
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
 			background-color: blue
 			height: 121px
 			width: 150px
