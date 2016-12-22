@@ -20,6 +20,7 @@
 	3.0 - Mesa de trabajo 1
 	4.0 - Mesa de trabajo 2
 	5.0 - Mesa de trabajo 3
+	6.0 - Mesa de trabajo 4
 
 	--------------------------------------------------------
 	*/
@@ -1588,4 +1589,313 @@ blockquote {
   .mt3 .mt3-cont form .form-group-btns a.btn {
     padding: 1rem 1.3rem;
   }
+}
+
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+.mt4 {
+  align-items: center;
+  background-image: url(../images/bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.mt4 .logo {
+  display: flex;
+  left: 90px;
+  position: absolute;
+  top: 10px;
+  z-index: 4;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .mt4 .logo {
+    left: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt4 .logo {
+    height: 232px;
+    left: 70px;
+    width: 280px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 .logo {
+    height: 100px;
+    left: 30px;
+    top: 5px;
+    width: 122px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt4 .logo img {
+    width: 100%;
+  }
+}
+
+.mt4 .avion {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt4 .avion {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 .avion {
+    height: 41px;
+    right: 10px;
+    top: 30px;
+    width: 103px;
+  }
+}
+
+.mt4 .mt4-cont {
+  margin-top: 270px;
+  max-width: 800px;
+  padding-bottom: 50px;
+  position: relative;
+  width: 90%;
+  z-index: 3;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt4 .mt4-cont {
+    margin-top: 270px;
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 .mt4-cont {
+    margin-top: 90px;
+  }
+}
+
+.mt4 .mt4-cont h2 {
+  color: #FFF;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt4 .mt4-cont h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 .mt4-cont h2 {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+}
+
+.mt4 .mt4-cont .mt4-tabla {
+  background-color: #FFF;
+  width: 100%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-head {
+  background-color: #B93C89;
+  display: flex;
+  padding: 16px 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 .mt4-cont .mt4-tabla .mt4-tabla-head {
+    padding: 16px 10px;
+  }
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-head .mt4-tabla-head-td {
+  color: #FFF;
+  word-wrap: break-word;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-head .mt4-tabla-head-td:nth-child(1) {
+  width: 33.33%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-head .mt4-tabla-head-td:nth-child(2) {
+  width: 33.33%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-head .mt4-tabla-head-td:nth-child(3) {
+  width: 33.33%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr {
+  align-items: center;
+  display: flex;
+  padding: 16px 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr {
+    padding: 16px 10px;
+  }
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr:nth-child(even) {
+  background-color: #f8eaf3;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr .mt4-tabla-body-td {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  word-wrap: break-word;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr .mt4-tabla-body-td span {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr .mt4-tabla-body-td:nth-child(1) {
+  width: 33.33%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr .mt4-tabla-body-td:nth-child(2) {
+  width: 33.33%;
+}
+
+.mt4 .mt4-cont .mt4-tabla .mt4-tabla-body .mt4-tabla-body-tr .mt4-tabla-body-td:nth-child(3) {
+  width: 33.33%;
+}
+
+.mt4 .mt4-cont .mt4-botones {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 10px;
+}
+
+.mt4 .mt4-cont .mt4-botones .btn {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.mt4 .mt4-cont .mt4-botones .btn:first-child {
+  margin-right: 20px;
 }
