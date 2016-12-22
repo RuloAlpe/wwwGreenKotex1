@@ -23,41 +23,46 @@ use yii\helpers\Url;
 	<div class="mt3-cont">
 
 		<h2>Registra a tu equipo de ventas</h2>
-
-		<?php
-		$form = ActiveForm::begin ( [
-				'options' => [
-						'enctype' => 'multipart/form-data'
-				],
-				
-				"id" => "from-verdedores",
-				"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['site/registro-vendedores'] )
-		] );
-
-		?>
-			<?= $form->field($vendedor, 'id_gerente')->textInput(['maxlength' => true, 'value' => $idGerente, 'style' => 'display:none'])?>
-			
-			<?= $form->field($vendedor, 'txt_nombre')->textInput(['maxlength' => true])?>
-				
-			<?= $form->field($vendedor, 'txt_apellido')->textInput(['maxlength' => true])?>
-			
-			<?= $form->field($vendedor, 'txt_correo')->textInput(['maxlength' => true])?>
-			
-			<?= $form->field($vendedor, 'num_telefono')->textInput(['maxlength' => true])?>
-
-			<!-- .form-group-btns -->
-			<div class="form-group-btns">
-				
-				<?= Html::submitButton('Resgistrar otro vendedor', array('class' => 'btn btn-primary js-submit-vendedores'))?>
-				<a class="btn btn-primary" href="http://localhost/wwwGreenKotex1/web/site/registro">Terminar</a>
-
-			</div>
-			<!-- end - .form-group-btns -->
-			
-		<?php
-		ActiveForm::end ();
-		?>
 		
+		<?php if($idGerente != 0){ ?>
+		
+			<?php
+			$form = ActiveForm::begin ( [
+					'options' => [
+							'enctype' => 'multipart/form-data'
+					],
+					
+					"id" => "from-verdedores",
+					"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['site/registro-vendedores'] )
+			] );
+	
+			?>
+				<?= $form->field($vendedor, 'id_gerente')->textInput(['maxlength' => true, 'value' => $idGerente, 'style' => 'display:none'])?>
+				
+				<?= $form->field($vendedor, 'txt_nombre')->textInput(['maxlength' => true])?>
+					
+				<?= $form->field($vendedor, 'txt_apellido')->textInput(['maxlength' => true])?>
+				
+				<?= $form->field($vendedor, 'txt_correo')->textInput(['maxlength' => true])?>
+				
+				<?= $form->field($vendedor, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
+	
+				<!-- .form-group-btns -->
+				<div class="form-group-btns">
+					
+					<?= Html::submitButton('Resgistrar otro vendedor', array('class' => 'btn btn-primary js-submit-vendedores'))?>
+					<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
+<!-- 					<a class="btn btn-primary" href="http://localhost/wwwGreenKotex1/web/site/registro">Terminar</a> -->
+	
+				</div>
+				<!-- end - .form-group-btns -->
+				
+			<?php
+			ActiveForm::end ();
+			?>
+		<?php }else{ ?>
+					<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro-gerentes'] ) ?>">Registrase como Gerente</a>
+		<?php  } ?>
 
 	</div>
 	<!-- end - .mt3-cont -->

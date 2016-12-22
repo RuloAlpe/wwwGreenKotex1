@@ -136,10 +136,9 @@ class SiteController extends Controller
 
     public function actionRegistroGerentes(){
     	//$this->layout = false;
-    	
     	$gerente = new EntGerentes();
-    	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
-    	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
+	    $sucursales = new CatSucursal();
+	    $cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
     	
     	if($gerente->load ( Yii::$app->request->post () )){
     		$gerente->save();
@@ -189,5 +188,15 @@ class SiteController extends Controller
     	return $this->render('tablaVendedores',[
     			'vendedores' =>$vendedores
     	]);
+    }
+    
+    public function actionGetSucursales($idC){
+    	//Yii::$app->response->format = Response::FORMAT_JSON;
+    	$sucursales = CatSucursal::find()->where(['id_cadena'=>$idC])->andWhere(['b_habilitado'=>1])->all();
+    	
+    	foreach($sucursales as $sucursal){
+    		echo "<option value='" . $sucursal->id_sucursal . "'>" . $sucursal->txt_nombre . "</option>";
+    	}
+    	//return ['sucursales' => $sucursal];
     }
 }

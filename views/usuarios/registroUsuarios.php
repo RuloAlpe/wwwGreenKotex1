@@ -2,6 +2,7 @@
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use app\models\CatSucursal;
 
 $form = ActiveForm::begin ( [
 		'options' => [
@@ -21,9 +22,9 @@ $form = ActiveForm::begin ( [
 	
 	<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 	
-	<?= $form->field($usuario, 'id_sucursal')->dropDownList(ArrayHelper::map($sucursales, 'id_sucursal', 'txt_nombre'))?>
-	
-	<?= $form->field($usuario, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'))?>
+	<?= $form->field($usuario, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
+			
+	<?= $form->field($usuario, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
 	
 	<?= $form->field($usuario, 'txt_ticket')->textInput(['maxlength' => true])?>
 	

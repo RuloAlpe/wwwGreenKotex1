@@ -146,4 +146,14 @@ class UsuariosController extends Controller
     			'cadenas' => $cadenas
     	]);
     }
+    
+    public function actionGetSucursales($idC){
+    	//Yii::$app->response->format = Response::FORMAT_JSON;
+    	$sucursales = CatSucursal::find()->where(['id_cadena'=>$idC])->andWhere(['b_habilitado'=>1])->all();
+    	 
+    	foreach($sucursales as $sucursal){
+    		echo "<option value='" . $sucursal->id_sucursal . "'>" . $sucursal->txt_nombre . "</option>";
+    	}
+    	//return ['sucursales' => $sucursal];
+    }
 }
