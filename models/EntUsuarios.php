@@ -8,10 +8,16 @@ use Yii;
  * This is the model class for table "ent_usuarios".
  *
  * @property string $id_usuario
- * @property string $id_tipo_usuario
  * @property string $txt_nombre
+ * @property string $txt_apellido
+ * @property string $txt_correo
+ * @property string $num_telefono
+ * @property string $id_cadena
+ * @property string $id_sucursal
+ * @property string $txt_ticket
  *
- * @property CatTiposUsuarios $idTipoUsuario
+ * @property CatCadena $idCadena
+ * @property CatSucursal $idSucursal
  */
 class EntUsuarios extends \yii\db\ActiveRecord
 {
@@ -29,10 +35,14 @@ class EntUsuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_tipo_usuario', 'txt_nombre'], 'required'],
-            [['id_tipo_usuario'], 'integer'],
-            [['txt_nombre'], 'string', 'max' => 50],
-            [['id_tipo_usuario'], 'exist', 'skipOnError' => true, 'targetClass' => CatTiposUsuarios::className(), 'targetAttribute' => ['id_tipo_usuario' => 'id_tipo_usuario']],
+            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono', 'id_cadena', 'id_sucursal', 'txt_ticket'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
+            [['id_cadena', 'id_sucursal'], 'integer'],
+            [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
+        	['txt_correo', 'email', 'message'=>'Formato de email no es valido'],
+            [['num_telefono'], 'string', 'max' => 10],
+            [['txt_ticket'], 'string', 'max' => 100],
+            [['id_cadena'], 'exist', 'skipOnError' => true, 'targetClass' => CatCadena::className(), 'targetAttribute' => ['id_cadena' => 'id_cadena']],
+            [['id_sucursal'], 'exist', 'skipOnError' => true, 'targetClass' => CatSucursal::className(), 'targetAttribute' => ['id_sucursal' => 'id_sucursal']],
         ];
     }
 
@@ -43,16 +53,29 @@ class EntUsuarios extends \yii\db\ActiveRecord
     {
         return [
             'id_usuario' => 'Id Usuario',
-            'id_tipo_usuario' => 'Id Tipo Usuario',
-            'txt_nombre' => 'Txt Nombre',
+            'txt_nombre' => 'Nombre',
+            'txt_apellido' => 'Apellido',
+            'txt_correo' => 'Correo',
+            'num_telefono' => 'Telefono',
+            'id_cadena' => 'Cadena',
+            'id_sucursal' => 'Sucursal',
+            'txt_ticket' => 'Ticket',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdTipoUsuario()
+    public function getIdCadena()
     {
-        return $this->hasOne(CatTiposUsuarios::className(), ['id_tipo_usuario' => 'id_tipo_usuario']);
+        return $this->hasOne(CatCadena::className(), ['id_cadena' => 'id_cadena']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdSucursal()
+    {
+        return $this->hasOne(CatSucursal::className(), ['id_sucursal' => 'id_sucursal']);
     }
 }

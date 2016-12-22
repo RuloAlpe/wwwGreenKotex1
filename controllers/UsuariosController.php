@@ -8,6 +8,8 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\CatSucursal;
+use app\models\CatCadena;
 
 /**
  * UsuariosController implements the CRUD actions for EntUsuarios model.
@@ -125,5 +127,33 @@ class UsuariosController extends Controller
     public function actionRegistro(){
     	
     	return $this->render('registro');
+    }
+    
+    public function actionRegistroUsuarios(){
+    	$usuarios = new EntUsuarios();
+    	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
+    	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
+    	
+    	if($usuarios->load ( Yii::$app->request->post () )){
+    		$usuarios->save();
+    	
+    		return $this->render('felicidades');
+    	}
+    	
+    	return $this->render('registroUsuarios',[
+    			'usuario' => $usuarios,
+    			'sucursales' => $sucursales,
+    			'cadenas' => $cadenas
+    	]);
+    }
+    
+    public function actionGetSucursales($idC){
+    	//Yii::$app->response->format = Response::FORMAT_JSON;
+    	$sucursales = CatSucursal::find()->where(['id_cadena'=>$idC])->andWhere(['b_habilitado'=>1])->all();
+    	 
+    	foreach($sucursales as $sucursal){
+    		echo "<option value='" . $sucursal->id_sucursal . "'>" . $sucursal->txt_nombre . "</option>";
+    	}
+    	//return ['sucursales' => $sucursal];
     }
 }

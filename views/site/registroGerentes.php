@@ -3,6 +3,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
+use app\models\CatSucursal;
 ?>
 
 <!-- .mt2 -->
@@ -36,11 +37,11 @@ use yii\helpers\Url;
 			
 			<?= $form->field($gerente, 'txt_correo')->textInput(['maxlength' => true])?>
 			
-			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => true])?>
+			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
 			
-			<?= $form->field($gerente, 'id_sucursal')->dropDownList(ArrayHelper::map($sucursales, 'id_sucursal', 'txt_nombre'))?>
+			<?= $form->field($gerente, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
 			
-			<?= $form->field($gerente, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'))?>
+			<?= $form->field($gerente, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
 			
 			<?= Html::submitButton('Enviar', array('class' => 'btn btn-primary js-submit-gerentes'))?>
 
