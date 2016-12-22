@@ -2,7 +2,7 @@
  * Kotex.js
  */
 
-var basePath = "http://localhost/wwwGreenKotex1/web/site/";
+var basePath = "http://localhost/wwwGreenKotex1/web/";
 var valor = true;
 
 $(document).ready(function(){
@@ -34,7 +34,7 @@ $(document).ready(function(){
 			data: form.serialize(),
 			success: function() {
 				if(!valor){
-            		window.location.href = basePath + 'registro';
+            		window.location.href = basePath + 'site/registro';
             	}
 				swal("Good job!", "You clicked the button!", "success")
 				document.getElementById("from-verdedores").reset();
@@ -83,7 +83,7 @@ $('#entgerentes-id_cadena').on('change', function(){
 	var idC = $(this).val();
 	console.log(idC);
 	$.ajax({
-		url: basePath + "get-sucursales?idC="+idC,
+		url: basePath + "site/get-sucursales?idC="+idC,
 		type: "get",
 		success: function(data){
 			$('select#entgerentes-id_sucursal').html(data);
@@ -91,15 +91,69 @@ $('#entgerentes-id_cadena').on('change', function(){
 	});
 });
 
-$('#entusuarios-id_cadena').on('change', function(){
+$('#enttickets-id_cadena').on('change', function(){
 	var idC = $(this).val();
 	console.log(idC);
 	$.ajax({
-		url: basePath + "get-sucursales?idC="+idC,
+		url: basePath + "usuarios/get-sucursales?idC="+idC,
 		type: "get",
 		success: function(data){
-			$('select#entusuarios-id_sucursal').html(data);
+			$('select#enttickets-id_sucursal').html(data);
 		}
+	});
+});
+
+$(document).ready(function(){
+
+	/**
+	 * Animsition
+	 */
+	$('.animsition').animsition();
+
+	/**
+	 * Ladda
+	 */
+	// $('#registro-btn').click(function(){
+	// 	// e.preventDefault();
+	// 	var l = Ladda.create(this);
+	// 	l.start();
+	// });
+
+
+	$('#from-ticket').on('beforeSubmit', function(){
+		var form = $(this);
+		if(form.find('.has-error').length) {
+			return false;
+		}
+
+		$.ajax({
+			url: form.attr('action'),
+			type: 'post',
+			data: form.serialize(),
+			success: function() {
+				if(!valor){
+            		window.location.href = basePath + 'usuarios/registro';
+            	}
+				swal("Good job!", "You clicked the button!", "success")
+				document.getElementById("from-ticket").reset();
+			}
+		});
+		return false;
+	});
+
+	
+});
+
+$(document).ready(function(){
+	$("#sesion-btn-ticket").on("click", function(e){
+		e.preventDefault();
+		valor = true;
+		$('#from-ticket').submit();
+	});
+	$("#terminar_ticket").on("click", function(e){
+		e.preventDefault();
+		valor = false;
+		$('#from-ticket').submit();
 	});
 });
 

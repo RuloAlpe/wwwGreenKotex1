@@ -51,7 +51,7 @@ use yii\helpers\Url;
 				<div class="form-group-btns">
 					
 					<?= Html::submitButton('Resgistrar otro vendedor', array('class' => 'btn btn-primary js-submit-vendedores'))?>
-					<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
+					<a id="submit_terminar" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
 <!-- 					<a class="btn btn-primary" href="http://localhost/wwwGreenKotex1/web/site/registro">Terminar</a> -->
 	
 				</div>

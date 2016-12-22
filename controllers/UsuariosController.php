@@ -10,6 +10,8 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\CatSucursal;
 use app\models\CatCadena;
+use app\models\EntTickets;
+use app\models\RelUsuarioTickets;
 
 /**
  * UsuariosController implements the CRUD actions for EntUsuarios model.
@@ -133,9 +135,15 @@ class UsuariosController extends Controller
     	$usuarios = new EntUsuarios();
     	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
     	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
+    	$ticket = new EntTickets();
     	
-    	if($usuarios->load ( Yii::$app->request->post () )){
+    	if($usuarios->load ( Yii::$app->request->post () ) && $ticket->load ( Yii::$app->request->post () )){
     		$usuarios->save();
+    		$ticket->save();
+    		$relacion = new RelUsuarioTickets();
+    		$relacion->id_usuario = $usuarios->id_usuario;
+    		$relacion->id_ticket = $ticket->id_ticket;
+    		$relacion->save();
     	
     		return $this->render('felicidades');
     	}
@@ -143,7 +151,8 @@ class UsuariosController extends Controller
     	return $this->render('registroUsuarios',[
     			'usuario' => $usuarios,
     			'sucursales' => $sucursales,
-    			'cadenas' => $cadenas
+    			'cadenas' => $cadenas,
+    			'ticket' => $ticket
     	]);
     }
     
@@ -155,5 +164,46 @@ class UsuariosController extends Controller
     		echo "<option value='" . $sucursal->id_sucursal . "'>" . $sucursal->txt_nombre . "</option>";
     	}
     	//return ['sucursales' => $sucursal];
+    }
+    
+    public function actionAbrirSesion(){
+    	 
+    	return $this->render('abrirSesion');
+    }
+    
+    public function actionGuardarTicket(){
+    	$correo = $_POST['email-usuario'];
+    	$buscar = EntUsuarios::find()->where(['txt_correo'=>$correo])->one();
+    	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
+    	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
+    	$ticket = new EntTickets();
+    
+    	if($buscar){
+    		 
+    		return $this->render('registroTickets',[
+    			'idUsuario' => $buscar->id_usuario,
+				'ticket' => $ticket,
+    			'sucursales' => $sucursales,
+    			'cadenas' => $cadenas
+    		]);
+    	}
+    	 
+    	return $this->render('abrirSesion');
+    }
+    
+    public function actionGuardarRelacion($id = 0){
+    	if($id != 0){
+    		$ticket = new EntTickets();
+    		if($ticket->load ( Yii::$app->request->post () )){
+    			$ticket->save();
+    			$rel = new RelUsuarioTickets();
+    			$rel->id_usuario = $id;
+    			$rel->id_ticket = $ticket->id_ticket;
+    			$rel->save();
+    			
+    			return $this->render('felicidades');
+    		}
+    		
+    	}
     }
 }
