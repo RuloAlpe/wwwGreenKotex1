@@ -1145,6 +1145,13 @@ blockquote {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .mt3 {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
 .mt3 .logo {
   display: flex;
   left: 200px;
@@ -1153,10 +1160,132 @@ blockquote {
   z-index: 4;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt3 .logo {
+    height: 232px;
+    left: 70px;
+    width: 280px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt3 .logo {
+    height: 100px;
+    left: 30px;
+    top: 10px;
+    width: 122px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt3 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .mt3 .logo img {
+    width: 100%;
+  }
+}
+
 .mt3 .avion {
   position: absolute;
   right: 30px;
   top: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt3 .avion {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt3 .avion {
+    height: 41px;
+    right: 10px;
+    top: 30px;
+    width: 103px;
+  }
 }
 
 .mt3 .productos {
@@ -1165,17 +1294,92 @@ blockquote {
   position: absolute;
 }
 
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt3 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt3 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt3 .productos {
+    bottom: -34px;
+    height: 300px;
+    left: -76px;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt3 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt3 .productos {
+    height: 300px;
+    opacity: .6;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt3 .productos {
+    height: 250px;
+    left: -60px;
+    opacity: .6;
+    width: 177px;
+  }
+}
+
 .mt3 .mt3-cont {
   padding-right: 100px;
   position: relative;
   max-width: 600px;
+  width: 100%;
   z-index: 3;
+}
+
+@media screen and (max-width: 767px) {
+  .mt3 .mt3-cont {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mt3 .mt3-cont {
+    padding: 20px 10px;
+  }
 }
 
 .mt3 .mt3-cont h2 {
   color: #FFF;
   font-size: 3rem;
   margin-bottom: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt3 .mt3-cont h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mt3 .mt3-cont h2 {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+  }
 }
 
 .mt3 .mt3-cont form {
@@ -1193,6 +1397,12 @@ blockquote {
   margin-bottom: 20px;
   text-align: right;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .mt3 .mt3-cont form .form-group {
+    margin-bottom: 7px;
+  }
 }
 
 .mt3 .mt3-cont form .form-group label {
@@ -1224,11 +1434,28 @@ blockquote {
 
 .mt3 .mt3-cont form .form-group-btns {
   align-items: center;
-  background-color: red;
   display: flex;
   justify-content: center;
   margin-top: 30px;
   width: 100%;
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt3 .mt3-cont form .form-group-btns {
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns {
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns {
+    margin-top: 16px;
+  }
 }
 
 .mt3 .mt3-cont form .form-group-btns .btn {
@@ -1236,7 +1463,24 @@ blockquote {
   font-style: italic;
   font-weight: bold;
   line-height: 1;
-  width: 210px;
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt3 .mt3-cont form .form-group-btns .btn {
+    font-size: .95rem;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns .btn {
+    font-size: .95rem;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns .btn {
+    font-size: 1.1rem;
+  }
 }
 
 .mt3 .mt3-cont form .form-group-btns button.btn {
@@ -1244,8 +1488,98 @@ blockquote {
   white-space: normal;
 }
 
+@media (min-width: 1201px) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    width: 210px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    width: 210px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: 1.1rem 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: .6rem 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: .6rem 1rem;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: .5rem 1.3rem;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: .5rem 1.3rem;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns button.btn {
+    padding: 1rem 1.3rem;
+  }
+}
+
 .mt3 .mt3-cont form .form-group-btns a.btn {
   letter-spacing: 1px;
   margin-left: 20px;
   padding: 1.13rem 3rem;
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .mt3 .mt3-cont form .form-group-btns a.btn {
+    padding: 1rem 1.3rem;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns a.btn {
+    padding: 1rem 1.3rem;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns a.btn {
+    padding: 1rem 1.3rem;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt3 .mt3-cont form .form-group-btns a.btn {
+    padding: 1rem 1.3rem;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns a.btn {
+    padding: 1rem 1.3rem;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns a.btn {
+    padding: 1rem 1.3rem;
+  }
 }
