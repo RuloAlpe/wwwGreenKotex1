@@ -145,7 +145,9 @@ class UsuariosController extends Controller
     		$relacion->id_ticket = $ticket->id_ticket;
     		$relacion->save();
     	
-    		return $this->render('felicidades');
+    		return $this->render('felicidades',[
+    				'correo' => $usuarios->txt_correo
+    		]);
     	}
     	
     	return $this->render('registroUsuarios',[
@@ -196,12 +198,17 @@ class UsuariosController extends Controller
     		$ticket = new EntTickets();
     		if($ticket->load ( Yii::$app->request->post () )){
     			$ticket->save();
+    			
     			$rel = new RelUsuarioTickets();
+    			$usuario = EntUsuarios::find()->where(['id_usuario' => $id])->one();
+    			
     			$rel->id_usuario = $id;
     			$rel->id_ticket = $ticket->id_ticket;
     			$rel->save();
     			
-    			return $this->render('felicidades');
+    			return $this->render('felicidades',[
+    				'correo' => $usuario->txt_correo
+    			]);
     		}
     		
     	}

@@ -36,7 +36,7 @@ use yii\helpers\Url;
 				"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['site/registro-gerentes'] ),
 		] );
 		?>
-		<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+		<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
 
 
 		<?php

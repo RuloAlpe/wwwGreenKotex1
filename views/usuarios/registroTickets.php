@@ -19,7 +19,7 @@ $form = ActiveForm::begin ( [
 			
 	<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
 		
-	<?= Html::submitButton('<span class="ladda-label">Guardar</span>', ['id'=>'sesion-btn-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+	<?= Html::submitButton('<span class="ladda-label">Registrar otro ticket</span>', ['id'=>'sesion-btn-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 	<a id="terminar_ticket" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
 <?php
 ActiveForm::end ();
