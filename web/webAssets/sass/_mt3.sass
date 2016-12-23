@@ -217,8 +217,14 @@
 					&:focus
 						outline: none
 
-				.help-block
-					width: 100%
+				&.has-error
+					.help-block
+						background-color: red
+						color: white
+						font-size: .8rem
+						margin-top: 4px
+						padding: 2px 10px
+						width: auto
 
 			.form-group-btns
 				align-items: center
