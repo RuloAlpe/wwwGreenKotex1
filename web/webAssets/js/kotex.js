@@ -6,6 +6,11 @@
  *
  */
 
+// Modal
+var modal = document.getElementById('modal-ayuda');
+var modalOpen = document.getElementById("modal-ayuda-open");
+var modalClose = document.getElementById("modal-ayuda-close");
+
 /**
  * ----------------------------
  *		Document Ready
@@ -15,89 +20,40 @@
  *
  */
 $(document).ready(function(){
-	
-	/**
-	 * Inicializar Animsition
-	 */
-	$('.animsition').animsition();
 
+	/**
+	 * Modal
+	 */
+	// Open Modal
+	$(modalOpen).on("click", function(){
+		modal.style.display = "flex";
+	});
+	// Close Modal
+	$(modalClose).on("click", function(){
+		modal.style.display = "none";
+	});
 
 });
+
 
 /**
- * Click - Menu movil - animaciones
+ * ----------------------------
+ *		Click Window
+ * ----------------------------
+ *
+ * - Modal
+ *
  */
-(function($) {
+window.onclick = function(event) {
+	// Modal - Close
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+}
 
-// slideout nav
-var $navContainer = $('#navContainer');
-var $closeMainNav = $('#closeMainNav');
-
-$closeMainNav.on('click', function(e) {
-	e.preventDefault();
-	if ($navContainer.hasClass('open')) {
-		$navContainer.removeClass('open');
-		$closeMainNav.removeClass('open');
-		$("body").css("overflow-y", "auto");
-	} else {
-		$navContainer.addClass('open');
-		$closeMainNav.addClass('open');
-		$("body").css("overflow-y", "hidden");
+$(window).bind("click touchstart", function(){
+	// Modal - Close
+	if (event.target == modal) {
+		modal.style.display = "none";
 	}
 });
-
-// main navigation animation
-var unitAnimationDelay = 60; // ms
-var $hasSubMenu = $('.hasSubMenu');
-var $backToParent = $('.backToParent');
-var $mainNavigationList = $('#mainNavigationList');
-
-$hasSubMenu.on('click', function(e) {
-	e.preventDefault();
-
-	var $currentMenu = $(this).parent().parent();
-	var subMenuId = $(this).data('menu');
-	var $subMenu = $('#' + subMenuId);
-
-	$currentMenu.addClass('animate-outToLeft');
-	$subMenu.addClass('animate-inFromRight');
-
-	$currentMenu.children().last().on('webkitAnimationEnd MSAnimationEnd oAnimationEnd animationend', function() {
-		$currentMenu.removeClass('animate-outToLeft current');
-
-	});
-
-	$subMenu.children().last().on('webkitAnimationEnd MSAnimationEnd oAnimationEnd animationend', function() {
-		$subMenu.removeClass('animate-inFromRight').addClass('current');
-	});
-
-});
-
-
-$backToParent.on('click', function(e) {
-	e.preventDefault();
-
-	var $currentMenu = $(this).parent().parent();
-
-	$currentMenu.addClass('animate-outToRight');
-	$mainNavigationList.addClass('animate-inFromLeft');
-	$currentMenu.children().last().on('webkitAnimationEnd MSAnimationEnd oAnimationEnd animationend', function() {
-		$currentMenu.removeClass('animate-outToRight current');
-	});
-	$mainNavigationList.children().last().on('webkitAnimationEnd MSAnimationEnd oAnimationEnd animationend', function() {
-		$mainNavigationList.removeClass('animate-inFromLeft').addClass('current');
-	});
-});
-
-$('.mainNavigationList').each(function() {
-	var i = 0;
-	$(this).children().each(function() {
-		var delay = parseInt(unitAnimationDelay * i);
-		var item = $(this)[0];
-		item.style.WebkitAnimationDelay = item.style.animationDelay = delay + 'ms';
-		i++;
-	});
-});
-
-})(jQuery);
-

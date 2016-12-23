@@ -1,0 +1,322 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	3.0 - Mesa de Trabajo 1
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+
+.ur1
+	align-items: center
+	background-image: url(../images/bg.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	height: 100vh
+	overflow: hidden
+	position: relative
+
+	+respond-to(lg)
+		justify-content: flex-end
+
+	+respond-to(md)
+		justify-content: flex-end
+
+	+respond-to(sm)
+		justify-content: flex-end
+
+	// Movil Lg
+	@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+		flex-direction: column
+		justify-content: center
+	@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+		flex-direction: column
+		justify-content: center
+	@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+		flex-direction: column
+		justify-content: center
+
+	// Movil Xs
+	@media only screen and (max-device-width : 350px)
+		flex-direction: column
+		justify-content: center
+	@media only screen and (max-device-width : 350px) and (orientation : portrait)
+		flex-direction: column
+		justify-content: center
+	@media only screen and (max-device-width : 350px) and (orientation : landscape)
+		flex-direction: column
+		justify-content: center
+
+	.logo
+		display: flex
+		left: 10px
+		position: absolute
+		top: 10px
+
+		+respond-to(sm)
+			height: 232px
+			width: 280px
+			img
+				width: 100%
+
+		+respond-to(xs)
+			height: 100px
+			width: 122px
+			img
+				width: 100%
+
+	.avion
+		position: absolute
+		right: 90px
+		top: 50px
+		
+		+respond-to(md)
+			right: 30px
+
+		+respond-to(sm)
+			right: 20px
+
+		+respond-to(xs)
+			height: 41px
+			right: 10px
+			top: 30px
+			width: 103px
+
+	.pavimento
+		bottom: -68px
+		left: 0
+		position: absolute
+		right: 0
+		width: 100%
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			bottom: -30px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			bottom: -30px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: -58px
+			opacity: .5
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			bottom: -18px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			bottom: -18px
+		@media only screen and (max-device-width : 350px) and (orientation : landscape)
+			bottom: -58px
+			opacity: .5
+
+	.premios
+		bottom: 10px
+		left: 4px
+		position: absolute
+
+		+respond-to(md)
+			height: 404px
+			width: 500px
+
+		+respond-to(sm)
+			height: 330px
+			width: 408px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 121px
+			width: 150px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			// background-color: purple
+			height: 121px
+			width: 150px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			// background-color: yellow
+			height: 221px
+			opacity: .8
+			width: 273px
+		
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 121px
+			width: 150px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			// background-color: red
+			height: 121px
+			width: 150px
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			// background-color: blue
+			height: 121px
+			opacity: .8
+			width: 150px
+
+	h2.title
+		// background-color: red
+		color: $white
+		font-size: 2.5rem
+		
+		
+
+		.title-kotex
+			font-size: 3rem
+			font-style: italic
+			font-weight: 700
+			text-align: left
+
+			+respond-to(xs)
+				font-size: 2rem
+
+			+respond-to(xx)
+				font-size: 1.5rem
+
+		.title-purple
+			color: #B93C89
+			display: block
+			font-style: italic
+			font-weight: 700
+			text-align: right
+
+		.title-uppercase
+			display: block
+			font-weight: 500
+			text-align: center
+			text-transform: uppercase
+		
+		+respond-to(lg)
+			left: 50%
+			margin-left: -250px
+			position: absolute
+			top: 30px
+			width: 430px
+
+		+respond-to(md)
+			left: 50%
+			margin-left: -250px
+			position: absolute
+			top: 30px
+			width: 430px
+
+		+respond-to(md)
+			margin-left: -200px
+			position: absolute
+			width: 430px
+
+		+respond-to(sm)
+			margin-left: -145px
+			position: absolute
+			top: 190px
+			width: 430px
+		
+		+respond-to(xs)
+			font-size: 1.5rem
+			margin-bottom: 30px
+			position: relative
+		
+		+respond-to(xx)
+			font-size: 1.1rem
+			margin-bottom: 30px
+			position: relative
+
+	.acepto-terminos-condiciones
+		// background-color: red
+		bottom: 20px
+		position: absolute
+		right: 30px
+
+		p
+			color: $white
+			font-size: 1.1rem
+			margin-bottom: 0
+
+
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			bottom: 8px
+			right: 20px
+			p
+				font-size: .9rem
+
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: 4px
+			right: auto
+			left: 20px
+			p
+				font-size: .9rem
+
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			bottom: 8px
+			right: 20px
+			p
+				font-size: .8rem
+
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			bottom: 4px
+			right: auto
+			left: 20px
+			p
+				font-size: .8rem
+
+	.ur1-cont
+		// background-color: rgba(red,.2)
+		padding-right: 70px
+		position: relative
+		z-index: 3
+
+		+respond-to(xs)
+			padding-left: 20px
+			padding-right: 20px
+
+		+respond-to(xx)
+			padding-left: 20px
+			padding-right: 20px
+
+		h3
+			color: $white
+			font-size: 2rem
+			font-weight: 700
+			margin-bottom: 40px
+
+			+respond-to(xs)
+				font-size: 1.15rem
+				margin-bottom: 10px
+
+		p,
+		span.incluye
+			color: $white
+			display: block
+			font-size: 1.15rem
+			letter-spacing: 1px
+			line-height: 1.9rem
+			margin: 0 0 20px auto
+			max-width: 400px
+			text-align: justify
+			width: 100%
+
+			+respond-to(xs)
+				font-size: 1rem
+				line-height: 1.3rem
+				margin: 0 auto 10px
+
+		span.incluye
+			font-size: 1rem
+			text-align: right
+
+		form
+			align-items: center
+			display: flex
+			justify-content: flex-end
+			padding-right: 40px
+
+			+respond-to(xs)
+				padding-right: 0
+
+			.btn
+				font-style: italic
+				font-weight: bold
+
+
+	// Registro Gerentes
+	.kotex-cont-registro-gerentes
+		background-color: rgba(yellow,.3)
+		max-width: 800px
