@@ -43,9 +43,9 @@ class EntTickets extends \yii\db\ActiveRecord
     {
         return [
             'id_ticket' => 'Id Ticket',
-            'txt_ticket' => 'Txt Ticket',
-            'id_cadena' => 'Id Cadena',
-            'id_sucursal' => 'Id Sucursal',
+            'txt_ticket' => 'Ticket',
+            'id_cadena' => 'Cadena',
+            'id_sucursal' => 'Sucursal',
         ];
     }
 

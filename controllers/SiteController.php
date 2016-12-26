@@ -297,7 +297,8 @@ class SiteController extends Controller {
 		$num = 0;
 		
 		return $this->render ( 'abrirSesion', [ 
-				'message' => $num 
+				'message' => $num,
+				'gerente' => $gerente
 		] );
 	}
 	
