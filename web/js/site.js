@@ -2,7 +2,6 @@
  * Kotex.js
  */
 
-var basePath = "http://localhost/wwwGreenKotex1/web/";
 var valor = true;
 
 $(document).ready(function(){
@@ -39,12 +38,16 @@ $(document).ready(function(){
 			type: 'post',
 			data: form.serialize(),
 			success: function() {
+				
+				l.stop();
+				m.stop();
+				swal("Correcto", "El vendedor ha sido guardado con exito", "success")
+				
 				if(!valor){
 					m.stop();
             		window.location.href = basePath + 'site/registro';
             	}
-				l.stop();
-				swal("Good job!", "You clicked the button!", "success")
+				
 				document.getElementById("from-verdedores").reset();
 			}
 		});
@@ -142,7 +145,7 @@ $(document).ready(function(){
 				if(!valor){
             		window.location.href = basePath + 'usuarios/registro';
             	}
-				swal("Good job!", "You clicked the button!", "success")
+				swal("Correcto", "Tu ticket ha sido registrado exitosamente", "success")
 				document.getElementById("from-ticket").reset();
 			}
 		});
@@ -151,6 +154,22 @@ $(document).ready(function(){
 
 	
 });
+
+$('body').on(
+		'beforeSubmit',
+		'#form-registros-gerentes',
+		function() {
+			var form = $(this);
+			// return false if form still have some validation errors
+			if (form.find('.has-error').length) {
+				return false;
+			}
+			var button = document.getElementById('btn-submit-gerentes');
+			var l = Ladda.create(button);
+		 	l.start();
+		 	//alert();
+		 	//$('#form-registros-gerentes').submit();
+		});
 
 $(document).ready(function(){
 	$("#sesion-btn-ticket").on("click", function(e){
@@ -175,15 +194,7 @@ $('#registro-btn').on('click', function(e){
 	 	l.stop();
 	 });
 
-$('#btn-submit-gerentes').on('click', function(e){
-		//console.log("jsjsjsjsjs");
-	 	e.preventDefault();
-	 	var button = document.getElementById('btn-submit-gerentes');
-		var l = Ladda.create(button);
-	 	l.start();
-	 	$('#btn-submit-gerentes').submit();
-	 	l.stop();
-	 });
+
 
 //$(document).on({
 //	'change' : function(e) {

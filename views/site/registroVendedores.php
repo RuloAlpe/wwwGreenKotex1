@@ -45,13 +45,13 @@ use yii\helpers\Url;
 				
 				<?= $form->field($vendedor, 'txt_correo')->textInput(['maxlength' => true])?>
 				
-				<?= $form->field($vendedor, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
+				<?= $form->field($vendedor, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 	
 				<!-- .form-group-btns -->
 				<div class="form-group-btns">
 					
 					<?= Html::submitButton('<span class="ladda-label">Registrar otro vendedor</span>', ['id' => 'btn-submit-vendedor', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
-					<a id="submit_terminar" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
+					<a id="submit_terminar" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>" data-style="zoom-out"><span class="ladda-label">Terminar</span></a>
 <!-- 					<a class="btn btn-primary" href="http://localhost/wwwGreenKotex1/web/site/registro">Terminar</a> -->
 	
 				</div>

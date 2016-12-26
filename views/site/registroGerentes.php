@@ -23,7 +23,8 @@ use app\models\CatSucursal;
 		<h2>Datos del Gerente</h2>
 
 		<?php
-		$form = ActiveForm::begin ( [ 
+		$form = ActiveForm::begin ( [
+				'id'=>'form-registros-gerentes',
 				'options' => [ 
 						'enctype' => 'multipart/form-data' 
 				],
@@ -37,7 +38,7 @@ use app\models\CatSucursal;
 			
 			<?= $form->field($gerente, 'txt_correo')->textInput(['maxlength' => true])?>
 			
-			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
+			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 			
 			<?= $form->field($gerente, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
 			
