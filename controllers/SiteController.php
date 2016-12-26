@@ -201,11 +201,17 @@ class SiteController extends Controller
     }
     
     public function actionAbrirSesion(){
+    	//Yii::$app->response->format = Response::FORMAT_JSON;
+    	$num = 1;
     	
-    	return $this->render('abrirSesion');
+    	return $this->render('abrirSesion',[
+    			'message' => $num
+    	]);
     }
     
     public function actionSesion(){
+    	//Yii::$app->response->format = Response::FORMAT_JSON;
+    	
     	$correo = $_POST['email-gerente'];
     	$buscar = EntGerentes::find()->where(['txt_correo'=>$correo])->one();
     	 
@@ -218,7 +224,10 @@ class SiteController extends Controller
     				'idGerente' => $idGerente
     		]);
     	}
+    	$num = 0;
     	
-    	return $this->render('abrirSesion');
+    	return $this->render('abrirSesion',[
+    			'message' => $num
+    	]);
     }
 }

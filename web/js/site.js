@@ -27,6 +27,12 @@ $(document).ready(function(){
 		if(form.find('.has-error').length) {
 			return false;
 		}
+		var button = document.getElementById('btn-submit-vendedor');
+		var l = Ladda.create(button);
+	 	l.start();
+	 	var button2 = document.getElementById('submit_terminar');
+		var m = Ladda.create(button2);
+	 	m.start();
 
 		$.ajax({
 			url: form.attr('action'),
@@ -34,8 +40,10 @@ $(document).ready(function(){
 			data: form.serialize(),
 			success: function() {
 				if(!valor){
+					m.stop();
             		window.location.href = basePath + 'site/registro';
             	}
+				l.stop();
 				swal("Good job!", "You clicked the button!", "success")
 				document.getElementById("from-verdedores").reset();
 			}
@@ -47,7 +55,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-	$(".js-submit-vendedores").on("click", function(e){
+	$("#btn-submit-vendedor").on("click", function(e){
 		e.preventDefault();
 		valor = true;
 		$('#from-verdedores').submit();
@@ -156,6 +164,26 @@ $(document).ready(function(){
 		$('#from-ticket').submit();
 	});
 });
+
+$('#registro-btn').on('click', function(e){
+		//console.log("dsdsdsdsds");
+	 	e.preventDefault();
+	 	var button = document.getElementById('registro-btn');
+		var l = Ladda.create(button);
+	 	l.start();
+	 	$('#registro-btn').submit();
+	 	l.stop();
+	 });
+
+$('#btn-submit-gerentes').on('click', function(e){
+		//console.log("jsjsjsjsjs");
+	 	e.preventDefault();
+	 	var button = document.getElementById('btn-submit-gerentes');
+		var l = Ladda.create(button);
+	 	l.start();
+	 	$('#btn-submit-gerentes').submit();
+	 	l.stop();
+	 });
 
 //$(document).on({
 //	'change' : function(e) {
