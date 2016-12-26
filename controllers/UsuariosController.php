@@ -12,6 +12,7 @@ use app\models\CatSucursal;
 use app\models\CatCadena;
 use app\models\EntTickets;
 use app\models\RelUsuarioTickets;
+use yii\web\Response;
 
 /**
  * UsuariosController implements the CRUD actions for EntUsuarios model.
@@ -149,11 +150,28 @@ class UsuariosController extends Controller
     					'sucursales' => $sucursales,
     					'cadenas' => $cadenas,
     					'ticket' => $ticket,
-    					'correo' => 0
+    					'correo' => 0,
+    					'tick' => 1
     			]);
     		}
     		
     		$ticket->save();
+    		
+    		$buscarTicket = EntTickets::find()->where(['txt_ticket'=>$ticket->txt_ticket])->andWhere(['!=', 'id_ticket', $ticket->id_ticket])->one();
+    		if($buscarTicket){
+    			$ticket->delete();
+    			$usuarios->delete();
+    			
+    			return $this->render('registroUsuarios',[
+    					'usuario' => $usuarios,
+    					'sucursales' => $sucursales,
+    					'cadenas' => $cadenas,
+    					'ticket' => $ticket,
+    					'correo' => 1,
+    					'tick' => 0
+    			]);
+    		}
+    		
     		$relacion = new RelUsuarioTickets();
     		$relacion->id_usuario = $usuarios->id_usuario;
     		$relacion->id_ticket = $ticket->id_ticket;
@@ -169,7 +187,8 @@ class UsuariosController extends Controller
     			'sucursales' => $sucursales,
     			'cadenas' => $cadenas,
     			'ticket' => $ticket,
-    			'correo' => 1
+    			'correo' => 1,
+    			'tick' => 1
     	]);
     }
     
@@ -194,14 +213,15 @@ class UsuariosController extends Controller
     	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
     	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
     	$ticket = new EntTickets();
-    
+    	
     	if($buscar){
     		 
     		return $this->render('registroTickets',[
     			'idUsuario' => $buscar->id_usuario,
 				'ticket' => $ticket,
     			'sucursales' => $sucursales,
-    			'cadenas' => $cadenas
+    			'cadenas' => $cadenas,
+    			'tick' => 1
     		]);
     	}
     	 
@@ -213,6 +233,14 @@ class UsuariosController extends Controller
     		$ticket = new EntTickets();
     		if($ticket->load ( Yii::$app->request->post () )){
     			$ticket->save();
+    			
+    			$buscarTicket = EntTickets::find()->where(['txt_ticket'=>$ticket->txt_ticket])->andWhere(['!=','id_ticket', $ticket->id_ticket])->one();
+    			if($buscarTicket){
+    				Yii::$app->response->format = Response::FORMAT_JSON;
+    				$ticket->delete();
+    				
+    				return ['status' => 'error'];
+    			}
     			
     			$rel = new RelUsuarioTickets();
     			$usuario = EntUsuarios::find()->where(['id_usuario' => $id])->one();

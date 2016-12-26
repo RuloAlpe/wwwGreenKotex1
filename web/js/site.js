@@ -36,6 +36,7 @@ $(document).ready(function(){
 			data: form.serialize(),
 			success: function(resp) {
 				if(resp.status != 'error'){
+					$("#correoRegistardo").css('display', "none");
 					if(!valor){
 	            		window.location.href = basePath + 'site/registro';
 	            	}
@@ -142,12 +143,16 @@ $(document).ready(function(){
 			url: form.attr('action'),
 			type: 'post',
 			data: form.serialize(),
-			success: function() {
-				if(!valor){
-            		window.location.href = basePath + 'usuarios/registro';
-            	}
-				swal("Correcto", "Tu ticket ha sido registrado exitosamente", "success")
-				document.getElementById("from-ticket").reset();
+			success: function(resp) {
+				if(resp.status != 'error'){
+					$("#ticketRegistardo").css("display", "none");
+					if(!valor){
+	            		window.location.href = basePath + 'usuarios/registro';
+	            	}
+					swal("Correcto", "Tu ticket ha sido registrado exitosamente", "success")
+					document.getElementById("from-ticket").reset();
+				}else
+					$("#ticketRegistardo").css("display", "");
 			}
 		});
 		return false;
