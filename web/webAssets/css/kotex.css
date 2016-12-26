@@ -24,6 +24,7 @@
 	7.0 - Usuario Regular 1
 	8.0 - Usuario Regular 2
 	9.0 - Usuario Regular 3
+	10.0 - Usuario Regular 4
 
 	--------------------------------------------------------
 	*/
@@ -3734,5 +3735,459 @@ blockquote {
 @media only screen and (max-device-width: 480px) and (orientation: landscape) {
   .ur3 .ur3-cont .ur3-botones .btn {
     margin-top: 10px;
+  }
+}
+
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+.ur4 {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.ur4 .logo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 110px;
+  position: absolute;
+  top: 20px;
+  z-index: 4;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ur4 .logo {
+    height: 232px;
+    left: 70px;
+    width: 280px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .logo {
+    height: 100px;
+    left: 30px;
+    top: 10px;
+    width: 122px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .ur4 .logo {
+    height: 80px;
+    left: 10px;
+    top: 5px;
+    width: 96px;
+  }
+  .ur4 .logo img {
+    width: 100%;
+  }
+}
+
+.ur4 .avion {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ur4 .avion {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .avion {
+    height: 41px;
+    right: 10px;
+    top: 30px;
+    width: 103px;
+  }
+}
+
+.ur4 .productos {
+  bottom: -64px;
+  left: -106px;
+  position: absolute;
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
+  .ur4 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
+  .ur4 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
+  .ur4 .productos {
+    bottom: -34px;
+    height: 300px;
+    left: -76px;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .ur4 .productos {
+    height: 300px;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .ur4 .productos {
+    height: 300px;
+    opacity: .6;
+    width: 213px;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .ur4 .productos {
+    height: 250px;
+    left: -60px;
+    opacity: .6;
+    width: 177px;
+  }
+}
+
+.ur4 .ur4-cont {
+  background-color: rgba(255, 0, 0, 0.2);
+  padding-right: 100px;
+  position: relative;
+  margin-top: 60px;
+  max-width: 630px;
+  z-index: 3;
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .ur4-cont {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ur4 .ur4-cont {
+    padding: 10px;
+  }
+}
+
+.ur4 .ur4-cont h2 {
+  color: #FFF;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ur4 .ur4-cont h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .ur4-cont h2 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+}
+
+.ur4 .ur4-cont form {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ur4 .ur4-cont form .form-group {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 20px;
+  text-align: right;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .ur4-cont form .form-group {
+    margin-bottom: 7px;
+    margin-top: 8px;
+  }
+}
+
+.ur4 .ur4-cont form .form-group label {
+  color: #FFF;
+  font-size: 1.1rem;
+  margin-right: 20px;
+}
+
+.ur4 .ur4-cont form .form-group input[type="email"],
+.ur4 .ur4-cont form .form-group input[type="text"],
+.ur4 .ur4-cont form .form-group input[type="password"] {
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  padding: 5px 10px;
+  width: 56%;
+}
+
+.ur4 .ur4-cont form .form-group input[type="email"]:focus,
+.ur4 .ur4-cont form .form-group input[type="text"]:focus,
+.ur4 .ur4-cont form .form-group input[type="password"]:focus {
+  outline: none;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2), .ur4 .ur4-cont form .form-group:nth-child(3) {
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 10px;
+  position: relative;
+  text-align: left;
+  width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .ur4-cont form .form-group:nth-child(2), .ur4 .ur4-cont form .form-group:nth-child(3) {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ur4 .ur4-cont form .form-group:nth-child(2), .ur4 .ur4-cont form .form-group:nth-child(3) {
+    width: 100%;
+  }
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2) label, .ur4 .ur4-cont form .form-group:nth-child(3) label {
+  margin-bottom: 18px;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2):after, .ur4 .ur4-cont form .form-group:nth-child(3):after {
+  content: '';
+  position: absolute;
+  top: 47px;
+  width: 0;
+  height: 0;
+  right: 8px;
+  margin: auto;
+  border-style: solid;
+  border-width: 10px 6px 0 6px;
+  border-color: #999 transparent transparent transparent;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2):before, .ur4 .ur4-cont form .form-group:nth-child(3):before {
+  width: 30px;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  background-color: #ccc;
+  content: '';
+  pointer-events: none;
+  z-index: 8;
+  height: 28px;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2) select, .ur4 .ur4-cont form .form-group:nth-child(3) select {
+  background-color: #FFF;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  height: 28px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  z-index: 3;
+  -moz-appearance: none;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2) select:-moz-focusring, .ur4 .ur4-cont form .form-group:nth-child(3) select:-moz-focusring {
+  color: transparent;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2) select::-ms-expand, .ur4 .ur4-cont form .form-group:nth-child(3) select::-ms-expand {
+  display: none;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2) select:focus, .ur4 .ur4-cont form .form-group:nth-child(3) select:focus {
+  border-color: #76aec1;
+  outline: none;
+}
+
+.ur4 .ur4-cont form .form-group:nth-child(2) select.error, .ur4 .ur4-cont form .form-group:nth-child(3) select.error {
+  border: 1px solid red;
+}
+
+@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+  .ur4 .ur4-cont form .form-group:nth-child(2) .select select, .ur4 .ur4-cont form .form-group:nth-child(3) .select select {
+    padding-right: 0;
+  }
+  .ur4 .ur4-cont form .form-group:nth-child(2) .select:after, .ur4 .ur4-cont form .form-group:nth-child(2) .select:before, .ur4 .ur4-cont form .form-group:nth-child(3) .select:after, .ur4 .ur4-cont form .form-group:nth-child(3) .select:before {
+    display: none;
+  }
+}
+
+.ur4 .ur4-cont form .form-group.has-error .help-block {
+  background-color: red;
+  color: white;
+  font-size: .8rem;
+  margin-top: 4px;
+  padding: 2px 10px;
+  width: auto;
+}
+
+.ur4 .ur4-cont form .btn {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ur4 .ur4-cont form .btn {
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ur4 .ur4-cont form .btn {
+    margin-left: auto;
   }
 }
