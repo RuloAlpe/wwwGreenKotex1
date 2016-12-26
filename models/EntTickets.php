@@ -30,7 +30,7 @@ class EntTickets extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['txt_ticket', 'id_cadena', 'id_sucursal'], 'required'],
+            [['txt_ticket', 'id_cadena', 'id_sucursal'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
             [['id_cadena', 'id_sucursal'], 'integer'],
             [['txt_ticket'], 'string', 'max' => 100],
         ];

@@ -104,9 +104,14 @@ $('#entgerentes-id_cadena').on('change', function(){
 	});
 });
 
+var path = $("#imgTicket").attr("src");
 $('#enttickets-id_cadena').on('change', function(){
 	var idC = $(this).val();
 	console.log(idC);
+	
+	$("#imgTicket").attr("src", path);
+	$("#imgTicket").attr("src", path+"ticket-0"+idC+".png");
+	
 	$.ajax({
 		url: basePath + "usuarios/get-sucursales?idC="+idC,
 		type: "get",

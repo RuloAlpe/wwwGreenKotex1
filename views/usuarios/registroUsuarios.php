@@ -95,7 +95,7 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 		<h2 class="modal-content-title">Registra el número marcado en rojo</h2>
 
 		<div class="modal-content-ticket">
-			<img src="<?=Url::base()?>/webAssets/images/ticket-01.png" alt="Ticket">	
+			<img id="imgTicket" src="<?=Url::base()?>/webAssets/images/" alt="Ticket">	
 		</div>
 
 	</div>
