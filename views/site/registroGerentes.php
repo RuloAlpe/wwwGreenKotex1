@@ -37,6 +37,10 @@ use app\models\CatSucursal;
 			
 			<?= $form->field($gerente, 'txt_correo')->textInput(['maxlength' => true])?>
 			
+			<?php if($correo == 0){?>
+				<p>Este correo ya esta registrado</p>
+			<?php }?>
+			
 			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
 			
 			<?= $form->field($gerente, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>

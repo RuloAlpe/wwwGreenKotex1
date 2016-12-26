@@ -139,6 +139,20 @@ class UsuariosController extends Controller
     	
     	if($usuarios->load ( Yii::$app->request->post () ) && $ticket->load ( Yii::$app->request->post () )){
     		$usuarios->save();
+    		
+    		$buscarCorreo = EntUsuarios::find()->where(['txt_correo'=>$usuarios->txt_correo])->andWhere(['!=', 'id_usuario', $usuarios->id_usuario])->one(); 
+    		if($buscarCorreo){
+    			$usuarios->delete();
+    			
+    			return $this->render('registroUsuarios',[
+    					'usuario' => $usuarios,
+    					'sucursales' => $sucursales,
+    					'cadenas' => $cadenas,
+    					'ticket' => $ticket,
+    					'correo' => 0
+    			]);
+    		}
+    		
     		$ticket->save();
     		$relacion = new RelUsuarioTickets();
     		$relacion->id_usuario = $usuarios->id_usuario;
@@ -154,7 +168,8 @@ class UsuariosController extends Controller
     			'usuario' => $usuarios,
     			'sucursales' => $sucursales,
     			'cadenas' => $cadenas,
-    			'ticket' => $ticket
+    			'ticket' => $ticket,
+    			'correo' => 1
     	]);
     }
     

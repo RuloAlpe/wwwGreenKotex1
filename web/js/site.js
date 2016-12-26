@@ -30,22 +30,23 @@ $(document).ready(function(){
 		var button = document.getElementById('btn-submit-vendedor');
 		var l = Ladda.create(button);
 	 	l.start();
-	 	var button2 = document.getElementById('submit_terminar');
-		var m = Ladda.create(button2);
-	 	m.start();
 
 		$.ajax({
 			url: form.attr('action'),
 			type: 'post',
 			data: form.serialize(),
-			success: function() {
-				if(!valor){
-					m.stop();
-            		window.location.href = basePath + 'site/registro';
-            	}
-				l.stop();
-				swal("Good job!", "You clicked the button!", "success")
-				document.getElementById("from-verdedores").reset();
+			success: function(resp) {
+				if(resp.status != 'error'){
+					if(!valor){
+	            		window.location.href = basePath + 'site/registro';
+	            	}
+					l.stop();
+					swal("Good job!", "You clicked the button!", "success")
+					document.getElementById("from-verdedores").reset();
+				}else{
+					$("#correoRegistardo").css('display', "");
+					l.stop();
+				}
 			}
 		});
 		return false;
@@ -62,7 +63,11 @@ $(document).ready(function(){
 	});
 	$("#submit_terminar").on("click", function(e){
 		e.preventDefault();
+		var button2 = document.getElementById('submit_terminar');
+		var m = Ladda.create(button2);
+	 	m.start();
 		valor = false;
+		m.stop();
 		$('#from-verdedores').submit();
 	});
 });

@@ -142,6 +142,18 @@ class SiteController extends Controller
     	
     	if($gerente->load ( Yii::$app->request->post () )){
     		$gerente->save();
+    		
+    		$buscarCorreo = EntGerentes::find()->where(['txt_correo'=>$gerente->txt_correo])->andWhere(['!=', 'id_gerente', $gerente->id_gerente])->one();
+    		if($buscarCorreo){
+    			$gerente->delete();
+    			
+    			return $this->render('registroGerentes', [
+    					'gerente' => $gerente,
+    					'sucursales' => $sucursales,
+    					'cadenas' => $cadenas,
+    					'correo' => 0
+    			]);
+    		}
     		$idGerente = $gerente->id_gerente;
     		$entVendedores = new EntVendedores();
     		
@@ -154,7 +166,8 @@ class SiteController extends Controller
     	return $this->render('registroGerentes', [
     			'gerente' => $gerente,
     			'sucursales' => $sucursales,
-    			'cadenas' => $cadenas
+    			'cadenas' => $cadenas,
+    			'correo' => 1
     	]);
     }
     
@@ -165,8 +178,16 @@ class SiteController extends Controller
     	$idGerente = 0;
     	
     	if($vendedor->load ( Yii::$app->request->post () )){
-    		//$vendedor->id_gerente = 1;
     		$vendedor->save();
+    		
+    		$buscarCorreo = EntVendedores::find()->where(['txt_correo'=>$vendedor->txt_correo])->andWhere(['!=', 'id_vendedor', $vendedor->id_vendedor])->one();
+    		if($buscarCorreo){
+    			Yii::$app->response->format = Response::FORMAT_JSON;
+    			$vendedor->delete();
+    			
+    			return ['status' => 'error'];
+    		}
+    		
     		$idGerente = $vendedor->id_gerente;
     		$vendedor = new EntVendedores();
     			

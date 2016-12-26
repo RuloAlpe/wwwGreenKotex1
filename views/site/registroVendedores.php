@@ -45,6 +45,8 @@ use yii\helpers\Url;
 				
 				<?= $form->field($vendedor, 'txt_correo')->textInput(['maxlength' => true])?>
 				
+				<p id="correoRegistardo" style="display:none">Este correo ya esta registrado</p>
+				
 				<?= $form->field($vendedor, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
 	
 				<!-- .form-group-btns -->
