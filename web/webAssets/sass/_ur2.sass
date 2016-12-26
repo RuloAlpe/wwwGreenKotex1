@@ -26,11 +26,14 @@
 		min-height: 100vh
 
 	.logo
+		border: none
 		display: flex
 		left: 110px
 		position: absolute
 		top: 20px
 		z-index: 4
+		img
+			border: none
 
 		+respond-to(sm)
 			height: 232px
@@ -223,7 +226,7 @@
 			
 				&:nth-child(6),
 				&:nth-child(7)
-					// background-color: red
+					background-color: green
 					// height: 30px
 					justify-content: flex-start
 					margin-top: 10px
@@ -255,7 +258,7 @@
 					&:before
 						width: 30px
 						position: absolute
-						top: 37px
+						top: 42px
 						right: 0px
 						// bottom: 0px
 						background-color: #ccc

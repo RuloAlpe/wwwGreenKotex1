@@ -2086,12 +2086,18 @@ blockquote {
 }
 
 .ur1 .logo {
+  border: none;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   left: 10px;
   position: absolute;
   top: 10px;
+  z-index: 4;
+}
+
+.ur1 .logo img {
+  border: none;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2523,6 +2529,7 @@ blockquote {
 }
 
 .ur2 .logo {
+  border: none;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2530,6 +2537,10 @@ blockquote {
   position: absolute;
   top: 20px;
   z-index: 4;
+}
+
+.ur2 .logo img {
+  border: none;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2815,6 +2826,7 @@ blockquote {
 }
 
 .ur2 .ur2-cont form .form-group:nth-child(6), .ur2 .ur2-cont form .form-group:nth-child(7) {
+  background-color: green;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -2852,7 +2864,7 @@ blockquote {
 .ur2 .ur2-cont form .form-group:nth-child(6):before, .ur2 .ur2-cont form .form-group:nth-child(7):before {
   width: 30px;
   position: absolute;
-  top: 37px;
+  top: 42px;
   right: 0px;
   background-color: #ccc;
   content: '';
