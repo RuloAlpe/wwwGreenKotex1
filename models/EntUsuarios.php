@@ -44,10 +44,10 @@ class EntUsuarios extends \yii\db\ActiveRecord
     {
         return [
             'id_usuario' => 'Id Usuario',
-            'txt_nombre' => 'Txt Nombre',
-            'txt_apellido' => 'Txt Apellido',
-            'txt_correo' => 'Txt Correo',
-            'num_telefono' => 'Num Telefono',
+            'txt_nombre' => 'Nombre',
+            'txt_apellido' => 'Apellido',
+            'txt_correo' => 'Correo',
+            'num_telefono' => 'Télefono',
         ];
     }
 
