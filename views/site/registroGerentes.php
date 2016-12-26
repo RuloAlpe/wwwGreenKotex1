@@ -43,7 +43,7 @@ use app\models\CatSucursal;
 			
 			<?= $form->field($gerente, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
 			
-			<?= Html::submitButton('Enviar', array('class' => 'btn btn-primary js-submit-gerentes'))?>
+			<?= Html::submitButton('<span class="ladda-label">Enviar</span>', ['id' => 'btn-submit-gerentes', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
 
 		<?php
 

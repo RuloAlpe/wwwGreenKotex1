@@ -199,4 +199,26 @@ class SiteController extends Controller
     	}
     	//return ['sucursales' => $sucursal];
     }
+    
+    public function actionAbrirSesion(){
+    	
+    	return $this->render('abrirSesion');
+    }
+    
+    public function actionSesion(){
+    	$correo = $_POST['email-gerente'];
+    	$buscar = EntGerentes::find()->where(['txt_correo'=>$correo])->one();
+    	 
+    	if($buscar){
+    		$vendedor = new EntVendedores();
+    		$idGerente = $buscar->id_gerente;
+    	
+    		return $this->render('registroVendedores',[
+    				'vendedor' => $vendedor,
+    				'idGerente' => $idGerente
+    		]);
+    	}
+    	
+    	return $this->render('abrirSesion');
+    }
 }

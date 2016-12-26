@@ -37,7 +37,7 @@ use yii\helpers\Url;
 			] );
 	
 			?>
-				<?= $form->field($vendedor, 'id_gerente')->textInput(['maxlength' => true, 'value' => $idGerente, 'style' => 'display:none'])?>
+				<?= $form->field($vendedor, 'id_gerente')->textInput(['maxlength' => true, 'value' => $idGerente, 'style' => 'display:none'])->label(false)?>
 				
 				<?= $form->field($vendedor, 'txt_nombre')->textInput(['maxlength' => true])?>
 					
@@ -50,8 +50,8 @@ use yii\helpers\Url;
 				<!-- .form-group-btns -->
 				<div class="form-group-btns">
 					
-					<?= Html::submitButton('Resgistrar otro vendedor', array('class' => 'btn btn-primary js-submit-vendedores'))?>
-					<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
+					<?= Html::submitButton('<span class="ladda-label">Registrar otro vendedor</span>', ['id' => 'btn-submit-vendedor', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+					<a id="submit_terminar" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
 <!-- 					<a class="btn btn-primary" href="http://localhost/wwwGreenKotex1/web/site/registro">Terminar</a> -->
 	
 				</div>
@@ -61,7 +61,7 @@ use yii\helpers\Url;
 			ActiveForm::end ();
 			?>
 		<?php }else{ ?>
-					<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro-gerentes'] ) ?>">Registrase como Gerente</a>
+					<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro-gerentes'] ) ?>">Registrarse como Gerente</a>
 		<?php  } ?>
 
 	</div>

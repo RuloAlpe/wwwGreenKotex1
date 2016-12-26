@@ -41,17 +41,18 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 
 			<?= $form->field($usuario, 'txt_nombre')->textInput(['maxlength' => true])?>
 		
+
 			<?= $form->field($usuario, 'txt_apellido')->textInput(['maxlength' => true])?>
-			
+
 			<?= $form->field($usuario, 'txt_correo')->input('email')?>
-			
+
 			<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
-			
-			<?= $form->field($usuario, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
+
+			<?= $form->field($ticket, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
 					
-			<?= $form->field($usuario, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
-			
-			<?= $form->field($usuario, 'txt_ticket')->textInput(['maxlength' => true])?>
+			<?= $form->field($ticket, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
+
+			<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
 			
 			<span id="modal-ayuda-open" class="form-group-ayuda"><i class="ion ion-help"></i></span>
 			

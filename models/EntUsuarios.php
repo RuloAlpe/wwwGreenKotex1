@@ -12,12 +12,8 @@ use Yii;
  * @property string $txt_apellido
  * @property string $txt_correo
  * @property string $num_telefono
- * @property string $id_cadena
- * @property string $id_sucursal
- * @property string $txt_ticket
  *
- * @property CatCadena $idCadena
- * @property CatSucursal $idSucursal
+ * @property RelUsuarioTickets[] $relUsuarioTickets
  */
 class EntUsuarios extends \yii\db\ActiveRecord
 {
@@ -35,14 +31,9 @@ class EntUsuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono', 'id_cadena', 'id_sucursal', 'txt_ticket'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
-            [['id_cadena', 'id_sucursal'], 'integer'],
+            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
-        	['txt_correo', 'email', 'message'=>'Formato de email no es valido'],
             [['num_telefono'], 'string', 'max' => 10],
-            [['txt_ticket'], 'string', 'max' => 100],
-            [['id_cadena'], 'exist', 'skipOnError' => true, 'targetClass' => CatCadena::className(), 'targetAttribute' => ['id_cadena' => 'id_cadena']],
-            [['id_sucursal'], 'exist', 'skipOnError' => true, 'targetClass' => CatSucursal::className(), 'targetAttribute' => ['id_sucursal' => 'id_sucursal']],
         ];
     }
 
@@ -53,29 +44,18 @@ class EntUsuarios extends \yii\db\ActiveRecord
     {
         return [
             'id_usuario' => 'Id Usuario',
-            'txt_nombre' => 'Nombre',
-            'txt_apellido' => 'Apellido',
-            'txt_correo' => 'Correo',
-            'num_telefono' => 'Telefono',
-            'id_cadena' => 'Cadena',
-            'id_sucursal' => 'Sucursal',
-            'txt_ticket' => 'Ticket',
+            'txt_nombre' => 'Txt Nombre',
+            'txt_apellido' => 'Txt Apellido',
+            'txt_correo' => 'Txt Correo',
+            'num_telefono' => 'Num Telefono',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdCadena()
+    public function getRelUsuarioTickets()
     {
-        return $this->hasOne(CatCadena::className(), ['id_cadena' => 'id_cadena']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdSucursal()
-    {
-        return $this->hasOne(CatSucursal::className(), ['id_sucursal' => 'id_sucursal']);
+        return $this->hasMany(RelUsuarioTickets::className(), ['id_usuario' => 'id_usuario']);
     }
 }
