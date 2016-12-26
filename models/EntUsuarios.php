@@ -33,7 +33,7 @@ class EntUsuarios extends \yii\db\ActiveRecord
         return [
             [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
-            [['num_telefono'], 'string', 'max' => 10],
+            ['num_telefono', 'string', 'min'=>10, 'tooShort' => 'Télefono debe ser mínimo 10 dígitos'],
         ];
     }
 

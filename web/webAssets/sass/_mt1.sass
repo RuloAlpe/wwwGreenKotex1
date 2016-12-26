@@ -27,10 +27,44 @@
 		position: absolute
 		top: 10px
 
+		+respond-to(sm)
+			height: 232px
+			width: 280px
+			img
+				width: 100%
+
+		+respond-to(xs)
+			height: 100px
+			width: 122px
+			img
+				width: 100%
+
+		// Movil Lg
+		// @media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+		// @media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+		// @media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+		
+		// Movil Xs
+		// @media only screen and (max-device-width : 350px)
+		// @media only screen and (max-device-width : 350px) and (orientation : portrait)
+		// @media only screen and (max-device-width : 350px) and (orientation : landscape)
+
 	.avion
 		position: absolute
 		right: 300px
 		top: 50px
+		
+		+respond-to(md)
+			right: 200px
+
+		+respond-to(sm)
+			right: 90px
+
+		+respond-to(xs)
+			height: 41px
+			right: 30px
+			top: 30px
+			width: 103px
 
 	// .pavimento
 	// 	background-image: url(../images/pavimento.png)
@@ -51,16 +85,78 @@
 		right: 0
 		width: 100%
 
+		// +respond-to(sm)
+		// 	right: 90px
+
+		// +respond-to(xs)
+		// 	right: 30px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			bottom: -30px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			bottom: -30px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: -58px
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			bottom: -18px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			bottom: -18px
+		@media only screen and (max-device-width : 350px) and (orientation : landscape)
+			bottom: -58px
+
 	.premios
 		bottom: 10px
 		left: 4px
 		position: absolute
 
+		+respond-to(md)
+			height: 404px
+			width: 500px
+
+		+respond-to(sm)
+			height: 330px
+			width: 408px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 121px
+			width: 150px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			background-color: purple
+			height: 121px
+			width: 150px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			background-color: yellow
+			height: 221px
+			width: 273px
+		
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 121px
+			width: 150px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			background-color: red
+			height: 121px
+			width: 150px
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			background-color: blue
+			height: 121px
+			width: 150px
+
 	.mt1-cont
 		// background-color: rgba(red,.2)
-		padding-right: 40px
+		padding-right: 70px
 		position: relative
 		z-index: 3
+
+		+respond-to(xs)
+			padding-right: 30px
+
+		+respond-to(xx)
+			padding-right: 10px
 
 		h2
 			color: $white
@@ -70,6 +166,12 @@
 			-webkit-text-fill-color: $white
 			-webkit-text-stroke: 2px #B93C89
 
+			+respond-to(xs)
+				font-size: 1.35rem
+				margin-bottom: 20px
+				-webkit-text-fill-color: $white
+				-webkit-text-stroke: 1px #B93C89
+
 		p
 			color: $white
 			font-size: 1.4rem
@@ -78,6 +180,12 @@
 			margin: 0 0 70px auto
 			max-width: 300px
 			text-align: justify
+			width: 100%
+
+			+respond-to(xs)
+				font-size: 1rem
+				line-height: 1.3rem
+				margin: 0 auto 20px
 
 		form
 			align-items: center
@@ -85,10 +193,14 @@
 			justify-content: flex-end
 			padding-right: 70px
 
+			+respond-to(xs)
+				padding-right: 0
+
 			.btn
 				font-style: italic
 				font-weight: bold
-	
+
+
 	// Registro Gerentes
 	.kotex-cont-registro-gerentes
 		background-color: rgba(yellow,.3)
