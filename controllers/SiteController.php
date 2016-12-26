@@ -218,7 +218,14 @@ class SiteController extends Controller {
 		// return ['sucursales' => $sucursal];
 	}
 	public function actionAbrirSesion() {
-		
+		if($this->existeSesion()){
+			$vendedor = new EntVendedores ();
+			$gerente = $this->obtenerSesionGerente();
+			return $this->render ( 'registroVendedores', [
+					'vendedor' => $vendedor,
+					'idGerente' => $gerente->id_gerente
+			] );
+		}
 		// Yii::$app->response->format = Response::FORMAT_JSON;
 		$num = 1;
 		
@@ -230,6 +237,16 @@ class SiteController extends Controller {
 		] );
 	}
 	public function actionSesion() {
+		
+		if($this->existeSesion()){
+			$vendedor = new EntVendedores ();
+			$gerente = $this->obtenerSesionGerente();
+			return $this->render ( 'registroVendedores', [
+					'vendedor' => $vendedor,
+					'idGerente' => $gerente->id_gerente
+			] );
+		}
+		
 		// Yii::$app->response->format = Response::FORMAT_JSON;
 		$gerente = new EntGerentes ();
 		
@@ -240,6 +257,8 @@ class SiteController extends Controller {
 			] )->one ();
 			
 			if ($buscar) {
+				
+				$this->crearSesionGerente($buscar);
 				
 				$vendedor = new EntVendedores ();
 				$idGerente = $buscar->id_gerente;

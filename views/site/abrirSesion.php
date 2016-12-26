@@ -35,8 +35,8 @@ $form = ActiveForm::begin ( [
 		<p>El correo es incorrecto</p>
 	<?php }?>
 		
-	<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'sesion-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
-	<a class="btn btn-primary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro-gerentes'] ) ?>"><span class="ladda-label">Ingresar</span></a>
+	<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ['id'=>'sesion-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+	<a class="btn btn-primary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro-gerentes'] ) ?>"><span class="ladda-label">Registrarse</span></a>
 	
 <?php
 ActiveForm::end ();
