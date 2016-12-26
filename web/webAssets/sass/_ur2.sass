@@ -224,26 +224,52 @@
 						outline: none
 				
 			
-				&:nth-child(6),
-				&:nth-child(7)
-					background-color: green
+
+					
+				&:nth-child(8)
+					// background-color: red
+
+					+respond-to(xs)
+						margin-top: 20px
+
+				&.has-error
+					.help-block
+						background-color: red
+						color: white
+						font-size: .8rem
+						margin-top: 4px
+						padding: 2px 10px
+						width: auto
+			
+			.form-group-select
+				align-items: center
+				// background-color: pink
+				display: flex
+				justify-content: space-between
+				width: 100%
+
+				.form-group
+					// background-color: green
 					// height: 30px
 					justify-content: flex-start
 					margin-top: 10px
 					position: relative
 					text-align: left
-					width: 45%
+					width: 47%
 
 					+respond-to(xs)
 						margin-top: 10px
 
 					label
-						margin-bottom: 18px
+						// background-color: blue
+						display: block
+						height: 30px
+						margin-bottom: 0px
 				  
 					&:after
 						content: ''
 						position: absolute
-						top: 47px
+						top: 40px
 						width: 0
 						height: 0
 						right: 8px
@@ -258,7 +284,7 @@
 					&:before
 						width: 30px
 						position: absolute
-						top: 42px
+						top: 30px
 						right: 0px
 						// bottom: 0px
 						background-color: #ccc
@@ -314,42 +340,41 @@
 							&:after,
 							&:before
 								display: none
-				
-				&:nth-child(8)
-					// background-color: red
 
-					+respond-to(xs)
-						margin-top: 20px
-
-				&.has-error
-					.help-block
-						background-color: red
-						color: white
-						font-size: .8rem
-						margin-top: 4px
-						padding: 2px 10px
-						width: auto
-			
 			// Ayuda
 			.form-group-ayuda
 				align-items: center
-				background-color: $primary-color
-				+border-radius(50%)
-				cursor: pointer
+				// background-color: teal
 				display: flex
-				height: 30px
-				justify-content: center
-				width: 30px
-				i
-					color: $black
-					font-size: 1.15rem
+				justify-content: space-between
+				margin-top: 20px
+				position: relative
+				width: 100%
+				.form-group
+					// background-color: red
+					margin-bottom: 0
+					width: calc(100% - 40px)
+				.form-group-ayuda-span
+					align-items: center
+					background-color: $primary-color
+					+border-radius(50%)
+					cursor: pointer
+					display: flex
+					height: 30px
+					justify-content: center
+					margin-left: 10px
+					width: 30px
+					i
+						color: $black
+						font-size: 1.15rem
 			
 			// Checkbox
 			.form-group-check
 				align-items: center
 				background-color: transparent
 				display: flex
-				justify-content: flex-start
+				justify-content: center
+				margin-top: 10px
 				width: 100%
 
 				+respond-to(sm)
@@ -373,7 +398,7 @@
 						margin-bottom: 20px
 						// font-family: $font-din
 						font-size: 1.05rem
-						color: $primary-color
+						color: $white
 						cursor: pointer
 						-webkit-user-select: none
 						-moz-user-select: none
@@ -398,7 +423,7 @@
 						display: block
 						width: 16px
 						height: 16px
-						border: 1px solid $primary-color
+						border: 1px solid $white
 						position: absolute
 						left: 8px
 						top: 2px

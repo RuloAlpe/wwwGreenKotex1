@@ -27,6 +27,7 @@ $(document).ready(function(){
 	// Open Modal
 	$(modalOpen).on("click", function(){
 		modal.style.display = "flex";
+		modal.style.display = "-ms-flexbox";
 	});
 	// Close Modal
 	$(modalClose).on("click", function(){

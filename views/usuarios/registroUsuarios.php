@@ -48,14 +48,17 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 
 			<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 
-			<?= $form->field($ticket, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
-					
-			<?= $form->field($ticket, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
+			<div class="form-group-select">
+				<?= $form->field($ticket, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
+		
+				<?= $form->field($ticket, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
+			</div>
+			
+			<div class="form-group-ayuda">
+				<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
+				<span id="modal-ayuda-open" class="form-group-ayuda-span"><i class="ion ion-help"></i></span>
+			</div>
 
-			<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
-			
-			<span id="modal-ayuda-open" class="form-group-ayuda"><i class="ion ion-help"></i></span>
-			
 			<div class="form-group-check">
 				<div class="boxes">
 					<input type="checkbox" id="box-1">
