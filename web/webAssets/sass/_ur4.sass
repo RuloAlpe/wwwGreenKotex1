@@ -327,14 +327,44 @@
 			
 
 			// Btn
-			.btn
-				font-style: italic
-				font-weight: bold
-				margin-top: 10px
-				
-				+respond-to(sm)
-					margin-left: auto
+			.form-group-btns
+				align-items: center
+				// background-color: green
+				display: flex
+				justify-content: flex-end
+				width: 100%
 
-				+respond-to(xs)
-					margin-left: auto
+				// Movil Lg
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+					flex-direction: column
+					align-items: flex-end
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+					flex-direction: column
+					align-items: flex-end
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+					flex-direction: column
+					align-items: flex-end
+				
+				// Movil Xs
+				@media only screen and (max-device-width : 350px)
+					flex-direction: column
+					align-items: flex-end
+				@media only screen and (max-device-width : 350px) and (orientation : portrait)
+					flex-direction: column
+					align-items: flex-end
+				@media only screen and (max-device-width : 480px) and (orientation : landscape)
+					flex-direction: column
+					align-items: flex-end
+
+				.btn
+					font-style: italic
+					font-weight: bold
+					margin-left: 10px
+					margin-top: 10px
+					
+					// +respond-to(sm)
+					// 	margin-left: auto
+
+					// +respond-to(xs)
+					// 	margin-left: auto
 			
