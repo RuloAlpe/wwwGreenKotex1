@@ -128,10 +128,27 @@ class SiteController extends Controller {
 		return $this->render ( 'about' );
 	}
 	public function actionRegistro() {
+		
+		$this->removerSesionGerente();
 		// $this->layout = false;
 		return $this->render ( 'registro' );
 	}
+	
+	/**
+	 * Registra a los gerentes
+	 * @return string
+	 */
 	public function actionRegistroGerentes() {
+		
+		if($this->existeSesion()){
+			$vendedor = new EntVendedores ();
+			$gerente = $this->obtenerSesionGerente();
+			return $this->render ( 'registroVendedores', [
+					'vendedor' => $vendedor,
+					'idGerente' => $gerente->id_gerente
+			] );
+		}
+		
 		// $this->layout = false;
 		$gerente = new EntGerentes ();
 		$sucursales = new CatSucursal ();
@@ -143,6 +160,8 @@ class SiteController extends Controller {
 			$gerente->save ();
 			$idGerente = $gerente->id_gerente;
 			$entVendedores = new EntVendedores ();
+			
+			$this->crearSesionGerente($gerente);
 			
 			return $this->render ( 'registroVendedores', [ 
 					'vendedor' => $entVendedores,
@@ -199,6 +218,7 @@ class SiteController extends Controller {
 		// return ['sucursales' => $sucursal];
 	}
 	public function actionAbrirSesion() {
+		
 		// Yii::$app->response->format = Response::FORMAT_JSON;
 		$num = 1;
 		
@@ -220,6 +240,7 @@ class SiteController extends Controller {
 			] )->one ();
 			
 			if ($buscar) {
+				
 				$vendedor = new EntVendedores ();
 				$idGerente = $buscar->id_gerente;
 				
@@ -235,5 +256,31 @@ class SiteController extends Controller {
 		return $this->render ( 'abrirSesion', [ 
 				'message' => $num 
 		] );
+	}
+	
+	private function crearSesionGerente($gerente){
+		$session = Yii::$app->session;
+		$session->set('gerente', $gerente);
+	}
+	
+	
+	private function removerSesionGerente(){
+		$session = Yii::$app->session;
+		$session->remove('gerente');
+	}
+	
+	private function obtenerSesionGerente(){
+		$session = Yii::$app->session;
+		return $session->get('gerente');
+	}
+	
+	private function existeSesion(){
+		$session = Yii::$app->session;
+		
+		if ($session->has('gerente')){
+			return true;
+		}else{
+			return false;
+		}
 	}
 }
