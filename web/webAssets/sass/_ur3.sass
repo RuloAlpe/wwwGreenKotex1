@@ -1,0 +1,428 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+
+.ur3
+	align-items: center
+	background-image: url(../images/bg.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	height: 100vh
+	justify-content: center
+	overflow: hidden
+	position: relative
+
+	+respond-to(xs)
+		height: auto
+		min-height: 100vh
+
+	.avion
+		position: absolute
+		right: 200px
+		top: 50px
+		
+		+respond-to(md)
+			right: 60px
+
+		+respond-to(sm)
+			right: 10px
+
+		+respond-to(xs)
+			height: 41px
+			right: 10px
+			top: 6px
+			width: 103px
+
+	.edificio
+		position: absolute
+
+		+respond-to(lg)
+			bottom: 87px
+			left: -2px
+
+		+respond-to(md)
+			bottom: 37px
+			left: -2px
+
+		+respond-to(sm)
+			bottom: 4px
+			left: -2px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			bottom: 10px
+			height: 201px
+			left: -2px
+			opacity: .4
+			width: 141px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			bottom: 10px
+			height: 201px
+			left: -2px
+			opacity: .4
+			width: 141px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: -8px
+			height: 201px
+			left: -2px
+			opacity: .4
+			width: 141px
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			bottom: 10px
+			height: 201px
+			left: -2px
+			opacity: .4
+			width: 141px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			bottom: 10px
+			height: 201px
+			left: -2px
+			opacity: .4
+			width: 141px
+		@media only screen and (max-device-width : 350px) and (orientation : landscape)
+			bottom: 10px
+			height: 201px
+			left: -2px
+			opacity: .4
+			width: 141px
+
+	.angel
+		position: absolute
+
+		+respond-to(lg)
+			bottom: 97px
+			left: 130px
+
+		+respond-to(md)
+			bottom: 47px
+			left: 130px
+
+		+respond-to(sm)
+			bottom: 15px
+			left: 130px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			bottom: 27px
+			height: 210px
+			left: 90px
+			opacity: .4
+			width: 75px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			bottom: 27px
+			height: 210px
+			left: 90px
+			opacity: .4
+			width: 75px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: 6px
+			height: 210px
+			left: 90px
+			opacity: .4
+			width: 75px
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			bottom: 27px
+			height: 210px
+			left: 90px
+			opacity: .4
+			width: 75px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			bottom: 27px
+			height: 210px
+			left: 90px
+			opacity: .4
+			width: 75px
+		@media only screen and (max-device-width : 350px) and (orientation : landscape)
+			bottom: 6px
+			height: 210px
+			left: 90px
+			opacity: .4
+			width: 75px
+
+	.pavimento
+		bottom: -88px
+		left: 0
+		position: absolute
+		right: 0
+		width: 100%
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			bottom: -30px
+			opacity: .65
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			bottom: -30px
+			opacity: .65
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: -68px
+			opacity: .65
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			bottom: -18px
+			opacity: .5
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			bottom: -18px
+			opacity: .5
+		@media only screen and (max-device-width : 350px) and (orientation : landscape)
+			bottom: -58px
+			opacity: .5
+
+	.premios
+		bottom: -60px
+		right: -90px
+		position: absolute
+
+		+respond-to(md)
+			bottom: -34px
+			height: 404px
+			width: 500px
+
+		+respond-to(sm)
+			bottom: -6px
+			height: 330px
+			width: 408px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			bottom: 10px
+			height: 121px
+			opacity: .8
+			right: -20px
+			width: 150px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			// background-color: purple
+			bottom: 10px
+			height: 121px
+			opacity: .8
+			right: -20px
+			width: 150px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			// background-color: yellow
+			bottom: -10px
+			height: 221px
+			opacity: .87
+			right: -40px
+			width: 273px
+		
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			bottom: 10px
+			height: 121px
+			opacity: .8
+			right: -30px
+			width: 150px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			// background-color: red
+			bottom: 10px
+			height: 121px
+			opacity: .8
+			right: -30px
+			width: 150px
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			// background-color: blue
+			bottom: 0px
+			height: 121px
+			opacity: .87
+			right: -40px
+			width: 150px
+
+
+	.ur3-cont
+		// align-items: center
+		// background-color: rgba(yellow,.7)
+		display: flex
+		flex-direction: column
+		height: 100vh
+		justify-content: space-between
+		padding: 0 40px 30px
+		position: relative
+		width: 100%
+		z-index: 3
+
+		// +respond-to(xs)
+		// 	height: auto
+		// 	min-height: 100vh
+		// 	padding: 20px
+
+		// +respond-to(xx)
+		// 	padding: 10px
+		
+		+respond-to(sm)
+			padding: 50px 40px
+
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			justify-content: space-around
+			height: auto
+			min-height: 100vh
+			padding: 20px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			justify-content: space-around
+			height: auto
+			min-height: 100vh
+			padding: 20px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			justify-content: space-between
+			height: auto
+			min-height: 100vh
+			padding: 20px
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			justify-content: space-around
+			padding: 10px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			justify-content: space-around
+			padding: 10px
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			justify-content: space-between
+			padding: 10px
+
+		.ur3-felicidades
+			// background-color: rgba(red,.4)
+			margin: 0 auto
+			max-width: 600px
+			position: relative
+			text-align: center
+
+			.logo
+				align-items: center
+				// background-color: pink
+				display: flex
+				justify-content: center
+				margin: 0 auto
+				text-align: center
+				z-index: 4
+
+				+respond-to(lg)
+					height: 232px
+					width: 280px
+					img
+						width: 100%
+
+				+respond-to(md)
+					height: 232px
+					width: 280px
+					img
+						width: 100%
+
+				+respond-to(sm)
+					height: 232px
+					width: 280px
+					img
+						width: 100%
+
+				+respond-to(xs)
+					height: 100px
+					width: 122px
+					img
+						width: 100%
+
+				+respond-to(xx)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+				
+				// Movil Lg
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+
+				// Movil Xs
+				@media only screen and (max-device-width : 350px)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+				@media only screen and (max-device-width : 350px) and (orientation : portrait)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+				@media only screen and (max-device-width : 480px) and (orientation : landscape)
+					height: 80px
+					width: 96px
+					img
+						width: 100%
+			
+			h2
+				color: $white
+				font-size: 3.4rem
+				font-style: italic
+				font-weight: 700
+				margin: 10px auto 16px
+
+				+respond-to(xs)
+					font-size: 2.5rem
+
+			h3
+				color: #B93C89
+				font-size: 2.1rem
+				font-style: italic
+				font-weight: 500
+
+				+respond-to(xs)
+					font-size: 1.15rem
+
+			h4
+				color: $white
+				font-size: 1.8rem
+				font-style: italic
+				font-weight: 500
+
+				+respond-to(xs)
+					font-size: 1rem
+
+
+		.ur3-botones
+			// background-color: rgba(green,.4)
+			// margin: 0 auto
+			max-width: 560px
+
+			+respond-to(xs)
+				text-align: center
+			
+			.btn
+
+				// Movil Lg
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+					margin-top: 10px
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+					margin-top: 10px
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+					margin-top: 10px
+
+				// Movil Xs
+				@media only screen and (max-device-width : 350px)
+					margin-top: 10px
+				@media only screen and (max-device-width : 350px) and (orientation : portrait)
+					margin-top: 10px
+				@media only screen and (max-device-width : 480px) and (orientation : landscape)
+					margin-top: 10px
