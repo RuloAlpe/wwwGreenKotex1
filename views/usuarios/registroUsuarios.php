@@ -40,12 +40,15 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 		?>
 
 			<?= $form->field($usuario, 'txt_nombre')->textInput(['maxlength' => true])?>
-		
 
 			<?= $form->field($usuario, 'txt_apellido')->textInput(['maxlength' => true])?>
-
+	
 			<?= $form->field($usuario, 'txt_correo')->input('email')?>
-
+			
+			<?php if($correo == 0){?>
+				<p>Este correo ya esta registrado</p>
+			<?php }?>
+			
 			<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 
 			<div class="form-group-select">
@@ -57,6 +60,10 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			<div class="form-group-ayuda">
 				<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
 				<span id="modal-ayuda-open" class="form-group-ayuda-span"><i class="ion ion-help"></i></span>
+
+				<?php if($tick == 0){?>
+					<p>Este ticket ya esta registrado</p>
+				<?php }?>
 			</div>
 
 			<div class="form-group-check">
@@ -91,8 +98,7 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 		<h2 class="modal-content-title">Registra el número marcado en rojo</h2>
 
 		<div class="modal-content-ticket">
-			<img src="<?=Url::base()?>/webAssets/images/ticket-01.png" alt="Ticket">
-			
+			<img id="imgTicket" src="<?=Url::base()?>/webAssets/images/" alt="Ticket">	
 		</div>
 
 	</div>

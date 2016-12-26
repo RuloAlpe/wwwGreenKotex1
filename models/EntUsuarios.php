@@ -31,7 +31,7 @@ class EntUsuarios extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required'],
+            [['txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
             ['num_telefono', 'string', 'min'=>10, 'tooShort' => 'Télefono debe ser mínimo 10 dígitos'],
         ];
@@ -44,10 +44,10 @@ class EntUsuarios extends \yii\db\ActiveRecord
     {
         return [
             'id_usuario' => 'Id Usuario',
-            'txt_nombre' => 'Txt Nombre',
-            'txt_apellido' => 'Txt Apellido',
-            'txt_correo' => 'Txt Correo',
-            'num_telefono' => 'Num Telefono',
+            'txt_nombre' => 'Nombre',
+            'txt_apellido' => 'Apellido',
+            'txt_correo' => 'Correo',
+            'num_telefono' => 'Télefono',
         ];
     }
 

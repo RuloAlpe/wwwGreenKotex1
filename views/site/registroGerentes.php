@@ -23,7 +23,8 @@ use app\models\CatSucursal;
 		<h2>Datos del Gerente</h2>
 
 		<?php
-		$form = ActiveForm::begin ( [ 
+		$form = ActiveForm::begin ( [
+				'id'=>'form-registros-gerentes',
 				'options' => [ 
 						'enctype' => 'multipart/form-data' 
 				],
@@ -37,7 +38,11 @@ use app\models\CatSucursal;
 			
 			<?= $form->field($gerente, 'txt_correo')->textInput(['maxlength' => true])?>
 			
-			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => true, 'class' => 'txt_telefono'])?>
+			<?php if($correo == 0){?>
+				<p>Este correo ya esta registrado</p>
+			<?php }?>
+			
+			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 			
 			<!-- .form-group-select -->
 			<div class="form-group-select">

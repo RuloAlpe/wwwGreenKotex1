@@ -2,7 +2,6 @@
  * Kotex.js
  */
 
-var basePath = "http://localhost/wwwGreenKotex1/web/";
 var valor = true;
 
 $(document).ready(function(){
@@ -30,22 +29,24 @@ $(document).ready(function(){
 		var button = document.getElementById('btn-submit-vendedor');
 		var l = Ladda.create(button);
 	 	l.start();
-	 	var button2 = document.getElementById('submit_terminar');
-		var m = Ladda.create(button2);
-	 	m.start();
 
 		$.ajax({
 			url: form.attr('action'),
 			type: 'post',
 			data: form.serialize(),
-			success: function() {
-				if(!valor){
-					m.stop();
-            		window.location.href = basePath + 'site/registro';
-            	}
-				l.stop();
-				swal("Good job!", "You clicked the button!", "success")
-				document.getElementById("from-verdedores").reset();
+			success: function(resp) {
+				if(resp.status != 'error'){
+					$("#correoRegistardo").css('display', "none");
+					if(!valor){
+	            		window.location.href = basePath + 'site/registro';
+	            	}
+					l.stop();
+					swal("Correcto", "El vendedor ha sido guardado con exito", "success")
+					document.getElementById("from-verdedores").reset();
+				}else{
+					$("#correoRegistardo").css('display', "");
+					l.stop();
+				}
 			}
 		});
 		return false;
@@ -62,7 +63,11 @@ $(document).ready(function(){
 	});
 	$("#submit_terminar").on("click", function(e){
 		e.preventDefault();
+		var button2 = document.getElementById('submit_terminar');
+		var m = Ladda.create(button2);
+	 	m.start();
 		valor = false;
+		m.stop();
 		$('#from-verdedores').submit();
 	});
 });
@@ -99,9 +104,14 @@ $('#entgerentes-id_cadena').on('change', function(){
 	});
 });
 
+var path = $("#imgTicket").attr("src");
 $('#enttickets-id_cadena').on('change', function(){
 	var idC = $(this).val();
 	console.log(idC);
+	
+	$("#imgTicket").attr("src", path);
+	$("#imgTicket").attr("src", path+"ticket-0"+idC+".png");
+	
 	$.ajax({
 		url: basePath + "usuarios/get-sucursales?idC="+idC,
 		type: "get",
@@ -138,12 +148,16 @@ $(document).ready(function(){
 			url: form.attr('action'),
 			type: 'post',
 			data: form.serialize(),
-			success: function() {
-				if(!valor){
-            		window.location.href = basePath + 'usuarios/registro';
-            	}
-				swal("Good job!", "You clicked the button!", "success")
-				document.getElementById("from-ticket").reset();
+			success: function(resp) {
+				if(resp.status != 'error'){
+					$("#ticketRegistardo").css("display", "none");
+					if(!valor){
+	            		window.location.href = basePath + 'usuarios/registro';
+	            	}
+					swal("Correcto", "Tu ticket ha sido registrado exitosamente", "success")
+					document.getElementById("from-ticket").reset();
+				}else
+					$("#ticketRegistardo").css("display", "");
 			}
 		});
 		return false;
@@ -151,6 +165,22 @@ $(document).ready(function(){
 
 	
 });
+
+$('body').on(
+		'beforeSubmit',
+		'#form-registros-gerentes',
+		function() {
+			var form = $(this);
+			// return false if form still have some validation errors
+			if (form.find('.has-error').length) {
+				return false;
+			}
+			var button = document.getElementById('btn-submit-gerentes');
+			var l = Ladda.create(button);
+		 	l.start();
+		 	//alert();
+		 	//$('#form-registros-gerentes').submit();
+		});
 
 $(document).ready(function(){
 	$("#sesion-btn-ticket").on("click", function(e){
@@ -175,15 +205,7 @@ $('#registro-btn').on('click', function(e){
 	 	l.stop();
 	 });
 
-$('#btn-submit-gerentes').on('click', function(e){
-		//console.log("jsjsjsjsjs");
-	 	e.preventDefault();
-	 	var button = document.getElementById('btn-submit-gerentes');
-		var l = Ladda.create(button);
-	 	l.start();
-	 	$('#btn-submit-gerentes').submit();
-	 	l.stop();
-	 });
+
 
 //$(document).on({
 //	'change' : function(e) {
