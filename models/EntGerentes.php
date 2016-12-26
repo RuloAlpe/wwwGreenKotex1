@@ -39,7 +39,7 @@ class EntGerentes extends \yii\db\ActiveRecord
             [['id_sucursal', 'id_cadena'], 'integer'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],
         	['txt_correo', 'email', 'message'=>'Formato de email no es valido'],
-            [['num_telefono'], 'string', 'max' => 10],
+             ['num_telefono', 'string', 'min'=>10, 'tooShort' => 'Télefono debe ser mínimo 10 dígitos'],
             [['id_cadena'], 'exist', 'skipOnError' => true, 'targetClass' => CatCadena::className(), 'targetAttribute' => ['id_cadena' => 'id_cadena']],
             [['id_sucursal'], 'exist', 'skipOnError' => true, 'targetClass' => CatSucursal::className(), 'targetAttribute' => ['id_sucursal' => 'id_sucursal']],
         ];

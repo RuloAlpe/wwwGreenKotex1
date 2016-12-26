@@ -9,7 +9,7 @@
 	-----------------------------------------------------------------------------
 	*/
 
-.mt2
+.ur2
 	align-items: center
 	background-image: url(../images/bg.png)
 	background-position: 50%
@@ -156,10 +156,11 @@
 			opacity: .6
 			width: 177px
 
-	.mt2-cont
+	.ur2-cont
 		// background-color: rgba(red,.2)
 		padding-right: 100px
 		position: relative
+		margin-top: 60px
 		max-width: 560px
 		z-index: 3
 
@@ -218,16 +219,14 @@
 					width: 56%
 					&:focus
 						outline: none
-
 				
-
-
+			
 				&:nth-child(6),
 				&:nth-child(7)
 					// background-color: red
 					// height: 30px
 					justify-content: flex-start
-					margin-top: 20px
+					margin-top: 10px
 					position: relative
 					text-align: left
 					width: 45%
@@ -313,6 +312,12 @@
 							&:before
 								display: none
 				
+				&:nth-child(8)
+					// background-color: red
+
+					+respond-to(xs)
+						margin-top: 20px
+
 				&.has-error
 					.help-block
 						background-color: red
@@ -321,7 +326,108 @@
 						margin-top: 4px
 						padding: 2px 10px
 						width: auto
-						
+			
+			// Ayuda
+			.form-group-ayuda
+				align-items: center
+				background-color: $primary-color
+				+border-radius(50%)
+				cursor: pointer
+				display: flex
+				height: 30px
+				justify-content: center
+				width: 30px
+				i
+					color: $black
+					font-size: 1.15rem
+			
+			// Checkbox
+			.form-group-check
+				align-items: center
+				background-color: transparent
+				display: flex
+				justify-content: flex-start
+				width: 100%
+
+				+respond-to(sm)
+					justify-content: flex-end
+
+				+respond-to(xs)
+					justify-content: flex-end
+
+				.boxes 
+					// background-color: rgba(#484848,.3)
+				
+
+					/*Checkboxes styles*/
+					input[type="checkbox"]
+						display: none 
+
+					input[type="checkbox"] + label 
+						display: block
+						position: relative
+						padding-left: 35px
+						margin-bottom: 20px
+						// font-family: $font-din
+						font-size: 1.05rem
+						color: $primary-color
+						cursor: pointer
+						-webkit-user-select: none
+						-moz-user-select: none
+						-ms-user-select: none
+
+						+respond-to(xs)
+							font-size: .9rem
+
+						// a
+						// 	font-size: 1.05rem
+						// 	color: $primary-color
+						// 	text-decoration: underline
+
+						// 	+respond-to(xs)
+						// 		font-size: 1rem
+
+					input[type="checkbox"] + label:last-child
+						margin-bottom: 0 
+
+					input[type="checkbox"] + label:before 
+						content: ''
+						display: block
+						width: 16px
+						height: 16px
+						border: 1px solid $primary-color
+						position: absolute
+						left: 8px
+						top: 2px
+						opacity: .6
+						-webkit-transition: all .12s, border-color .08s
+						transition: all .12s, border-color .08s
+
+						+respond-to(xs)
+							top: 2px
+
+						+respond-to(xx)
+							top: 9px
+					
+
+					input[type="checkbox"]:checked + label:before 
+						width: 10px
+						top: -2px
+						left: 10px
+						border-radius: 0
+						opacity: 1
+						border-top-color: transparent
+						border-left-color: transparent
+						-webkit-transform: rotate(45deg)
+						transform: rotate(45deg)
+
+						+respond-to(xs)
+							top: 0px
+
+						+respond-to(xx)
+							top: 4px
+
+			// Btn
 			.btn
 				font-style: italic
 				font-weight: bold

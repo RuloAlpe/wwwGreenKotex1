@@ -21,6 +21,10 @@
 	overflow: hidden
 	position: relative
 
+	+respond-to(xs)
+		height: auto
+		min-height: 100vh
+
 	.logo
 		display: flex
 		left: 200px
@@ -28,27 +32,151 @@
 		top: 20px
 		z-index: 4
 
+		+respond-to(md)
+			left: 80px
+
+		+respond-to(sm)
+			height: 232px
+			left: 70px
+			width: 280px
+			img
+				width: 100%
+
+		+respond-to(xs)
+			height: 100px
+			left: 30px
+			top: 10px
+			width: 122px
+			img
+				width: 100%
+
+		+respond-to(xx)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+
 	.avion
 		position: absolute
 		right: 30px
 		top: 50px
+
+		+respond-to(sm)
+			right: 20px
+
+		+respond-to(xs)
+			height: 41px
+			right: 10px
+			top: 30px
+			width: 103px
 
 	.productos
 		bottom: -54px
 		left: -103px
 		position: absolute
 
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 300px
+			width: 213px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			height: 300px
+			width: 213px
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			bottom: -34px
+			height: 300px
+			left: -76px
+			width: 213px
+		
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 300px
+			width: 213px
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			height: 300px
+			opacity: .6
+			width: 213px
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			height: 250px
+			left: -60px
+			opacity: .6
+			width: 177px
+
 	.mt3-cont
 		// background-color: rgba(red,.2)
 		padding-right: 100px
 		position: relative
 		max-width: 600px
+		width: 100%
 		z-index: 3
+
+		+respond-to(xs)
+			padding: 30px 20px
+
+		+respond-to(xx)
+			padding: 20px 10px
 
 		h2
 			color: $white
 			font-size: 3rem
 			margin-bottom: 40px
+
+			+respond-to(sm)
+				margin-bottom: 20px
+
+			+respond-to(xs)
+				font-size: 1.35rem
+				margin-bottom: 20px
+				padding-right: 20px
+				text-align: right
 
 		form
 			align-items: center
@@ -66,6 +194,9 @@
 				margin-bottom: 20px
 				text-align: right
 				width: 100%
+
+				+respond-to(xs)
+					margin-bottom: 7px
 
 				label
 					// background-color: red
@@ -86,29 +217,95 @@
 					&:focus
 						outline: none
 
-				.help-block
-					width: 100%
+				&.has-error
+					.help-block
+						background-color: red
+						color: white
+						font-size: .8rem
+						margin-top: 4px
+						padding: 2px 10px
+						width: auto
 
 			.form-group-btns
 				align-items: center
-				background-color: rgba(green,.2)
+				// background-color: red
 				display: flex
 				justify-content: center
 				margin-top: 30px
 				width: 100%
+				
+				// Movil Lg
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+					margin-top: 16px
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+					margin-top: 16px
+				@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+					margin-top: 16px
 
 				.btn
 					font-size: 1.1rem
 					font-style: italic
 					font-weight: bold
 					line-height: 1
-					width: 210px
+					
+					// +respond-to(xs)
+					// 	font-size: .95rem
+
+					// Movil Xs
+					@media only screen and (max-device-width : 350px)
+						font-size: .95rem
+					@media only screen and (max-device-width : 350px) and (orientation : portrait)
+						font-size: .95rem
+					@media only screen and (max-device-width : 480px) and (orientation : landscape)
+						font-size: 1.1rem
 
 				button.btn
 					padding: .6rem 2rem
 					white-space: normal
 
+					+respond-to(lg)
+						width: 210px
+
+					+respond-to(md)
+						width: 210px
+
+					+respond-to(sm)
+						padding: 1.1rem 2rem
+
+					// Movil Lg
+					@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+						padding: .6rem 1rem
+					@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+						padding: .6rem 1rem
+					@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+						padding: 1rem
+					
+					// Movil Xs
+					@media only screen and (max-device-width : 350px)
+						padding: .5rem 1.3rem
+					@media only screen and (max-device-width : 350px) and (orientation : portrait)
+						padding: .5rem 1.3rem
+					@media only screen and (max-device-width : 480px) and (orientation : landscape)
+						padding: 1rem 1.3rem
+
 				a.btn
 					letter-spacing: 1px
 					margin-left: 20px
 					padding: 1.13rem 3rem
+					
+
+					// Movil Lg
+					@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+						padding: 1rem 1.3rem
+					@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+						padding: 1rem 1.3rem
+					@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+						padding: 1rem 1.3rem
+					
+					// Movil Xs
+					@media only screen and (max-device-width : 350px)
+						padding: 1rem 1.3rem
+					@media only screen and (max-device-width : 350px) and (orientation : portrait)
+						padding: 1rem 1.3rem
+					@media only screen and (max-device-width : 480px) and (orientation : landscape)
+						padding: 1rem 1.3rem

@@ -20,12 +20,11 @@ class AppAsset extends AssetBundle
     public $css = [
         'webAssets/plugins/animsition/css/animsition.min.css',
         'webAssets/plugins/ladda/css/ladda.min.css',
+    	'webAssets/plugins/sweetalert/css/sweetalert.css',
+        'webAssets/plugins/ionicons/css/ionicons.min.css',
         'webAssets/css/kotex.css',
-    	'webAssets/plugins/sweetalert/css/sweetalert.css'
     ];
     public $js = [
-
-     	'js/site.js',
      	'webAssets/plugins/sweetalert/js/sweetalert.min.js',
         'webAssets/plugins/animsition/js/animsition.min.js',
         'webAssets/plugins/ladda/js/spin.min.js',
