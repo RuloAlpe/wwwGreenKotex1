@@ -1,8 +1,27 @@
 <?php
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
+?>
 
-$form = ActiveForm::begin ( [
+<!-- .ur2 -->
+<div class="ur2">
+
+	<a href="" class="logo">
+		<img src="<?=Url::base()?>/webAssets/images/logo.png" alt="Kotex">
+	</a>
+
+	<img src="<?=Url::base()?>/webAssets/images/avion.png" class="avion" alt="Avion">
+
+	<img src="<?=Url::base()?>/webAssets/images/productos.png" class="productos" alt="Productos">
+
+	<!-- .ur2-cont -->
+	<div class="ur2-cont">
+
+		<!-- <h2>Datos del Gerente</h2> -->
+
+		<?php
+		$form = ActiveForm::begin ( [
 		'options' => [
 				'enctype' => 'multipart/form-data'
 		],
@@ -17,3 +36,9 @@ $form = ActiveForm::begin ( [
 <?php
 ActiveForm::end ();
 ?>
+
+	</div>
+	<!-- end - .ur2-cont -->
+
+</div>
+<!-- end - .ur2 -->
