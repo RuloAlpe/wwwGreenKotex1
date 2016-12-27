@@ -11,7 +11,7 @@ use yii\helpers\Url;
 <!-- .mt3 -->
 <div class="mt3">
 
-	<a href="" class="logo">
+	<a href="<?=Yii::$app->urlManager->createAbsoluteUrl ( ['site/registro'] );?>" class="logo">
 		<img src="<?=Url::base()?>/webAssets/images/logo.png" alt="Kotex">
 	</a>
 
