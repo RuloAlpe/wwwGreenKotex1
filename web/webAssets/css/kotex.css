@@ -1158,7 +1158,7 @@ blockquote {
   height: 28px;
   outline: none;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   position: relative;
   width: 100%;
   -webkit-appearance: none;
@@ -2903,6 +2903,7 @@ blockquote {
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
   .ur2 .productos {
     height: 300px;
+    opacity: .6;
     width: 213px;
   }
 }
@@ -2910,6 +2911,7 @@ blockquote {
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
   .ur2 .productos {
     height: 300px;
+    opacity: .6;
     width: 213px;
   }
 }
@@ -2918,6 +2920,7 @@ blockquote {
   .ur2 .productos {
     bottom: -34px;
     height: 300px;
+    opacity: .6;
     left: -76px;
     width: 213px;
   }
@@ -2926,6 +2929,7 @@ blockquote {
 @media only screen and (max-device-width: 350px) {
   .ur2 .productos {
     height: 300px;
+    opacity: .6;
     width: 213px;
   }
 }
@@ -3135,7 +3139,7 @@ blockquote {
   height: 28px;
   outline: none;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   position: relative;
   width: 100%;
   -webkit-appearance: none;
@@ -3188,9 +3192,14 @@ blockquote {
   background-color: red;
   color: white;
   font-size: .8rem;
+  margin-bottom: 0;
   margin-top: 0;
   padding: 2px 10px;
   width: auto;
+}
+
+.ur2 .ur2-cont form .help-error {
+  margin-top: 8px;
 }
 
 .ur2 .ur2-cont form .form-group-ayuda {
@@ -4424,7 +4433,7 @@ blockquote {
   height: 28px;
   outline: none;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 40px;
   position: relative;
   width: 100%;
   -webkit-appearance: none;

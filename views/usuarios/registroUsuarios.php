@@ -62,11 +62,12 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			<div class="form-group-ayuda">
 				<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
 				<span id="modal-ayuda-open" class="form-group-ayuda-span"><i class="ion ion-help"></i></span>
-
-				<?php if($tick == 0){?>
-					<p>Este ticket ya esta registrado</p>
-				<?php }?>
 			</div>
+			<?php if($tick == 0){?>
+				<div class="help-error">
+					<p>Este ticket ya esta registrado</p>
+				</div>
+			<?php }?>
 
 			<div class="form-group-check">
 				<div class="boxes">
