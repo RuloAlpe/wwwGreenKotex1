@@ -210,11 +210,14 @@ class UsuariosController extends Controller
     public function actionGuardarTicket(){
     	$correo = $_POST['email-usuario'];
     	$buscar = EntUsuarios::find()->where(['txt_correo'=>$correo])->one();
-    	$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
-    	$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
-    	$ticket = new EntTickets();
     	
     	if($buscar){
+    		
+    		#$this->crearSesionUsuario($buscar);
+    		
+    		$sucursales = CatSucursal::find()->where(['b_habilitado'=>1])->all();
+    		$cadenas = CatCadena::find()->where(['b_habilitado'=>1])->all();
+    		$ticket = new EntTickets();
     		 
     		return $this->render('registroTickets',[
     			'idUsuario' => $buscar->id_usuario,
@@ -254,6 +257,33 @@ class UsuariosController extends Controller
     			]);
     		}
     		
+    	}
+    }
+    
+    
+    private function crearSesionUsuario($usuario){
+    	$session = Yii::$app->session;
+    	$session->set('usuario', $usuario);
+    }
+    
+    
+    private function removerSesionUsuario(){
+    	$session = Yii::$app->session;
+    	$session->remove('usuario');
+    }
+    
+    private function obtenerSesionUsuario(){
+    	$session = Yii::$app->session;
+    	return $session->get('usuario');
+    }
+    
+    private function existeSesion(){
+    	$session = Yii::$app->session;
+    
+    	if ($session->has('usuario')){
+    		return true;
+    	}else{
+    		return false;
     	}
     }
 }

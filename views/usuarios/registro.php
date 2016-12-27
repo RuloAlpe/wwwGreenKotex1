@@ -45,9 +45,9 @@ use yii\helpers\Url;
 		] );
 		?>
 
-		<?= Html::submitButton('<span class="ladda-label">Registra tu ticket</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+		<?= Html::submitButton('<span class="ladda-label">Registrate</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 
-
+	<a id="ready" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/abrir-sesion'] ) ?>" data-style="zoom-out"><span class="ladda-label">Ya tengo registro</span></a>
 
 		<?php
 		ActiveForm::end ();

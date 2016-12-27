@@ -9,7 +9,7 @@ use app\models\CatSucursal;
 <!-- .mt2 -->
 <div class="mt2">
 
-	<a href="" class="logo">
+	<a href="<?=Yii::$app->urlManager->createAbsoluteUrl ( ['site/registro'] );?>" class="logo">
 		<img src="<?=Url::base()?>/webAssets/images/logo.png" alt="Kotex">
 	</a>
 

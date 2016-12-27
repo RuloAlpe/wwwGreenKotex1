@@ -15,7 +15,7 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 <!-- .ur2 -->
 <div class="ur2">
 
-	<a href="" class="logo">
+	<a href="<?=Yii::$app->urlManager->createAbsoluteUrl ( ['usuarios/registro'] );?>" class="logo">
 		<img src="<?=Url::base()?>/webAssets/images/logo.png" alt="Kotex">
 	</a>
 
