@@ -46,7 +46,9 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			<?= $form->field($usuario, 'txt_correo')->input('email')?>
 			
 			<?php if($correo == 0){?>
-				<p>Este correo ya esta registrado</p>
+				<div class="help-error-correo-registrado">
+					<p>Este correo ya esta registrado</p>
+				</div>
 			<?php }?>
 			
 			<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
@@ -60,11 +62,12 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			<div class="form-group-ayuda">
 				<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
 				<span id="modal-ayuda-open" class="form-group-ayuda-span"><i class="ion ion-help"></i></span>
-
-				<?php if($tick == 0){?>
-					<p>Este ticket ya esta registrado</p>
-				<?php }?>
 			</div>
+			<?php if($tick == 0){?>
+				<div class="help-error">
+					<p>Este ticket ya esta registrado</p>
+				</div>
+			<?php }?>
 
 			<div class="form-group-check">
 				<div class="boxes">

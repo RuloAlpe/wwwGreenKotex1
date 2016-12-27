@@ -194,7 +194,7 @@
 			align-items: center
 			display: flex
 			justify-content: flex-end
-			padding-right: 70px
+			// padding-right: 70px
 
 			+respond-to(xs)
 				padding-right: 0
@@ -202,7 +202,20 @@
 			.btn
 				font-style: italic
 				font-weight: bold
+		
+			.form-group-btns
+				align-items: center
+				// background-color: orange
+				display: flex
+				justify-content: flex-end
+				width: 100%
+				button.btn
+					margin-right: 10px
 
+				+respond-to(xs)
+					flex-direction: column
+					button.btn
+						margin-bottom: 10px
 
 	// Registro Gerentes
 	.kotex-cont-registro-gerentes

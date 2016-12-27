@@ -36,9 +36,13 @@ use yii\helpers\Url;
 				"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['site/registro-gerentes'] ),
 		] );
 		?>
-		
-		<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
-	<a id="ready" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/abrir-sesion'] ) ?>" data-style="zoom-out"><span class="ladda-label">Ya tengo registro</span></a>
+
+		<!-- .form-group-btns -->
+		<div class="form-group-btns">
+			<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+			
+			<a id="ready" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/abrir-sesion'] ) ?>" data-style="zoom-out"><span class="ladda-label">Ya tengo registro</span></a>
+		</div>
 
 		<?php
 
