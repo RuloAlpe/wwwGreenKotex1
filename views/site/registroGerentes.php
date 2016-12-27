@@ -61,7 +61,7 @@ use app\models\CatSucursal;
 				<?= Html::submitButton('<span class="ladda-label">Enviar</span>', ['id' => 'btn-submit-gerentes', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
 			</div>
 			<!-- end - .form-group-botones-center -->
-
+<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/abrir-sesion'] ) ?>"><span class="ladda-label">Ya tengo registro</span></a>
 		<?php
 
 		ActiveForm::end ();
