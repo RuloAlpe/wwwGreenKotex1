@@ -224,100 +224,6 @@
 					&:focus
 						outline: none
 
-				
-
-
-				&:nth-child(6),
-				&:nth-child(7)
-					// background-color: red
-					// height: 30px
-					justify-content: flex-start
-					margin-top: 20px
-					position: relative
-					text-align: left
-					width: 45%
-
-					+respond-to(xs)
-						margin-top: 10px
-
-					label
-						margin-bottom: 18px
-				  
-					&:after
-						content: ''
-						position: absolute
-						top: 47px
-						width: 0
-						height: 0
-						right: 8px
-						// bottom: 0
-						margin: auto
-						border-style: solid
-						border-width: 10px 6px 0 6px
-						border-color: #999 transparent transparent transparent
-						pointer-events: none
-						z-index: 9
-				
-					&:before
-						width: 30px
-						position: absolute
-						top: 37px
-						right: 0px
-						// bottom: 0px
-						background-color: #ccc
-						content: ''
-						pointer-events: none
-						z-index: 8
-						height: 28px
-
-					select
-						background-color: $white
-						border-radius: 0
-						// border: 1px solid rgba(navy,.7)
-						border: none
-						// +border-radius(3px)
-						// box-shadow: none
-						// color: blue
-						cursor: pointer
-						font-family: $font-base
-						font-size: 1rem
-						height: 28px
-						outline: none
-						padding-left: 10px
-						padding-right: 10px
-						position: relative
-						width: 100%
-						-webkit-appearance: none
-						z-index: 3
-
-						// Disable default styling on ff
-						-moz-appearance: none
-
-						// Disable ugly ass outline on firefox 
-						&:-moz-focusring
-							color: transparent
-
-						// Disable default arrow on IE 11+
-						&::-ms-expand
-							display: none
-						
-						&:focus
-							border-color: #76aec1
-							outline: none
-
-						&.error
-							border: 1px solid red
-
-					// IE 9 only 
-					@media all and (min-width:0\0) and (min-resolution:.001dpcm)
-						.select
-							select
-								padding-right: 0
-
-							&:after,
-							&:before
-								display: none
-				
 				&.has-error
 					.help-block
 						background-color: red
@@ -326,7 +232,8 @@
 						margin-top: 4px
 						padding: 2px 10px
 						width: auto
-			
+
+			.help-error-correo-registrado,
 			.help-error
 				align-items: center
 				display: flex
@@ -442,7 +349,8 @@
 								display: none
 								
 			// Btns
-			.form-group-botones
+			.form-group-botones,
+			.form-group-botones-center
 				align-items: center
 				// background-color: maroon
 				display: flex
@@ -453,11 +361,11 @@
 					font-weight: bold
 					margin-top: 30px
 					
-					+respond-to(sm)
-						margin-left: auto
+					// +respond-to(sm)
+					// 	margin-left: auto
 
-					+respond-to(xs)
-						margin-left: auto
+					// +respond-to(xs)
+					// 	margin-left: auto
 
 				.btn-secundary
 					background-color: #DDD
@@ -473,3 +381,10 @@
 					&:hover
 						span
 							color: rgba($white,.9)
+			
+			.form-group-botones
+				+respond-to(xs)
+					justify-content: flex-end
+					
+			.form-group-botones-center
+				justify-content: center

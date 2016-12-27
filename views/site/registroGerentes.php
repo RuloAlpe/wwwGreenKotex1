@@ -39,7 +39,9 @@ use app\models\CatSucursal;
 			<?= $form->field($gerente, 'txt_correo')->textInput(['maxlength' => true])?>
 			
 			<?php if($correo == 0){?>
-				<p>Este correo ya esta registrado</p>
+				<div class="help-error-correo-registrado">
+					<p>Este correo ya esta registrado</p>
+				</div>
 			<?php }?>
 			
 			<?= $form->field($gerente, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
@@ -54,7 +56,11 @@ use app\models\CatSucursal;
 			</div>
 			<!-- end - .form-group-select -->
 
-			<?= Html::submitButton('<span class="ladda-label">Enviar</span>', ['id' => 'btn-submit-gerentes', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+			<!-- .form-group-botones-center -->
+			<div class="form-group-botones-center">
+				<?= Html::submitButton('<span class="ladda-label">Enviar</span>', ['id' => 'btn-submit-gerentes', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+			</div>
+			<!-- end - .form-group-botones-center -->
 
 		<?php
 

@@ -672,7 +672,6 @@ blockquote {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 70px;
 }
 
 @media screen and (max-width: 767px) {
@@ -684,6 +683,34 @@ blockquote {
 .mt1 .mt1-cont form .btn {
   font-style: italic;
   font-weight: bold;
+}
+
+.mt1 .mt1-cont form .form-group-btns {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.mt1 .mt1-cont form .form-group-btns button.btn {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .mt1 .mt1-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mt1 .mt1-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
+  }
 }
 
 .mt1 .kotex-cont-registro-gerentes {
@@ -1026,97 +1053,6 @@ blockquote {
   outline: none;
 }
 
-.mt2 .mt2-cont form .form-group:nth-child(6), .mt2 .mt2-cont form .form-group:nth-child(7) {
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-top: 20px;
-  position: relative;
-  text-align: left;
-  width: 45%;
-}
-
-@media screen and (max-width: 767px) {
-  .mt2 .mt2-cont form .form-group:nth-child(6), .mt2 .mt2-cont form .form-group:nth-child(7) {
-    margin-top: 10px;
-  }
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6) label, .mt2 .mt2-cont form .form-group:nth-child(7) label {
-  margin-bottom: 18px;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6):after, .mt2 .mt2-cont form .form-group:nth-child(7):after {
-  content: '';
-  position: absolute;
-  top: 47px;
-  width: 0;
-  height: 0;
-  right: 8px;
-  margin: auto;
-  border-style: solid;
-  border-width: 10px 6px 0 6px;
-  border-color: #999 transparent transparent transparent;
-  pointer-events: none;
-  z-index: 9;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6):before, .mt2 .mt2-cont form .form-group:nth-child(7):before {
-  width: 30px;
-  position: absolute;
-  top: 37px;
-  right: 0px;
-  background-color: #ccc;
-  content: '';
-  pointer-events: none;
-  z-index: 8;
-  height: 28px;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6) select, .mt2 .mt2-cont form .form-group:nth-child(7) select {
-  background-color: #FFF;
-  border-radius: 0;
-  border: none;
-  cursor: pointer;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1rem;
-  height: 28px;
-  outline: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: relative;
-  width: 100%;
-  -webkit-appearance: none;
-  z-index: 3;
-  -moz-appearance: none;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6) select:-moz-focusring, .mt2 .mt2-cont form .form-group:nth-child(7) select:-moz-focusring {
-  color: transparent;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6) select::-ms-expand, .mt2 .mt2-cont form .form-group:nth-child(7) select::-ms-expand {
-  display: none;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6) select:focus, .mt2 .mt2-cont form .form-group:nth-child(7) select:focus {
-  border-color: #76aec1;
-  outline: none;
-}
-
-.mt2 .mt2-cont form .form-group:nth-child(6) select.error, .mt2 .mt2-cont form .form-group:nth-child(7) select.error {
-  border: 1px solid red;
-}
-
-@media all and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
-  .mt2 .mt2-cont form .form-group:nth-child(6) .select select, .mt2 .mt2-cont form .form-group:nth-child(7) .select select {
-    padding-right: 0;
-  }
-  .mt2 .mt2-cont form .form-group:nth-child(6) .select:after, .mt2 .mt2-cont form .form-group:nth-child(6) .select:before, .mt2 .mt2-cont form .form-group:nth-child(7) .select:after, .mt2 .mt2-cont form .form-group:nth-child(7) .select:before {
-    display: none;
-  }
-}
-
 .mt2 .mt2-cont form .form-group.has-error .help-block {
   background-color: red;
   color: white;
@@ -1126,6 +1062,7 @@ blockquote {
   width: auto;
 }
 
+.mt2 .mt2-cont form .help-error-correo-registrado,
 .mt2 .mt2-cont form .help-error {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1139,6 +1076,7 @@ blockquote {
   width: 100%;
 }
 
+.mt2 .mt2-cont form .help-error-correo-registrado p,
 .mt2 .mt2-cont form .help-error p {
   background-color: red;
   color: white;
@@ -1254,7 +1192,8 @@ blockquote {
   }
 }
 
-.mt2 .mt2-cont form .form-group-botones {
+.mt2 .mt2-cont form .form-group-botones,
+.mt2 .mt2-cont form .form-group-botones-center {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1267,25 +1206,15 @@ blockquote {
   width: 100%;
 }
 
-.mt2 .mt2-cont form .form-group-botones .btn {
+.mt2 .mt2-cont form .form-group-botones .btn,
+.mt2 .mt2-cont form .form-group-botones-center .btn {
   font-style: italic;
   font-weight: bold;
   margin-top: 30px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .mt2 .mt2-cont form .form-group-botones .btn {
-    margin-left: auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .mt2 .mt2-cont form .form-group-botones .btn {
-    margin-left: auto;
-  }
-}
-
-.mt2 .mt2-cont form .form-group-botones .btn-secundary {
+.mt2 .mt2-cont form .form-group-botones .btn-secundary,
+.mt2 .mt2-cont form .form-group-botones-center .btn-secundary {
   background-color: #DDD;
   background-color: transparent;
   box-shadow: none;
@@ -1294,14 +1223,30 @@ blockquote {
   margin-right: 10px;
 }
 
-.mt2 .mt2-cont form .form-group-botones .btn-secundary span {
+.mt2 .mt2-cont form .form-group-botones .btn-secundary span,
+.mt2 .mt2-cont form .form-group-botones-center .btn-secundary span {
   color: #FFF;
   font-weight: 400;
   text-decoration: underline;
 }
 
-.mt2 .mt2-cont form .form-group-botones .btn-secundary:hover span {
+.mt2 .mt2-cont form .form-group-botones .btn-secundary:hover span,
+.mt2 .mt2-cont form .form-group-botones-center .btn-secundary:hover span {
   color: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 767px) {
+  .mt2 .mt2-cont form .form-group-botones {
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.mt2 .mt2-cont form .form-group-botones-center {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*!
