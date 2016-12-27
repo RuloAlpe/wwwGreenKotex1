@@ -45,7 +45,7 @@ use yii\helpers\Url;
 				
 				<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro-usuarios'] ) ?>"><span class="ladda-label">Registrarse</span></a>
 				
-				<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+				<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 
 			</div>
 			<!-- end - .form-group-botones -->
