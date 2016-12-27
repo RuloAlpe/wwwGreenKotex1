@@ -40,7 +40,9 @@ use yii\helpers\Url;
 			<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
 
 			<?php //if($tick == 0){?>
-				<p id="ticketRegistardo" style="display:none">Este ticket ya esta registrado</p>
+				<div class="help-error">
+					<p id="ticketRegistardo" style="display:none">Este ticket ya esta registrado</p>
+				</div>
 			<?php //}?>
 			
 			<!-- .form-group-btns -->

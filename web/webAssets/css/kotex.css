@@ -3169,6 +3169,30 @@ blockquote {
   }
 }
 
+.ur2 .ur2-cont form .help-error-correo-registrado,
+.ur2 .ur2-cont form .help-error {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.ur2 .ur2-cont form .help-error-correo-registrado p,
+.ur2 .ur2-cont form .help-error p {
+  background-color: red;
+  color: white;
+  font-size: .8rem;
+  margin-top: 0;
+  padding: 2px 10px;
+  width: auto;
+}
+
 .ur2 .ur2-cont form .form-group-ayuda {
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -4439,6 +4463,30 @@ blockquote {
   color: white;
   font-size: .8rem;
   margin-top: 4px;
+  padding: 2px 10px;
+  width: auto;
+}
+
+.ur4 .ur4-cont form .help-error-correo-registrado,
+.ur4 .ur4-cont form .help-error {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.ur4 .ur4-cont form .help-error-correo-registrado p,
+.ur4 .ur4-cont form .help-error p {
+  background-color: red;
+  color: white;
+  font-size: .8rem;
+  margin-top: 0;
   padding: 2px 10px;
   width: auto;
 }

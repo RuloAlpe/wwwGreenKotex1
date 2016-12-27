@@ -46,7 +46,9 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			<?= $form->field($usuario, 'txt_correo')->input('email')?>
 			
 			<?php if($correo == 0){?>
-				<p>Este correo ya esta registrado</p>
+				<div class="help-error-correo-registrado">
+					<p>Este correo ya esta registrado</p>
+				</div>
 			<?php }?>
 			
 			<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
