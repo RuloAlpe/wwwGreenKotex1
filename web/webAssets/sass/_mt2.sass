@@ -184,6 +184,9 @@
 				margin-bottom: 10px
 				text-align: right
 
+			&.ingresar
+				text-align: right
+
 		form
 			align-items: center
 			display: flex
@@ -324,6 +327,19 @@
 						padding: 2px 10px
 						width: auto
 			
+			.help-error
+				align-items: center
+				display: flex
+				justify-content: flex-end
+				width: 100%
+				p
+					background-color: red
+					color: white
+					font-size: .8rem
+					margin-top: 0
+					padding: 2px 10px
+					width: auto
+
 			// Select
 			.form-group-select
 				align-items: center
@@ -425,15 +441,35 @@
 							&:before
 								display: none
 								
-			// Btn 
-			.btn
-				font-style: italic
-				font-weight: bold
-				margin-top: 30px
-				
-				+respond-to(sm)
-					margin-left: auto
+			// Btns
+			.form-group-botones
+				align-items: center
+				// background-color: maroon
+				display: flex
+				justify-content: flex-end
+				width: 100%
+				.btn
+					font-style: italic
+					font-weight: bold
+					margin-top: 30px
+					
+					+respond-to(sm)
+						margin-left: auto
 
-				+respond-to(xs)
-					margin-left: auto
-			
+					+respond-to(xs)
+						margin-left: auto
+
+				.btn-secundary
+					background-color: #DDD
+					background-color: transparent
+					box-shadow: none
+					color: $white
+					padding: .6rem 1rem
+					margin-right: 10px
+					span
+						color: $white
+						font-weight: 400
+						text-decoration: underline
+					&:hover
+						span
+							color: rgba($white,.9)
