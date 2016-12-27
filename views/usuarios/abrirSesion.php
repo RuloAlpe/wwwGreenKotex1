@@ -18,24 +18,41 @@ use yii\helpers\Url;
 	<!-- .ur2-cont -->
 	<div class="ur2-cont">
 
-		<!-- <h2>Datos del Gerente</h2> -->
+		<h2 class="ingresar">Ingresar</h2>
 
 		<?php
 		$form = ActiveForm::begin ( [
-		'options' => [
-				'enctype' => 'multipart/form-data'
-		],
-		"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['usuarios/guardar-ticket'] ),
-] );
-?>
-	<label>Ingrese correo</label>
-	<input type="email" name="email-usuario">
-		
-	<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+			'options' => [
+					'enctype' => 'multipart/form-data'
+			],
+			"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['usuarios/guardar-ticket'] ),
+		] );
+		?>
 
-<?php
-ActiveForm::end ();
-?>
+			<div class="form-group">
+
+				<label>Ingrese correo</label>
+				<input type="email" name="email-usuario">
+							
+			</div>
+
+			<div class="help-error">
+				<p>El correo es incorrecto</p>
+			</div>
+
+			<!-- .form-group-botones -->
+			<div class="form-group-botones">
+				
+				<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro-usuarios'] ) ?>"><span class="ladda-label">Registrarse</span></a>
+				
+				<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+
+			</div>
+			<!-- end - .form-group-botones -->
+
+		<?php
+		ActiveForm::end ();
+		?>
 
 	</div>
 	<!-- end - .ur2-cont -->
