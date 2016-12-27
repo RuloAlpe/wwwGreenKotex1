@@ -1671,19 +1671,52 @@ blockquote {
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
   .mt3 .mt3-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 16px;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
   .mt3 .mt3-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 16px;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
   .mt3 .mt3-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 16px;
+  }
+}
+
+@media only screen and (max-device-width: 350px) {
+  .mt3 .mt3-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-device-width: 350px) and (orientation: portrait) {
+  .mt3 .mt3-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: landscape) {
+  .mt3 .mt3-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1737,36 +1770,42 @@ blockquote {
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
   .mt3 .mt3-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
     padding: .6rem 1rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
   .mt3 .mt3-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
     padding: .6rem 1rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
   .mt3 .mt3-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
     padding: 1rem;
   }
 }
 
 @media only screen and (max-device-width: 350px) {
   .mt3 .mt3-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
     padding: .5rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 350px) and (orientation: portrait) {
   .mt3 .mt3-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
     padding: .5rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: landscape) {
   .mt3 .mt3-cont form .form-group-btns button.btn {
+    margin-bottom: 10px;
     padding: 1rem 1.3rem;
   }
 }
@@ -1775,6 +1814,7 @@ blockquote {
   letter-spacing: 1px;
   margin-left: 20px;
   padding: 1.13rem 3rem;
+  white-space: normal;
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
