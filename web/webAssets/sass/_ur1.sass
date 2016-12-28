@@ -222,7 +222,111 @@
 			font-size: 1.1rem
 			margin-bottom: 30px
 			position: relative
+	
 
+	// Checkbox
+	.form-group-check
+		align-items: center
+		background-color: transparent
+		display: flex
+		justify-content: center
+		margin-top: 10px
+		position: relative
+		width: 100%
+
+		+respond-to(sm)
+			justify-content: flex-end
+
+		+respond-to(xs)
+			justify-content: flex-end
+
+		.boxes 
+			// background-color: rgba(#484848,.3)
+			position: relative
+			z-index: 2
+		
+
+			/*Checkboxes styles*/
+			input[type="checkbox"]
+				display: none 
+
+			input[type="checkbox"] + label 
+				display: block
+				position: relative
+				padding-left: 35px
+				margin-bottom: 20px
+				// font-family: $font-din
+				font-size: 1.05rem
+				color: $white
+				cursor: pointer
+				-webkit-user-select: none
+				-moz-user-select: none
+				-ms-user-select: none
+
+				+respond-to(xs)
+					font-size: .9rem
+
+				// a
+				// 	font-size: 1.05rem
+				// 	color: $primary-color
+				// 	text-decoration: underline
+
+				// 	+respond-to(xs)
+				// 		font-size: 1rem
+
+			input[type="checkbox"] + label:last-child
+				margin-bottom: 0 
+
+			input[type="checkbox"] + label:before 
+				content: ''
+				display: block
+				width: 16px
+				height: 16px
+				border: 1px solid $white
+				position: absolute
+				left: 8px
+				top: 2px
+				opacity: .6
+				-webkit-transition: all .12s, border-color .08s
+				transition: all .12s, border-color .08s
+
+				+respond-to(xs)
+					top: 2px
+
+				+respond-to(xx)
+					top: 9px
+			
+
+			input[type="checkbox"]:checked + label:before 
+				width: 10px
+				top: -2px
+				left: 10px
+				border-radius: 0
+				opacity: 1
+				border-top-color: transparent
+				border-left-color: transparent
+				-webkit-transform: rotate(45deg)
+				transform: rotate(45deg)
+
+				+respond-to(xs)
+					top: 0px
+
+				+respond-to(xx)
+					top: 4px
+			
+		// Mask 
+		.form-group-check-mask
+			background-color: rgba(red,.4)
+			bottom: 0
+			cursor: pointer
+			height: 100%
+			left: 0
+			position: absolute
+			right: 0
+			top: 0
+			width: 100%
+			z-index: 4
+					
 	.acepto-terminos-condiciones
 		// background-color: red
 		bottom: 20px

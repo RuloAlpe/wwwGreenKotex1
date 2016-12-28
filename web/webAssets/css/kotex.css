@@ -378,7 +378,7 @@ blockquote {
 
 .modal .modal-content .modal-close {
   color: #FFF;
-  font-size: 1rem;
+  font-size: 2rem;
   position: absolute;
   right: 10px;
   top: 10px;
@@ -388,6 +388,190 @@ blockquote {
   color: #F2F2F2;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal.modal-aviso-privacidad .modal-content {
+  position: relative;
+  background-color: #FFF;
+  margin: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-header {
+  padding: 4px 20px;
+  background-color: purple;
+  color: #FFF;
+}
+
+@media screen and (max-width: 767px) {
+  .modal.modal-aviso-privacidad .modal-content .modal-header {
+    padding: 10px 20px;
+  }
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-header h2 {
+  font-size: 1.95em;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal.modal-aviso-privacidad .modal-content .modal-header h2 {
+    font-size: 1.85em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal.modal-aviso-privacidad .modal-content .modal-header h2 {
+    font-size: 1.35em;
+  }
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body {
+  padding: 30px 20px;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body p {
+  text-align: justify;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .aceptar-terminos-condiciones-btn {
+  background-color: #CCC;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 44px;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 99999;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .aceptar-terminos-condiciones-btn:hover {
+  background-color: #c3c3c3;
+}
+
+@media screen and (max-width: 767px) {
+  .modal.modal-aviso-privacidad .modal-content .modal-body .aceptar-terminos-condiciones-btn {
+    text-align: center;
+  }
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum {
+  padding: 30px 20px;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum h3,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum h3 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum h4,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum h4 {
+  font-size: 1.1em;
+  margin: 30px 0 10px;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum p,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum p .link,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum p .link {
+  color: purple;
+  text-decoration: underline;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum p .link:hover,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum p .link:hover {
+  color: purple;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum ol,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum ol {
+  margin-left: 50px;
+  margin-top: 16px;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum ol li,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum ol li {
+  margin-bottom: 20px;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum ol li span.text-e,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum ol li span.text-e {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum ol li span.text-M,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum ol li span.text-M {
+  text-transform: uppercase;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum ol li span.text-t,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum ol li span.text-t {
+  display: block;
+  font-weight: bold;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum small,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum small {
+  font-size: .9em;
+  font-style: italic;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum table,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum table {
+  width: 100%;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum table,
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum th,
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum td,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum table,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum th,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum td {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum th, .modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum td,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum th,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum td {
+  padding: 5px;
+  text-align: left;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum th,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum th {
+  text-align: center;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum th.table-score,
+.modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum th.table-score {
+  width: 140px;
 }
 
 @-webkit-keyframes animatetop {
@@ -2687,6 +2871,134 @@ blockquote {
   }
 }
 
+.ur1 .form-group-check {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ur1 .form-group-check {
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ur1 .form-group-check {
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.ur1 .form-group-check .boxes {
+  position: relative;
+  z-index: 2;
+  /*Checkboxes styles*/
+}
+
+.ur1 .form-group-check .boxes input[type="checkbox"] {
+  display: none;
+}
+
+.ur1 .form-group-check .boxes input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #FFF;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+@media screen and (max-width: 767px) {
+  .ur1 .form-group-check .boxes input[type="checkbox"] + label {
+    font-size: .9rem;
+  }
+}
+
+.ur1 .form-group-check .boxes input[type="checkbox"] + label:last-child {
+  margin-bottom: 0;
+}
+
+.ur1 .form-group-check .boxes input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #FFF;
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  opacity: .6;
+  transition: all .12s, border-color .08s;
+}
+
+@media screen and (max-width: 767px) {
+  .ur1 .form-group-check .boxes input[type="checkbox"] + label:before {
+    top: 2px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ur1 .form-group-check .boxes input[type="checkbox"] + label:before {
+    top: 9px;
+  }
+}
+
+.ur1 .form-group-check .boxes input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -2px;
+  left: 10px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+@media screen and (max-width: 767px) {
+  .ur1 .form-group-check .boxes input[type="checkbox"]:checked + label:before {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ur1 .form-group-check .boxes input[type="checkbox"]:checked + label:before {
+    top: 4px;
+  }
+}
+
+.ur1 .form-group-check .form-group-check-mask {
+  background-color: rgba(255, 0, 0, 0.4);
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
 .ur1 .acepto-terminos-condiciones {
   bottom: 20px;
   position: absolute;
@@ -3471,6 +3783,7 @@ blockquote {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 10px;
+  position: relative;
   width: 100%;
 }
 
@@ -3491,6 +3804,8 @@ blockquote {
 }
 
 .ur2 .ur2-cont form .form-group-check .boxes {
+  position: relative;
+  z-index: 2;
   /*Checkboxes styles*/
 }
 
@@ -3569,6 +3884,18 @@ blockquote {
   .ur2 .ur2-cont form .form-group-check .boxes input[type="checkbox"]:checked + label:before {
     top: 4px;
   }
+}
+
+.ur2 .ur2-cont form .form-group-check .form-group-check-mask {
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
 }
 
 .ur2 .ur2-cont form .btn {
