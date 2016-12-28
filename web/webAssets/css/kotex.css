@@ -381,7 +381,7 @@ blockquote {
   font-size: 2rem;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 2px;
 }
 
 .modal .modal-content .modal-close:hover, .modal .modal-content .modal-close:focus {
@@ -572,6 +572,10 @@ blockquote {
 .modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum th.table-score,
 .modal.modal-aviso-privacidad .modal-content .modal-body .aviso-privacidad-colum th.table-score {
   width: 140px;
+}
+
+.modal.modal-aviso-privacidad .modal-content .modal-body .terminos-condiciones-colum {
+  padding: 30px 20px 0;
 }
 
 @-webkit-keyframes animatetop {
@@ -3005,8 +3009,10 @@ blockquote {
   right: 30px;
 }
 
-.ur1 .acepto-terminos-condiciones a {
+.ur1 .acepto-terminos-condiciones span {
   color: #FFF;
+  cursor: pointer;
+  display: block;
   font-size: 1.1rem;
   margin-bottom: 0;
 }
@@ -3016,7 +3022,7 @@ blockquote {
     bottom: 8px;
     right: 20px;
   }
-  .ur1 .acepto-terminos-condiciones a {
+  .ur1 .acepto-terminos-condiciones span {
     font-size: .9rem;
   }
 }
@@ -3027,7 +3033,7 @@ blockquote {
     right: auto;
     left: 20px;
   }
-  .ur1 .acepto-terminos-condiciones a {
+  .ur1 .acepto-terminos-condiciones span {
     font-size: .9rem;
   }
 }
@@ -3037,7 +3043,7 @@ blockquote {
     bottom: 8px;
     right: 20px;
   }
-  .ur1 .acepto-terminos-condiciones a {
+  .ur1 .acepto-terminos-condiciones span {
     font-size: .8rem;
   }
 }
@@ -3048,7 +3054,7 @@ blockquote {
     right: auto;
     left: 20px;
   }
-  .ur1 .acepto-terminos-condiciones a {
+  .ur1 .acepto-terminos-condiciones span {
     font-size: .8rem;
   }
 }
