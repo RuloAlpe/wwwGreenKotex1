@@ -32,6 +32,13 @@ class EntTickets extends \yii\db\ActiveRecord
         return [
             [['txt_ticket', 'id_cadena', 'id_sucursal'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
             [['id_cadena', 'id_sucursal'], 'integer'],
+        		[
+        		[
+        				'txt_ticket'
+        		],
+        		'unique',
+        		'message' => 'El ticket ya se encuentra registrado',
+        		],
             [['txt_ticket'], 'string', 'max' => 100],
         ];
     }

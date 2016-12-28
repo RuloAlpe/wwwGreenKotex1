@@ -50,9 +50,9 @@ use yii\helpers\Url;
 			?>
 				<input type="hidden" name="email-usuario" value="<?= $correo ?>">
 					
-				<?= Html::submitButton('<span class="ladda-label">Registrar otro ticket</span>', ['id'=>'btn-usuario-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+				<!--<?= Html::submitButton('<span class="ladda-label">Registrar otro ticket</span>', ['id'=>'btn-usuario-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 				
-				<a id="btn-terminar-usuario" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro'] ) ?>">Terminar</a>
+				<a id="btn-terminar-usuario" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro'] ) ?>">Terminar</a>-->
 				
 			<?php
 			ActiveForm::end ();

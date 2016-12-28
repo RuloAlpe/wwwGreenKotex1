@@ -32,6 +32,13 @@ class EntVendedores extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+        		[
+        		[
+        				'txt_correo'
+        		],
+        		'unique',
+        		'message' => 'Email ya se encuentra registrado',
+        		],
             [['id_gerente', 'txt_nombre', 'txt_apellido', 'txt_correo', 'num_telefono'], 'required', 'message'=>'Este campo no puede quedar en blanco'],
             [['id_gerente'], 'integer'],
             [['txt_nombre', 'txt_apellido', 'txt_correo'], 'string', 'max' => 50],

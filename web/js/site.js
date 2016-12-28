@@ -22,6 +22,7 @@ $(document).ready(function(){
 
 
 	$('#from-verdedores').on('beforeSubmit', function(){
+		
 		var form = $(this);
 		if(form.find('.has-error').length) {
 			return false;
@@ -29,23 +30,40 @@ $(document).ready(function(){
 		var button = document.getElementById('btn-submit-vendedor');
 		var l = Ladda.create(button);
 	 	l.start();
-
+	 	
+	 	var button2 = document.getElementById('submit_terminar');
+		var l2 = Ladda.create(button2);
+	 	l2.start();
+	 	
+	 	
 		$.ajax({
 			url: form.attr('action'),
 			type: 'post',
 			data: form.serialize(),
-			success: function(resp) {
-				if(resp.status != 'error'){
+			success: function(response) {
+				if (response.hasOwnProperty('status')
+						&& response.status == 'success') {
 					$("#correoRegistardo").css('display', "none");
 					if(!valor){
 	            		window.location.href = basePath + 'site/registro';
+	            		return false;
 	            	}
 					l.stop();
+					l2.stop();
 					swal("Correcto", "El vendedor ha sido guardado con exito", "success")
 					document.getElementById("from-verdedores").reset();
-				}else{
+				}else if (response.hasOwnProperty('status')
+						&& response.status == 'error') {
 					$("#correoRegistardo").css('display', "");
 					l.stop();
+					l2.stop();
+				}else{
+					// Muestra los errores
+					$('#from-verdedores').yiiActiveForm('updateMessages',
+							response, true);
+					
+					l.stop();
+					l2.stop();
 				}
 			}
 		});
@@ -143,21 +161,42 @@ $(document).ready(function(){
 		if(form.find('.has-error').length) {
 			return false;
 		}
+		
+		var button = document.getElementById('sesion-btn-ticket');
+		var l = Ladda.create(button);
+	 	l.start();
+	 	
+	 	var button2 = document.getElementById('terminar_ticket');
+		var l2 = Ladda.create(button2);
+	 	l2.start();
 
 		$.ajax({
 			url: form.attr('action'),
 			type: 'post',
 			data: form.serialize(),
-			success: function(resp) {
-				if(resp.status != 'error'){
+			success: function(response) {
+				if (response.hasOwnProperty('status')
+						&& response.status == 'success') {
 					$("#ticketRegistardo").css("display", "none");
 					if(!valor){
-	            		window.location.href = basePath + 'usuarios/registro';
+	            		window.location.href = basePath + 'usuarios/finish';
+	            		
+	            		return false;
 	            	}
 					swal("Correcto", "Tu ticket ha sido registrado exitosamente", "success")
 					document.getElementById("from-ticket").reset();
-				}else
+				}else if (response.hasOwnProperty('status')
+						&& response.status == 'error') {
 					$("#ticketRegistardo").css("display", "");
+				}else{
+					// Muestra los errores
+					$('#from-ticket').yiiActiveForm('updateMessages',
+							response, true);
+					
+				}	
+				
+				l.stop();
+				l2.stop();
 			}
 		});
 		return false;

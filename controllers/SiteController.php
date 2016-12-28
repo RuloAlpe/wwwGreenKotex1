@@ -13,6 +13,7 @@ use app\models\CatSucursal;
 use app\models\CatCadena;
 use app\models\EntVendedores;
 use yii\web\Response;
+use yii\widgets\ActiveForm;
 
 
 class SiteController extends Controller {
@@ -158,29 +159,19 @@ class SiteController extends Controller {
 		] )->all ();
 		
 		if ($gerente->load ( Yii::$app->request->post () )) {
-			$gerente->save ();
-    			
-    		$buscarCorreo = EntGerentes::find()->where(['txt_correo'=>$gerente->txt_correo])->andWhere(['!=', 'id_gerente', $gerente->id_gerente])->one();
-    		if($buscarCorreo){
-    			$gerente->delete();
-    			
-    			return $this->render('registroGerentes', [
-    					'gerente' => $gerente,
-    					'sucursales' => $sucursales,
-    					'cadenas' => $cadenas,
-    					'correo' => 0
-    			]);
-    		}
-    			
-			$idGerente = $gerente->id_gerente;
-			$entVendedores = new EntVendedores ();
 			
-			$this->crearSesionGerente($gerente);
+			if($gerente->save ()){
+				$idGerente = $gerente->id_gerente;
+				$entVendedores = new EntVendedores ();
+					
+				$this->crearSesionGerente($gerente);
+					
+				return $this->render ( 'registroVendedores', [
+						'vendedor' => $entVendedores,
+						'idGerente' => $idGerente
+				] );
+			}
 			
-			return $this->render ( 'registroVendedores', [ 
-					'vendedor' => $entVendedores,
-					'idGerente' => $idGerente
-			] );
 		}
 		
 		return $this->render ( 'registroGerentes', [ 
@@ -191,29 +182,22 @@ class SiteController extends Controller {
 		] );
 	}
 	public function actionRegistroVendedores() {
+		
 		// $this->layout = false;
 		$vendedor = new EntVendedores ();
 		$idGerente = 0;
 		
+		if($validar = $this->validarVendedor($vendedor)){
+			return $validar;
+		}
+		
 		if ($vendedor->load ( Yii::$app->request->post () )) {
 			// $vendedor->id_gerente = 1;
-			$vendedor->save ();
-    			
-    		$buscarCorreo = EntVendedores::find()->where(['txt_correo'=>$vendedor->txt_correo])->andWhere(['!=', 'id_vendedor', $vendedor->id_vendedor])->one();
-    		if($buscarCorreo){
-    			Yii::$app->response->format = Response::FORMAT_JSON;
-    			$vendedor->delete();
-    			
-    			return ['status' => 'error'];
-    		}
-    			
-			$idGerente = $vendedor->id_gerente;
-			$vendedor = new EntVendedores ();
-			
-			return $this->render ( 'registroVendedores', [ 
-					'vendedor' => $vendedor,
-					'idGerente' => $idGerente 
-			] );
+			if($vendedor->save ()){
+				return ['status'=>'success'];
+			}else{
+				return ['status'=>'error'];
+			}
 		}
 		
 		return $this->render ( 'registroVendedores', [ 
@@ -221,6 +205,15 @@ class SiteController extends Controller {
 				'idGerente' => $idGerente 
 		] );
 	}
+	
+	private function validarVendedor($vendedor){
+		if (Yii::$app->request->isAjax && $vendedor->load ( Yii::$app->request->post () )) {
+			Yii::$app->response->format = Response::FORMAT_JSON;
+				
+			return ActiveForm::validate ( $vendedor );
+		}
+	}
+	
 	public function actionTabla123456789QwertyVendedores() {
 		$vendedores = EntVendedores::find ()->all ();
 		

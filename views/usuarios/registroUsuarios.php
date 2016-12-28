@@ -10,6 +10,12 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
     \app\assets\AppAsset::className () 
   ] 
 ] );
+
+$this->registerJsFile ( '@web/webAssets/js/registro-usuario.js', [
+		'depends' => [
+				\app\assets\AppAsset::className ()
+		]
+] );
 ?>
 
 <!-- .ur2 -->
@@ -53,31 +59,14 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			
 			<?= $form->field($usuario, 'num_telefono')->textInput(['maxlength' => 10, 'class' => 'txt_telefono'])?>
 
-			<div class="form-group-select">
-				<?= $form->field($ticket, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
-		
-				<?= $form->field($ticket, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
-			</div>
-			
-			<div class="form-group-ayuda">
-				<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
-				<span id="modal-ayuda-open" class="form-group-ayuda-span"><i class="ion ion-help"></i></span>
-			</div>
-			<?php if($tick == 0){?>
-				<div class="help-error">
-					<p>Este ticket ya esta registrado</p>
-				</div>
-			<?php }?>
-
 			<div class="form-group-check">
 				<div class="boxes">
 					<input type="checkbox" id="box-1">
 					<label for="box-1">He leído y acepto el Aviso de Privacidad</label>
 				</div>
 			</div>
-
-			<?= Html::submitButton('Enviar', array('class' => 'btn btn-primary js-submit-usuarios'))?>
-
+	<?= Html::submitButton('<span class="ladda-label">Registrar</span>', ['id' => 'guardar-registro', 'class' => 'btn btn-primary js-submit-usuarios ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/abrir-sesion'] ) ?>"><span class="ladda-label">Ya tengo registro</span></a>
 
 		<?php
 		ActiveForm::end ();
@@ -89,23 +78,3 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 </div>
 <!-- end - .ur2 -->
 
-<!-- .modal -->
-<div id="modal-ayuda" class="modal modal-admin">
-
-	<!-- .modal-content -->
-	<div class="modal-content">
-
-		<!-- Brn Close -->
-		<span id="modal-ayuda-close" class="modal-close"><i class="ion ion-close-round"></i></span>
-		
-		<h2 class="modal-content-title">Registra el número marcado en rojo</h2>
-
-		<div class="modal-content-ticket">
-			<img id="imgTicket" src="<?=Url::base()?>/webAssets/images/" alt="Ticket">	
-		</div>
-
-	</div>
-	<!-- end - .modal-content -->
-
-</div>
-<!-- end - .modal -->

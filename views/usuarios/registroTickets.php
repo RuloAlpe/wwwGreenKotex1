@@ -51,7 +51,7 @@ use yii\helpers\Url;
 
 				<?= Html::submitButton('<span class="ladda-label">Registrar otro ticket</span>', ['id'=>'sesion-btn-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 				
-				<a id="terminar_ticket" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>">Terminar</a>
+				<a id="terminar_ticket" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>" data-style="zoom-out"><span class="ladda-label">Terminar</span></a>
 			
 			</div>
 			<!-- end - .form-group-btns -->
@@ -65,3 +65,25 @@ use yii\helpers\Url;
 
 </div>
 <!-- end - .ur4 -->
+
+
+<!-- .modal -->
+<div id="modal-ayuda" class="modal modal-admin">
+
+	<!-- .modal-content -->
+	<div class="modal-content">
+
+		<!-- Brn Close -->
+		<span id="modal-ayuda-close" class="modal-close"><i class="ion ion-close-round"></i></span>
+		
+		<h2 class="modal-content-title">Registra el número marcado en rojo</h2>
+
+		<div class="modal-content-ticket">
+			<img id="imgTicket" src="<?=Url::base()?>/webAssets/images/" alt="Ticket">	
+		</div>
+
+	</div>
+	<!-- end - .modal-content -->
+
+</div>
+<!-- end - .modal -->
