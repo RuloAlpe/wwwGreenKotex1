@@ -4,7 +4,11 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use app\models\CatSucursal;
 use yii\helpers\Url;
-
+$this->registerJsFile ( '@web/webAssets/js/kotex.js', [
+		'depends' => [
+				\app\assets\AppAsset::className ()
+		]
+] );
 ?>	
 
 <!-- .ur4 -->
@@ -83,7 +87,7 @@ use yii\helpers\Url;
 		<h2 class="modal-content-title">Registra el número marcado en rojo</h2>
 
 		<div class="modal-content-ticket">
-			<img id="imgTicket" src="<?=Url::base()?>/webAssets/images/" alt="Ticket">	
+			<img id="imgTicket" src="<?=Url::base()?>/webAssets/images/ticket-033.png" alt="Ticket">	
 		</div>
 
 	</div>
