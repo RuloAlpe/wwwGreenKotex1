@@ -9,7 +9,7 @@ $('body').on(
 			}
 			
 			if(!$("#box-1").prop('checked')){
-				
+				swal("Espera", "Debe haber aceptado el aviso de privacidad", "warning");
 				return false;
 			}
 			

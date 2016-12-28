@@ -214,6 +214,12 @@ $('body').on(
 			if (form.find('.has-error').length) {
 				return false;
 			}
+			
+				if(!$("#box-1").prop('checked')){
+					swal("Espera", "Debe haber aceptado el aviso de privacidad", "warning");
+				return false;
+			}
+			
 			var button = document.getElementById('btn-submit-gerentes');
 			var l = Ladda.create(button);
 		 	l.start();
