@@ -28,10 +28,9 @@ use yii\helpers\Url;
 		"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['usuarios/guardar-ticket'] ),
 ] );
 ?>
-	<label>Ingrese correo</label>
-	<input type="email" name="email-usuario">
+	<?= $form->field($usuario, 'txt_correo')->input('email')?>
 		
-	<?= Html::submitButton('<span class="ladda-label">Registrarse</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+	<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 
 <?php
 ActiveForm::end ();

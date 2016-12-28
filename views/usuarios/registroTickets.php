@@ -8,7 +8,7 @@ use yii\helpers\Url;
 ?>	
 
 <!-- .ur4 -->
-<div class="ur4">
+<div class="ur2">
 
 	<a href="" class="logo">
 		<img src="<?=Url::base()?>/webAssets/images/logo.png" alt="Kotex">
@@ -19,7 +19,7 @@ use yii\helpers\Url;
 	<img src="<?=Url::base()?>/webAssets/images/productos.png" class="productos" alt="Productos">
 
 	<!-- .ur4-cont -->
-	<div class="ur4-cont">
+	<div class="ur2-cont">
 
 		<!-- <h2>Datos del Gerente</h2> -->
 
@@ -33,12 +33,16 @@ use yii\helpers\Url;
 		] );
 		?>
 
-			<?= $form->field($ticket, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
+<div class="form-group-select">
+				<?= $form->field($ticket, 'id_cadena')->dropDownList(ArrayHelper::map($cadenas, 'id_cadena', 'txt_nombre'), ['prompt'=>'Seleciona una cadena','class' => 'js-id-cadena'])?>
+		
+				<?= $form->field($ticket, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
+			</div>
 			
-			<?= $form->field($ticket, 'id_sucursal')->dropDownList(ArrayHelper::map(CatSucursal::find()->one(), 'id_sucursal', 'txt_nombre'),['prompt'=>'Seleciona una sucursal'])?>
-					
-			<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
-
+			<div class="form-group-ayuda">
+				<?= $form->field($ticket, 'txt_ticket')->textInput(['maxlength' => true])?>
+				<span id="modal-ayuda-open" class="form-group-ayuda-span"><i class="ion ion-help"></i></span>
+			</div>
 			<?php //if($tick == 0){?>
 				<div class="help-error">
 					<p id="ticketRegistardo" style="display:none">Este ticket ya esta registrado</p>

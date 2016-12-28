@@ -202,9 +202,24 @@ class UsuariosController extends Controller {
 		// return ['sucursales' => $sucursal];
 	}
 	public function actionAbrirSesion() {
-		return $this->render ( 'abrirSesion' );
+		$usuario = new EntUsuarios();
+		return $this->render ( 'abrirSesion',['usuario'=>$usuario] );
 	}
 	public function actionGuardarTicket() {
+		$correo = new EntUsuarios();
+		$correo->load ( Yii::$app->request->post () );
+		
+		
+		$usuario = EntUsuarios::find()->where(['txt_correo'=>$correo])->one();
+		
+		if($usuario){
+			$this->crearSesionUsuario($usuario);
+		}else{
+			$usuario = new EntUsuarios();
+			$usuario->addError('txt_correo', 'No existe una cuenta con el correo ingresado');
+			return $this->render ( 'abrirSesion',['usuario'=>$usuario] );
+		}
+		
 		if ($this->existeSesion ()) {
 			
 			$usuario = $this->obtenerSesionUsuario();
