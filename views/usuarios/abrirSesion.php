@@ -18,7 +18,7 @@ use yii\helpers\Url;
 	<!-- .ur2-cont -->
 	<div class="ur2-cont">
 
-		<!-- <h2>Datos del Gerente</h2> -->
+		<h2 class="ingresar">Ingresar</h2>
 
 		<?php
 		$form = ActiveForm::begin ( [
@@ -32,9 +32,14 @@ use yii\helpers\Url;
 		
 	<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 
-<?php
-ActiveForm::end ();
-?>
+				
+				<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro-usuarios'] ) ?>"><span class="ladda-label">Registrarse</span></a>
+				
+				
+
+		<?php
+		ActiveForm::end ();
+		?>
 
 	</div>
 	<!-- end - .ur2-cont -->
