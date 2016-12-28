@@ -45,9 +45,9 @@ use yii\helpers\Url;
 		] );
 		?>
 
-		<?= Html::submitButton('<span class="ladda-label">Registrate</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+		<a id="ready" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/abrir-sesion'] ) ?>" data-style="zoom-out"><span class="ladda-label">Ya tengo registro</span></a>
 
-	<a id="ready" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/abrir-sesion'] ) ?>" data-style="zoom-out"><span class="ladda-label">Ya tengo registro</span></a>
+		<?= Html::submitButton('<span class="ladda-label">Registrate</span>', ['id'=>'registro-btn','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 
 		<?php
 		ActiveForm::end ();
@@ -58,7 +58,7 @@ use yii\helpers\Url;
 	
 	<!-- .acepto-terminos-condiciones -->
 	<div class="acepto-terminos-condiciones">
-		<p>Acepto términos y condiciones</p>
+		<a href="" target="_blank">Términos y condiciones</a>
 	</div>
 	<!-- end - .acepto-terminos-condiciones -->
 

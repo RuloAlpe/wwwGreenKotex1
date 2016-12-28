@@ -500,6 +500,7 @@
 			
 			// Btns
 			.form-group-botones,
+			.form-group-btns,
 			.form-group-botones-center
 				align-items: center
 				// background-color: maroon
@@ -529,6 +530,15 @@
 			.form-group-botones
 				+respond-to(xs)
 					justify-content: flex-end
-					
+			
+			.form-group-btns
+				.btn
+					padding: .6rem 2rem
+				button.btn
+					+respond-to(lg)
+						margin-right: 10px
+					+respond-to(md)
+						margin-right: 10px
+
 			.form-group-botones-center
 				justify-content: center

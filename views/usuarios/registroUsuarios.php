@@ -65,8 +65,12 @@ $this->registerJsFile ( '@web/webAssets/js/registro-usuario.js', [
 					<label for="box-1">He leído y acepto el Aviso de Privacidad</label>
 				</div>
 			</div>
-	<?= Html::submitButton('<span class="ladda-label">Registrar</span>', ['id' => 'guardar-registro', 'class' => 'btn btn-primary js-submit-usuarios ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
-<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/abrir-sesion'] ) ?>"><span class="ladda-label">Ya tengo registro</span></a>
+
+			<div class="form-group-botones-center">
+				<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/abrir-sesion'] ) ?>"><span class="ladda-label">Ya tengo registro</span></a>
+
+				<?= Html::submitButton('<span class="ladda-label">Registrar</span>', ['id' => 'guardar-registro', 'class' => 'btn btn-primary js-submit-usuarios ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+			</div>
 
 		<?php
 		ActiveForm::end ();

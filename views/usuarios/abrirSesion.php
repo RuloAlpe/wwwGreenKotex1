@@ -26,16 +26,18 @@ use yii\helpers\Url;
 				'enctype' => 'multipart/form-data'
 		],
 		"action" => Yii::$app->urlManager->createAbsoluteUrl ( ['usuarios/guardar-ticket'] ),
-] );
-?>
-	<?= $form->field($usuario, 'txt_correo')->input('email')?>
-		
-	<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+		] );
+		?>
+			<?= $form->field($usuario, 'txt_correo')->input('email')?>
+				
+			<div class="form-group-botones">
 
-				
 				<a class="btn btn-secundary ladda-button" data-style="zoom-out" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro-usuarios'] ) ?>"><span class="ladda-label">Registrarse</span></a>
-				
-				
+
+				<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ['id'=>'sesion-btn-usuario','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
+
+			</div>
+						
 
 		<?php
 		ActiveForm::end ();

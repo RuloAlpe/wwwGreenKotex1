@@ -19,7 +19,7 @@
 	height: 100vh
 	overflow: hidden
 	position: relative
-
+	
 	+respond-to(lg)
 		justify-content: flex-end
 
@@ -28,6 +28,10 @@
 
 	+respond-to(sm)
 		justify-content: flex-end
+	
+	+respond-to(xs)
+		height: auto
+		min-height: 100vh
 
 	// Movil Lg
 	@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
@@ -69,6 +73,7 @@
 
 		+respond-to(xs)
 			height: 100px
+			left: 4px
 			width: 122px
 			img
 				width: 100%
@@ -161,8 +166,6 @@
 		color: $white
 		font-size: 2.5rem
 		
-		
-
 		.title-kotex
 			font-size: 3rem
 			font-style: italic
@@ -192,7 +195,7 @@
 			left: 50%
 			margin-left: -250px
 			position: absolute
-			top: 30px
+			top: 20px
 			width: 430px
 
 		+respond-to(md)
@@ -211,6 +214,8 @@
 		+respond-to(xs)
 			font-size: 1.5rem
 			margin-bottom: 30px
+			margin-left: 30px
+			margin-top: 50px
 			position: relative
 		
 		+respond-to(xx)
@@ -224,7 +229,7 @@
 		position: absolute
 		right: 30px
 
-		p
+		a
 			color: $white
 			font-size: 1.1rem
 			margin-bottom: 0
@@ -233,27 +238,27 @@
 		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
 			bottom: 8px
 			right: 20px
-			p
+			a
 				font-size: .9rem
 
 		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
 			bottom: 4px
 			right: auto
 			left: 20px
-			p
+			a
 				font-size: .9rem
 
 		@media only screen and (max-device-width : 350px) and (orientation : portrait)
 			bottom: 8px
 			right: 20px
-			p
+			a
 				font-size: .8rem
 
 		@media only screen and (max-device-width : 480px) and (orientation : landscape)
 			bottom: 4px
 			right: auto
 			left: 20px
-			p
+			a
 				font-size: .8rem
 
 	.ur1-cont
@@ -263,12 +268,13 @@
 		z-index: 3
 
 		+respond-to(lg)
-			margin-top: 60px
+			margin-top: 80px
 
 		+respond-to(md)
 			margin-top: 40px
 
 		+respond-to(xs)
+			margin-bottom: 40px
 			padding-left: 20px
 			padding-right: 20px
 
@@ -313,16 +319,42 @@
 			justify-content: flex-end
 			padding-right: 40px
 
-			+respond-to(xs)
-				padding-right: 0
-
 			.btn
 				font-style: italic
 				font-weight: bold
 
-			button.btn
+			a.btn
 				margin-right: 10px
 
+			// Movil Lg
+			@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+				flex-direction: column
+				padding-right: 0
+				a.btn
+					margin-bottom: 10px
+			@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+				flex-direction: column
+				padding-right: 0
+				a.btn
+					margin-bottom: 10px
+			@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+				flex-direction: flex-end
+				padding-right: 0
+			
+			// Movil Xs
+			@media only screen and (max-device-width : 350px)
+				flex-direction: column
+				padding-right: 0
+				a.btn
+					margin-bottom: 10px
+			@media only screen and (max-device-width : 350px) and (orientation : portrait)
+				flex-direction: column
+				padding-right: 0
+				a.btn
+					margin-bottom: 10px
+			@media only screen and (max-device-width : 480px) and (orientation : landscape)
+				flex-direction: flex-end
+				padding-right: 0
 
 	// Registro Gerentes
 	.kotex-cont-registro-gerentes

@@ -53,6 +53,8 @@ use yii\helpers\Url;
 				<!--<?= Html::submitButton('<span class="ladda-label">Registrar otro ticket</span>', ['id'=>'btn-usuario-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 				
 				<a id="btn-terminar-usuario" class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro'] ) ?>">Terminar</a>-->
+
+				<a class="btn btn-primary" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/usuarios/registro'] ) ?>">Regresar a Home</a>
 				
 			<?php
 			ActiveForm::end ();
