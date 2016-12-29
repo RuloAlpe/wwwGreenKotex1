@@ -872,12 +872,14 @@ blockquote {
 
 @media screen and (max-width: 767px) {
   .mt1 .mt1-cont {
+    padding-left: 30px;
     padding-right: 30px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .mt1 .mt1-cont {
+    padding-left: 10px;
     padding-right: 10px;
   }
 }
@@ -905,8 +907,8 @@ blockquote {
   font-size: 1.4rem;
   letter-spacing: 1px;
   line-height: 1.9rem;
-  margin: 0 0 70px auto;
-  max-width: 300px;
+  margin: 0 0 70px 0;
+  max-width: 430px;
   text-align: justify;
   width: 100%;
 }
