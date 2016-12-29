@@ -2204,6 +2204,18 @@ blockquote {
   white-space: normal;
 }
 
+@media (min-width: 1201px) {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
+    width: 210px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
+    width: 210px;
+  }
+}
+
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
   .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
     padding: .6rem 1.3rem;
