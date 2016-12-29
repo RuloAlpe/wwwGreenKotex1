@@ -1,0 +1,240 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Mesa de Trabajo 2
+			# Basic
+			# Utility
+			# Loader
+
+	-----------------------------------------------------------------------------
+	*/
+
+.ur5
+	align-items: center
+	background-image: url(../images/bg.png)
+	background-position: 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: flex
+	min-height: 100vh
+	justify-content: center
+	overflow: hidden
+	position: relative
+
+	+respond-to(xs)
+		height: auto
+		min-height: 100vh
+
+	.logo
+		display: flex
+		left: 90px
+		position: absolute
+		top: 10px
+		z-index: 4
+		img
+			border: none
+
+		+respond-to(md)
+			left: 80px
+
+		+respond-to(sm)
+			height: 232px
+			left: 70px
+			width: 280px
+			img
+				width: 100%
+
+		+respond-to(xs)
+			height: 100px
+			left: 30px
+			top: 5px
+			width: 122px
+			img
+				width: 100%
+
+		+respond-to(xx)
+			height: 80px
+			left: 10px
+			width: 96px
+			img
+				width: 100%
+		
+		// Movil Lg
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : portrait)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (min-device-width : 351px) and (max-device-width : 767px) and (orientation : landscape)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+
+		// Movil Xs
+		@media only screen and (max-device-width : 350px)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (max-device-width : 350px) and (orientation : portrait)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+		@media only screen and (max-device-width : 480px) and (orientation : landscape)
+			height: 80px
+			left: 10px
+			top: 5px
+			width: 96px
+			img
+				width: 100%
+
+	.avion
+		position: absolute
+		right: 30px
+		top: 50px
+
+		+respond-to(sm)
+			right: 20px
+
+		+respond-to(xs)
+			height: 41px
+			right: 10px
+			top: 30px
+			width: 103px
+
+	
+	.ur5-cont
+		// background-color: rgba(red,.2)
+		margin-top: 270px
+		max-width: 800px
+		padding-bottom: 50px
+		position: relative
+		width: 90%
+		z-index: 3
+		
+		+respond-to(sm)
+			margin-top: 270px
+			max-width: 600px
+
+		+respond-to(xs)
+			margin-top: 90px
+			// padding: 30px 20px
+
+		+respond-to(xx)
+			// padding: 20px 10px
+
+		h2
+			color: $white
+			font-size: 1.8rem
+			margin-bottom: 40px
+			text-align: center
+
+			+respond-to(sm)
+				margin-bottom: 20px
+
+			+respond-to(xs)
+				font-size: 1.15rem
+				margin-bottom: 20px
+		
+		// Tabla
+		.ur5-tabla
+			background-color: $white
+			width: 100%
+
+			.ur5-tabla-head
+				background-color: #B93C89
+				display: flex
+				padding: 16px 20px
+
+				+respond-to(xs)
+					padding: 16px 10px
+
+				.ur5-tabla-head-td
+					// background-color: rgba(green,.2)
+					color: $white
+					// font-family: $f-proximan-bold
+					word-wrap: break-word
+					
+					&:nth-child(1)
+						width: 25%
+					&:nth-child(2)
+						width: 25%
+					&:nth-child(3)
+						width: 25%
+					&:nth-child(3)
+						width: 25%
+
+			.ur5-tabla-body
+				// background-color: rgba(red,.2)
+				.ur5-tabla-body-tr
+					// background-color: rgba(blue,.2)
+					align-items: center
+					display: flex
+					padding: 16px 10px
+
+					+respond-to(xs)
+						padding: 16px 10px
+
+					&:nth-child(odd)
+						background-color: $white
+					&:nth-child(even)
+						background-color: #f8eaf3
+					.ur5-tabla-body-td
+						align-items: center
+						display: flex
+						justify-content: flex-start
+						word-wrap: break-word
+						
+						span
+							word-wrap: break-word
+							width: 100%
+
+						&:nth-child(1)
+							width: 25%
+						&:nth-child(2)
+							width: 25%
+						&:nth-child(3)
+							width: 25%
+						&:nth-child(3)
+							width: 25%
+		
+		// Botones
+		.ur5-botones
+			align-items: center
+			display: flex
+			// justify-content: flex-end
+			justify-content: center
+			padding: 30px 0 10px
+
+			.btn
+				font-size: 1.1rem
+				font-style: italic
+				font-weight: bold
+				line-height: 1
+
+			.btn-csv
+				align-items: center
+				display: flex
+				height: 40px
+				justify-content: center
+				padding: 0
+				width: 40px
+				i.ion
+					font-size: 1.6rem

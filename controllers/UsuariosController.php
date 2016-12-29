@@ -330,4 +330,11 @@ class UsuariosController extends Controller {
 			return false;
 		}
 	}
+
+	// Tabla de tickers
+	public function actionTickets(){
+		return $this->render ( 'tickets' );
+		
+	}
+
 }
