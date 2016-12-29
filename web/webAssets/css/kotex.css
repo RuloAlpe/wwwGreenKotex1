@@ -1393,6 +1393,7 @@ blockquote {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 10px;
+  position: relative;
   width: 100%;
 }
 
@@ -1413,6 +1414,8 @@ blockquote {
 }
 
 .mt2 .mt2-cont form .form-group-check .boxes {
+  position: relative;
+  z-index: 2;
   /*Checkboxes styles*/
 }
 
@@ -1491,6 +1494,18 @@ blockquote {
   .mt2 .mt2-cont form .form-group-check .boxes input[type="checkbox"]:checked + label:before {
     top: 4px;
   }
+}
+
+.mt2 .mt2-cont form .form-group-check .form-group-check-mask {
+  bottom: 0;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
 }
 
 .mt2 .mt2-cont form .form-group-botones,
