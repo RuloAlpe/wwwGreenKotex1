@@ -55,11 +55,12 @@ $this->registerJsFile ( '@web/webAssets/js/kotex.js', [
 			
 			<!-- .form-group-btns -->
 			<div class="form-group-btns">
-				
 
 				<?= Html::submitButton('<span class="ladda-label">Registrar otro ticket</span>', ['id'=>'sesion-btn-ticket','class'=>'btn btn-primary ladda-button', 'data-style'=>'zoom-out'])?>
 				
-				<a id="terminar_ticket" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>" data-style="zoom-out"><span class="ladda-label">Terminar</span></a>
+				<?= Html::submitButton('<span class="ladda-label">Terminar</span>', ['id' => 'guardar-registro', 'class' => 'btn btn-primary js-submit-usuarios ladda-button', 'data-style'=>'zoom-out'])?>
+
+				<!-- <a id="terminar_ticket" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>" data-style="zoom-out"><span class="ladda-label">Terminar</span></a> -->
 			
 			</div>
 			<!-- end - .form-group-btns -->

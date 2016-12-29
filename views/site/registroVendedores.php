@@ -58,8 +58,12 @@ use yii\helpers\Url;
 				<!-- .form-group-btns -->
 				<div class="form-group-btns">
 					
-					<?= Html::submitButton('<span class="ladda-label">Guardar y registrar otro vendedor</span>', ['id' => 'btn-submit-vendedor', 'class' => 'btn btn-primary ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
-					<a id="submit_terminar" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>" data-style="zoom-out"><span class="ladda-label">Guardar y terminar</span></a>
+					<?= Html::submitButton('<span class="ladda-label">Guardar y registrar otro vendedor</span>', ['id' => 'btn-submit-vendedor', 'class' => 'btn btn-primary btn-primary-otro ladda-button animated delay-3', 'data-style'=>'zoom-out'])?>
+
+
+					<?= Html::submitButton('<span class="ladda-label">Guardar y terminar</span>', ['id' => 'btn-submit-vendedor', 'class' => 'btn btn-primary btn-primary-terminar ladda-button', 'data-style'=>'zoom-out'])?>
+
+					<!-- <a id="submit_terminar" class="btn btn-primary ladda-button" href="<?= Yii::$app->urlManager->createAbsoluteUrl ( ['/site/registro'] ) ?>" data-style="zoom-out"><span class="ladda-label">Guardar y terminar</span></a> -->
 <!-- 					<a class="btn btn-primary" href="http://localhost/wwwGreenKotex1/web/site/registro">Terminar</a> -->
 	
 				</div>

@@ -2132,72 +2132,72 @@ blockquote {
   }
 }
 
-.mt3 .mt3-cont form .form-group-btns button.btn {
+.mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
   padding: .6rem 2rem;
   white-space: normal;
 }
 
 @media (min-width: 1201px) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     width: 210px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     width: 210px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     padding: 1.1rem 2rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     margin-bottom: 10px;
     padding: .6rem 1rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     margin-bottom: 10px;
     padding: .6rem 1rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     margin-bottom: 10px;
     padding: 1rem;
   }
 }
 
 @media only screen and (max-device-width: 350px) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     margin-bottom: 10px;
     padding: .5rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 350px) and (orientation: portrait) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     margin-bottom: 10px;
     padding: .5rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: landscape) {
-  .mt3 .mt3-cont form .form-group-btns button.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-otro {
     margin-bottom: 10px;
     padding: 1rem 1.3rem;
   }
 }
 
-.mt3 .mt3-cont form .form-group-btns a.btn {
+.mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
   letter-spacing: 1px;
   margin-left: 20px;
   padding: 1.13rem 3rem;
@@ -2205,37 +2205,37 @@ blockquote {
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) {
-  .mt3 .mt3-cont form .form-group-btns a.btn {
-    padding: 1rem 1.3rem;
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
+    padding: .6rem 1.3rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: portrait) {
-  .mt3 .mt3-cont form .form-group-btns a.btn {
-    padding: 1rem 1.3rem;
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
+    padding: .6rem 1.3rem;
   }
 }
 
 @media only screen and (min-device-width: 351px) and (max-device-width: 767px) and (orientation: landscape) {
-  .mt3 .mt3-cont form .form-group-btns a.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
     padding: 1rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 350px) {
-  .mt3 .mt3-cont form .form-group-btns a.btn {
-    padding: 1rem 1.3rem;
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
+    padding: .5rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 350px) and (orientation: portrait) {
-  .mt3 .mt3-cont form .form-group-btns a.btn {
-    padding: 1rem 1.3rem;
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
+    padding: .5rem 1.3rem;
   }
 }
 
 @media only screen and (max-device-width: 480px) and (orientation: landscape) {
-  .mt3 .mt3-cont form .form-group-btns a.btn {
+  .mt3 .mt3-cont form .form-group-btns .btn-primary-terminar {
     padding: 1rem 1.3rem;
   }
 }
@@ -4064,6 +4064,14 @@ blockquote {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .ur2 .ur2-cont form .form-group-btns {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .ur2 .ur2-cont form .form-group-btns .btn {
   padding: .6rem 2rem;
 }
@@ -4077,6 +4085,12 @@ blockquote {
 @media (min-width: 992px) and (max-width: 1200px) {
   .ur2 .ur2-cont form .form-group-btns button.btn {
     margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ur2 .ur2-cont form .form-group-btns button.btn {
+    margin-top: 10px;
   }
 }
 

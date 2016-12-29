@@ -548,6 +548,8 @@
 					justify-content: flex-end
 			
 			.form-group-btns
+				+respond-to(xs)
+					flex-direction: column
 				.btn
 					padding: .6rem 2rem
 				button.btn
@@ -555,6 +557,9 @@
 						margin-right: 10px
 					+respond-to(md)
 						margin-right: 10px
+
+					+respond-to(xs)
+						margin-top: 10px
 
 			.form-group-botones-center
 				justify-content: center
