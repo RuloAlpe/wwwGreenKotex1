@@ -7,6 +7,12 @@ use yii\helpers\Url;
 
 # echo $idGerente;
 ?>
+<!-- .gk-botones -->
+<div class="gk-botones">
+	<a class="gk-vendedores" href=""><span>Mis vendedores</span></a>
+	<a class="gk-logout" href=""><i class="ion ion-log-out"></i></a>
+</div>
+<!-- end - .gk-botones -->
 
 <!-- .mt3 -->
 <div class="mt3">

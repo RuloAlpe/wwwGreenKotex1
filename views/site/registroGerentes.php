@@ -12,6 +12,7 @@ $this->registerJsFile ( '@web/webAssets/js/registro-gerentes.js', [
 ] );
 ?>
 
+
 <!-- .mt2 -->
 <div class="mt2">
 

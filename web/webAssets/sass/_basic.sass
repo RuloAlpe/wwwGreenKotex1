@@ -451,3 +451,47 @@ blockquote
 	to
 		top:0
 		opacity:1
+
+
+// Botones
+.gk-botones
+	align-items: center
+	// background-color: rgba(red,.45)
+	display: flex
+	justify-content: center
+	position: fixed
+	right: 20px
+	top: 20px
+	// width: 80px
+	z-index: 8
+	.gk-logout
+		align-items: center
+		background-color: $primary-color
+		+border-radius(50%)
+		+box-shadow(2)
+		color: $white
+		cursor: pointer
+		display: flex
+		justify-content: center
+		height: 30px
+		margin-left: 6px
+		width: 30px
+		i.ion
+			font-size: 1.2rem
+			font-weight: bold
+		&:hover
+			opacity: .9
+
+	.gk-vendedores
+		align-items: center
+		background-color: $white
+		+border-radius(3px)
+		+box-shadow(2)
+		color: $black
+		cursor: pointer
+		display: flex
+		justify-content: center
+		height: 30px
+		padding: 0 8px
+		&:hover
+			opacity: .9

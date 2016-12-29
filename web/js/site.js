@@ -215,7 +215,7 @@ $('body').on(
 				return false;
 			}
 			
-				if(!$("#box-1").prop('checked')){
+				if(!$("#box-2").prop('checked')){
 					swal("Espera", "Debe haber aceptado el aviso de privacidad", "warning");
 				return false;
 			}

@@ -600,6 +600,74 @@ blockquote {
   }
 }
 
+.gk-botones {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 8;
+}
+
+.gk-botones .gk-logout {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E8D841;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #FFF;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  margin-left: 6px;
+  width: 30px;
+}
+
+.gk-botones .gk-logout i.ion {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.gk-botones .gk-logout:hover {
+  opacity: .9;
+}
+
+.gk-botones .gk-vendedores {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFF;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #000;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  padding: 0 8px;
+}
+
+.gk-botones .gk-vendedores:hover {
+  opacity: .9;
+}
+
 /*!
 	-----------------------------------------------------------------------------
 
@@ -1812,13 +1880,13 @@ blockquote {
 
 @media screen and (max-width: 767px) {
   .mt3 .mt3-cont {
-    padding: 30px 20px;
+    padding: 100px 20px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .mt3 .mt3-cont {
-    padding: 20px 10px;
+    padding: 90px 10px;
   }
 }
 
